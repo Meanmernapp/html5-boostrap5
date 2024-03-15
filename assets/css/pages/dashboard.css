@@ -1,0 +1,291 @@
+.dashboard__sidebar {
+  background-color: var(--dark-white);
+  padding: 0 0.75rem 0.75rem;
+  width: 12.5rem;
+  min-width: 8.5rem;
+  /* height: calc(100vh - 164px); */
+}
+.dashboard__sidebar__list--item {
+  border-bottom: .0625rem solid var(--grey);
+  padding: .5rem 0;
+}
+.dashboard__sidebar__list--item p {
+  font-size: .625rem;
+  color: var(--light-gray);
+}
+.dashboard__sidebar__list--item a {
+  text-decoration: none;
+}
+.dashboard__sidebar__list--item a:hover h4 {
+  color: var(--blue);
+}
+.dashboard__sidebar__list--item h4 {
+  color: var(--black);
+  font-size: 0.75rem;
+  margin-bottom: .125rem;
+  font-weight: 400;
+}
+.dashboard__sidebar__title {
+  color: var(--black);
+  padding: .5rem;
+  border-radius: .25rem;
+  display: flex;
+  align-items: center;
+  font-size: .75rem;
+  margin: .5rem 0;
+  background-color: var(--white);
+  font-weight: 400;
+}
+.dashboard__sidebar__title img {
+  margin-right: .5rem;
+  background-color: var(--black);
+  border-radius: 2px;
+}
+.dashboard__sidebar__header {
+  cursor: pointer;
+}
+.dashboard__sidebar__header:hover i:before {
+  color: var(--blue);
+}
+.dashboard__sidebar__header i:before {
+  font-size: .875rem;
+  color: var(--light-gray);
+}
+
+.dashboard__sidebar__header.active i {
+  transform: rotate(180deg);
+  color: var(--blue);
+}
+.dashboard__sidebar .button {
+  font-size: .75rem;
+  color: var(--light-gray);
+  background-color: transparent;
+  width: 100%;
+  text-align: left;
+  display: flex;
+  justify-content: start;
+  padding: .75rem 0;
+}
+.dashboard__sidebar .button:hover {
+  color: var(--blue);
+}
+
+.dashboard__content {
+  width: calc(100% - 12.5rem);
+  background-color: var(--dark-white);
+  border-radius: 0.25rem;
+  padding: 1.5rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 1.5rem;
+}
+.dashboard__content .card__box {
+  max-height: 26.25rem;
+  padding-bottom: 1.25rem;
+}
+.dashboard__content .card__box:last-child {
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+.dashboard__table__content { 
+  overflow-y: auto; 
+  height: 16.25rem; 
+}
+.dashboard__topics__wrapper { 
+  overflow-y: auto; 
+  height: 20.25rem; 
+}
+.dashboard__table__content thead th,
+.dashboard__topics__wrapper thead th { 
+  position: sticky; 
+  top: 0; 
+  background-color: var(--white);
+  z-index: 1;
+} 
+.dashboard__table__content table, .dashboard__topics__wrapper table { 
+  border-collapse: collapse;         
+  width: 100%; 
+}
+.dashboard__table__wrapper {
+  padding: 0 2.25rem;
+}
+.dashboard__table__sort {
+  display: flex;
+  align-items: center;
+  font-size: 0.75rem;
+  margin-bottom: 1.25rem;
+  color: var(--light-gray);
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  font-weight: 700;
+}
+.dashboard__table__sort img {
+  margin-left: 0.25rem;
+  height: 0.75rem;
+  width: 0.75rem;
+}
+.dashboard__table__wrapper table th:first-child,
+.dashboard__table__wrapper table td:first-child {
+  padding-left: 0;
+}
+.dashboard__table__accordion {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  font-size: 0.875rem;
+  color: var(--dark-gray);
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+.dashboard__table__accordion button {
+  width: 1rem;
+  height: 1rem;
+  position: absolute;
+  left: .5rem;
+  border: none;
+  background-color: transparent;
+  padding: 0;
+}
+.dashboard__table__accordion.active button {
+  transform: rotate(180deg);
+}
+.dashboard__table__accordion img {
+  left: .5rem;
+}
+.dashboard__events__wrapper {
+  max-height: 20.3125rem;
+  overflow-y: auto;
+}
+.dashboard__events__title {
+  padding-left: 1.5rem;
+  position: relative;
+  margin-right: 2rem;
+  width: 80%;
+}
+.dashboard__events__title img {
+  position: absolute;
+  left: 0;
+}
+.dashboard__events__title h4 {
+  font-weight: 700;
+  font-size: .875rem;
+  color: var(--dark-gray);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.dashboard__events__item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 0.0625rem solid var(--darker-grey);
+  padding: 0.75rem;
+}
+.dashboard__events__item p {
+  font-weight: 300;
+  color: var(--light-gray);
+  margin-top: 0.25rem;
+  margin-bottom: 0;
+}
+.dashboard__events__count {
+  font-size: 0.875rem;
+  font-weight: 400;
+  color: var(--light-gray);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+.dashboard__events__count span {
+  background-color: var(--orange-light);
+  border-radius: 0.25rem;
+  color: var(--white);
+  font-weight: 700;
+  padding: 0.125rem;
+  margin: 0.125rem;
+  display: flex;
+  width: fit-content;
+  font-size: 0.625rem;
+}
+
+.dashboard__topics__wrapper table th,
+.dashboard__topics__wrapper table td {
+  padding: 0.5rem;
+}
+.dashboard__topics__wrapper svg {
+  height: 2rem;
+}
+.dashboard__topics__wrapper .topics-container {
+  display: flex;
+  align-items: center;
+  width: 4rem;
+}
+.dashboard__topics__wrapper .topics-container > div:first-child,
+.dashboard__topics__wrapper .chart-container > div:first-child {
+  min-height: 2rem !important;
+  height: 2rem;
+}
+.dashboard__topics__wrapper .topics-container .apexcharts-graphical {
+  transform: translateY(0.5rem);
+}
+.dashboard__topics__wrapper .topics-container .apexcharts-xaxis,
+.dashboard__topics__wrapper .chart-container .apexcharts-xaxis,
+.dashboard__topics__chart .apexcharts-datalabels-group {
+  display: none;
+}
+.dashboard__topics__wrapper .topics-container .apexcharts-canvas {
+  height: 2rem !important;
+}
+.dashboard__topics__wrapper .chart-container .apexcharts-canvas {
+  display: flex;
+  align-items: center;
+  height: 2rem !important;
+}
+.dashboard__topics__wrapper .chart-container .apexcharts-graphical {
+  transform: translateX(-0.375rem) translateY(-0.375rem);
+}
+.dashboard__topics__chart {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.dashboard__topics__chart .apexcharts-canvas,
+.dashboard__topics__chart svg {
+  width: 2rem !important;
+}
+.dashboard__topics__chart span {
+  margin-right: 0.25rem;
+}
+
+@media (max-width: 1199.98px) {
+  .dashboard__content {
+    display: block;
+  }
+  .dashboard__content {
+    padding: .75rem;
+  }
+  .dashboard__table__wrapper {
+    padding: 1.75rem;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .dashboard__sidebar, .dashboard__content {
+    width: 100%;
+    display: block;
+  }
+  .dashboard__content {
+    padding: .75rem;
+  }
+  .dashboard__table__wrapper {
+    padding: 1.75rem;
+  }
+  .dashboard__events__item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .dashboard__events__count {
+    padding-left: 1.5rem;
+    padding-top: .25rem;
+  }
+}

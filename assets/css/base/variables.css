@@ -1,0 +1,34 @@
+:root {
+  --white: #fff;
+  --black: #000;
+  --light-black: #1F1F1F;
+  --lightest-gray: #C7C7CC;
+  --blue: #4E46B4;
+  --konstellate-grey: #E5E5EA;
+  --kon-light-grey: #FAFAFC;
+  --grey: #444444;
+  --light-gray: #8E8E93;
+  --lighter-gray: #1C1C1E;
+  --dark-gray: #595D62;
+  --darker-grey: #E2E2E2;
+  --dark-white: #F2F2F7;
+  --orange-light: #b3804a8f;
+  --green: #40A69F;
+  --darkest-gray: #48484A;
+  --red: #D33030;
+  --yellow: #FFB319;
+  --yellow-light: #fab42594;
+  --yellow-lighter: #fab4253d;
+}
+
+:root {
+  --default-font: "Open Sans", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --body-font: "DM Sans", sans-serif;
+}
+.py-12 {
+  padding-top: .75rem;
+  padding-bottom: .75rem;
+}
+.mt-12 {
+  margin-top: .75rem;
+}

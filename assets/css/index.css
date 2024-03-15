@@ -1,0 +1,11 @@
+@import url(./base/variables.css);
+@import url(./base/typography.css);
+@import url(./base/animation.css);
+@import url(./base/global.css);
+@import url(./layout/header.css);
+@import url(./layout/sidebar.css);
+@import url(./pages/dashboard.css);
+@import url(./pages/result.css);
+@import url(./pages/search.css);
+@import url(./pages/notebook.css);
+@import url(./pages/admin.css);

@@ -1,0 +1,117 @@
+.search__info {
+  width: calc(100% - 27.25rem);
+  background-color: var(--dark-white);
+  border-radius: 0.25rem;
+  padding: 1rem 1.5rem;
+  min-height: calc(100vh - 11.75rem);
+}
+.search__topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+}
+.search__content {
+  display: flex;
+  gap: 1rem;
+}
+.search__info__items {
+  width: calc(100% - 16.875rem);
+}
+.search__info__item {
+  display: flex;
+  gap: 1.25rem;
+  font-size: .875rem;
+  font-weight: 400;
+}
+.search__info__time {
+  font-weight: 400;
+  color: var(--dark-gray);
+  margin-top: .125rem;
+  display: block;
+}
+.search__info__item:nth-child(even) {
+  font-weight: 700;
+}
+
+.search__info__item--title {
+  width: 3.75rem;
+}
+.search__info__item--content {
+  width: calc(100% - 3.75rem);
+}
+.search__info h3 {
+  font-weight: 700;
+  font-size: .875rem;
+}
+.search__topbar__info {
+  font-size: .625rem;
+}
+.search__topbar__info span {
+  padding-right: .5rem;
+}
+.search__topbar__info span:last-child {
+  padding: 0 0 0 .5rem;
+  font-weight: 700;
+  color: var(--black);
+}
+.search__topbar__link {
+  color: var(--blue);
+  text-decoration: none;
+  margin-right: .5rem;
+  cursor: pointer;
+}
+.search__topbar__link:hover {
+  text-decoration: underline;
+}
+.search__topbar__action {
+  display: flex;
+  align-items: center;
+}
+.search__topbar__action button:not(:last-child) {
+  border: none;
+  background-color: transparent;
+  width: 2rem;
+  height: 2rem;
+  padding: 0;
+}
+.search__topbar__action button:hover i {
+  color: var(--blue);
+}
+.search__topbar__action .search__topbar__notebook {
+  border: none;
+  background-color: transparent;
+  padding: .25rem .75rem;
+}
+.search__topbar__action .search__topbar__notebook:hover {
+  color: var(--blue);
+}
+.search__content .result__filter {
+  width: 16.875rem;
+}
+
+@media (max-width: 1199.98px) {
+  .search__info {
+    width: 60%;
+    padding: .75rem;
+  }
+  .search__topbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .search__content {
+    flex-direction: column;
+  }
+  .search__content .result__filter {
+    width: 100%;
+  }
+  .search__info__items {
+    width: 100%;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .result__sidebar, .search__info {
+    width: 100%;
+  }
+}
