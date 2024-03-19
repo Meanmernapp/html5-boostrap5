@@ -2,7 +2,7 @@
   background-color: var(--dark-white);
   padding: 0 0.75rem 0.75rem;
   width: 12.5rem;
-  min-width: 8.5rem;
+  min-width: 10.5rem;
   /* height: calc(100vh - 164px); */
 }
 .dashboard__sidebar__list--item {
@@ -25,6 +25,7 @@
   margin-bottom: .125rem;
   font-weight: 400;
 }
+
 .dashboard__sidebar__title {
   color: var(--black);
   padding: .5rem;

@@ -165,33 +165,9 @@
                   My Kols
                 </div>
                 <div class="dashboard__sidebar__list px-2">
-                  <div class="dashboard__sidebar__list--item">
-                    <a href="#">
-                      <h4 data-id="user_name" class="user_name_menu">Parminder Singh</h4>
-                    </a>
-                    <p class="m-0">University of AZ</p>
-                  </div>
-                  <div class="dashboard__sidebar__list--item">
-                    <a href="#">
-                      <h4 data-id="user_name" class="user_name_menu">Parminder Singh</h4>
-                    </a>
-                    <p class="m-0">University of AZ</p>
-                  </div>
-                  <div class="dashboard__sidebar__list--item">
-                    <a href="#">
-                      <h4 data-id="user_name" class="user_name_menu">Parminder Singh</h4>
-                    </a>
-                    <p class="m-0">University of AZ</p>
-                  </div>
-                  <div class="dashboard__sidebar__list--item">
-                    <a href="#">
-                      <h4 data-id="user_name" class="user_name_menu">Parminder Singh</h4>
-                    </a>
-                    <p class="m-0">University of AZ</p>
-                  </div>
-
-                  <button class="button">Load More...</button>
+                 
                 </div>
+                <button class="button" id="load_more_List_kol_user">Load More...</button>
               </div>
             </div>
             <div class="dashboard__content" id="mykol">
@@ -223,7 +199,7 @@
                       My KOL's
                     </div>
                     <div class="dashboard__table__content">
-                      <table>
+                      <table id="kol_table">
                         <thead>
                           <th>First Name</th>
                           <th>Last Name</th>
@@ -231,7 +207,7 @@
                         </thead>
                         <tbody></tbody>
                       </table>
-                      <button class="button load__more">
+                      <button class="button load__more" id="table_kol_load_more">
                         Load More...
                       </button>
                     </div>
@@ -545,9 +521,9 @@
                         <button><img src="./assets/images/play-circle.svg" /></button>
                         
                       </div> -->
-                
-                      <iframe width="125px" height="90px" src="https://www.youtube.com/embed/D5XNacL1_fM" frameborder="0"
-                      allowfullscreen></iframe>
+
+                      <iframe width="125px" height="90px" src="https://www.youtube.com/embed/D5XNacL1_fM"
+                        frameborder="0" allowfullscreen></iframe>
                       <div class="result__sidebar__item--content">
                         <div class="result__sidebar__item--title">
                           <h3>Uromiogs Live 2023: Dr. Petros Grivas on Promising Future Treatments in Bladder Cancer
@@ -573,9 +549,9 @@
                         <img class="result__sidebar__item--photo" src="./assets/images/video1.png" />
                         <button><img src="./assets/images/play-circle.svg" /></button>
                       </div> -->
-                      <iframe width="125px" height="90px" src="https://www.youtube.com/embed/yhmXJvDlO8s" frameborder="0"
-                      allowfullscreen></iframe>
-                      
+                      <iframe width="125px" height="90px" src="https://www.youtube.com/embed/yhmXJvDlO8s"
+                        frameborder="0" allowfullscreen></iframe>
+
                       <div class="result__sidebar__item--content">
                         <div class="result__sidebar__item--title">
                           <h3>Uromiogs Live 2023: Dr. Petros Grivas on Promising Future Treatments in Bladder Cancer
@@ -682,7 +658,7 @@
                             </ul>
                           </div>
                           <div class="result__summary__item">
-                            <h4>Negetives</h4>
+                            <h4>Negative</h4>
                             <ul>
                               <li>
                                 Early Stages and Limited Data: Challenges due to the early stages of treatments like Tar
@@ -740,7 +716,7 @@
                           </div>
                         </div> -->
                       </div>
-                      <div class="card__box result__summary__info">
+                      <!-- <div class="card__box result__summary__info">
                         <h4>Astellas Pharma Inc</h4>
                         <a href="#">astellas.com</a>
                         <div class="result__summary__text">
@@ -772,7 +748,7 @@
                           </div>
                         </div>
                         <button class="load__more button mx-auto">Show More</button>
-                      </div>
+                      </div> -->
                     </div>
                     <!-- <div class="result__research">
                       <h2 class="my-3">Research</h2>
@@ -923,7 +899,7 @@
                           </button>
                         </div>
                         <div class="result__info__summary">
-                          <h5>Call Summary</h5>
+                          <h5>Summary</h5>
                           <ul>
                             <li>
                               Tar 200 in Non-Muscle Invasive Bladder Cancer: Early data on Tar 200, delivering
@@ -966,6 +942,7 @@
 
                         <div class="result__info__summary">
                           <h5>Sentiment Analysis</h5>
+                          <h5>Positive</h5>
                           <ul>
                             <li>
                               Promising Early Results: The transcript begins on a positive note, highlighting the
@@ -1080,7 +1057,7 @@
                           </button>
                         </div>
                         <div class="result__info__summary">
-                          <h5>Call Summary</h5>
+                          <h5>Summary</h5>
                           <ul>
                             <li>
                               Lack of Definitive Data for UTUC: Unlike bladder cancer, there is a scarcity of definitive
@@ -1129,6 +1106,7 @@
 
                         <div class="result__info__summary">
                           <h5>Sentiment Analysis</h5>
+                          <h5>Positive</h5>
                           <ul>
                             <li>
                               Evidence-Based Support for Adjuvant Therapy: The mention of the POUT trial provides
@@ -1280,29 +1258,62 @@
           { Firstname: "Saby", LastName: "George", Institution: "Roswell Park" }
         ];
         // Function to populate the table with dynamic data
-        function populateTable() {
-          var tableBody = $("table tbody");
+        // function populateTable() {
+        //   var tableBody = $("table tbody");
 
-          // Clear existing table rows
-          tableBody.empty();
+        //   // Clear existing table rows
+        //   tableBody.empty();
 
-          // Iterate over the object and create table rows
-          $.each(mykol, function (index, entry) {
-            var row = $("<tr></tr>");
-            row.append("<td>" + entry.Firstname + "</td>");
-            row.append("<td>" + entry.LastName + "</td>");
-            row.append("<td>" + entry.Institution + "</td>");
-            tableBody.append(row);
-          });
+        //   // Iterate over the object and create table rows
+        //   $.each(mykol, function (index, entry) {
+        //     var row = $("<tr></tr>");
+        //     row.append("<td>" + entry.Firstname + "</td>");
+        //     row.append("<td>" + entry.LastName + "</td>");
+        //     row.append("<td>" + entry.Institution + "</td>");
+        //     tableBody.append(row);
+        //   });
+        // }
+
+        // // Call the function to populate the table initially
+        // populateTable();
+
+        // table dynamic  code start
+
+        var itemsToShow = 5; // Number of items to show initially
+        var itemsLoaded = 0;
+
+        // Function to add rows to the table
+        function addRows(start, end) {
+          for (var i = start; i < end; i++) {
+            var row = $('<tr>');
+            row.append($('<td>').text(mykol[i].Firstname));
+            row.append($('<td>').text(mykol[i].LastName));
+            row.append($('<td>').text(mykol[i].Institution));
+            $('#kol_table tbody').append(row);
+          }
+          itemsLoaded = end;
         }
 
-        // Call the function to populate the table initially
-        populateTable();
+        // Load initial rows
+        addRows(0, itemsToShow);
 
+        // Load more button click event
+        $('#table_kol_load_more').click(function () {
+          var remainingItems = mykol.length - itemsLoaded;
+          var nextItems = Math.min(remainingItems, itemsToShow);
+          addRows(itemsLoaded, itemsLoaded + nextItems);
+
+          if (itemsLoaded === mykol.length) {
+            $('#table_kol_load_more').hide();
+          }
+        });
+
+        // table code end
 
         $(".user_selected").hide();
 
-        $(".page__content__wrapper  .user_name_menu").on("click", function (event) {
+        $(document).on("click", ".user_name_menu", function () {
+
           const dataId = $(this).attr("data-id");
           if (dataId) {
             if ($(this).hasClass("active")) {
@@ -1317,10 +1328,53 @@
               $("#" + dataId).show();
             }
           }
+
         });
+        // $.each(mykol, function (index, person) {
+        //   // Create a div element for each person
+        //   var div = $("<div>").addClass("dashboard__sidebar__list--item");
+
+        //   // Create an anchor element with href="#" inside the div
+        //   var anchor = $("<a>").attr("href", "#").appendTo(div);
+
+        //   // Create an h4 element with the person's name and append it to the anchor
+        //   $("<h4>").addClass("user_name_menu").attr("data-id", `user_name`).text(person.Firstname + " " + person.LastName).appendTo(anchor);
+
+        //   // Create a p element with the person's institution and append it to the anchor
+        //   $("<p>").addClass("institution m-0").text(person.Institution).appendTo(anchor);
+
+        //   // Append the div to the container where you want to display the list
+        //   div.appendTo(".dashboard__sidebar__list"); // Change ".container" to your actual container selector
+        // });
 
 
+        function displayItems(startIndex, count) {
+          var end = Math.min(startIndex + count, mykol.length);
+          for (var i = startIndex; i < end; i++) {
+            var person = mykol[i];
+            var div = $("<div>").addClass("dashboard__sidebar__list--item");
+            var anchor = $("<a>").attr("href", "#").appendTo(div);
+            $("<h4>").addClass("user_name_menu").attr("data-id", `user_name`).text(person.Firstname + " " + person.LastName).appendTo(anchor);
+            $("<p>").addClass("institution m-0").text(person.Institution).appendTo(anchor);
+            div.appendTo(".dashboard__sidebar__list");
+          }
+        }
 
+        // Initial display
+        var itemsToShow = 8;
+        displayItems(0, itemsToShow);
+
+        // Load more button click event
+        var startIndex = itemsToShow;
+        var itemsPerLoad = 8; // Change this to adjust the number of items loaded per click
+        $("#load_more_List_kol_user").on("click", function () {
+          displayItems(startIndex, itemsPerLoad);
+          startIndex += itemsPerLoad;
+          // Hide the button if all items are loaded
+          if (startIndex >= mykol.length) {
+            $("#load_more_List_kol_user").hide();
+          }
+        });
       });
 
     </script>
