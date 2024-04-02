@@ -1,0 +1,144 @@
+// mixin min width breakpoint
+@mixin min-breakpoint($point) {
+	@media (min-width: #{$point}px) { @content; }
+}
+
+// mixin max width breakpoint
+@mixin breakpoint($point) {
+	@media (max-width: #{$point}px) { @content; }
+}
+
+// mixin max height breakpoint
+@mixin max-height-breakpoint($point) {
+	@media (max-height: #{$point}px) { @content; }
+}
+
+// mixin min height breakpoint
+@mixin min-height-breakpoint($point) {
+	@media (min-height: #{$point}px) { @content; }
+}
+
+// placeholder
+@mixin placeholder($color: $placeholder-color) {
+	&:-moz-placeholder        { color: $color; opacity: 1; }
+	&::-moz-placeholder       { color: $color; opacity: 1; }
+	&:-ms-input-placeholder     { color: $color; }
+	&::-webkit-input-placeholder  { color: $color; }
+}
+
+// hide text
+@mixin hide-text {
+	overflow: hidden;
+	text-indent: -9999px;
+}
+
+// Sizing shortcuts
+@mixin size($width, $height) {
+	width: $width;
+	height: $height;
+}
+
+// mixin for Alignment
+@mixin align($value1, $value2) {
+	display: $value1;
+	vertical-align: $value2;
+}
+
+// mixin for font face
+@mixin fontface ($fontfamily, $filename, $font-weight, $font-style) {
+	font-family: $fontfamily;
+	src:url('../fonts/#{$filename}.woff') format('woff'),
+			url('../fonts/#{$filename}.woff2') format('woff2');
+	font-weight: $font-weight;
+	font-style: $font-style;
+}
+
+// font size
+@mixin fontsize($font-size, $line-height) {
+	font-size: $font-size;
+	line-height: $line-height;
+}
+
+@mixin font($size: 16, $lineheight: 16, $weight:400) {
+	font-size: $size + px;
+	line-height: $lineheight + px;
+	font-weight: $weight;
+}
+
+// img-responsive
+@mixin img-style {
+	display: block;
+	width: 100%;
+	height: auto;
+}
+
+// reset for list
+@mixin listreset {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+// inline reset
+@mixin inline-reset {
+	font-size: 0;
+	line-height: 0;
+
+>*{
+		font-size: $font-size-base;
+		line-height: $line-height-base;
+	}
+}
+
+// text gradient
+@mixin text-gradient {
+	background: -webkit-linear-gradient(left, #18e8d9 , #009ee2);
+	background: -o-linear-gradient(right, #18e8d9 , #009ee2);
+	background: -moz-linear-gradient(right, #18e8d9 , #009ee2);
+	background: linear-gradient(to right, #18e8d9 , #009ee2);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+// mixin for position properties
+@mixin position($position, $top, $right, $bottom, $left){
+	position: $position;
+	top: $top;
+	right: $right;
+	bottom: $bottom;
+	left: $left;
+}
+
+// mixin for flex properties
+@mixin flex($display, $flex-wrap, $align-items, $justify-content) {
+	display: $display;
+	flex-wrap: $flex-wrap;
+	align-items: $align-items;
+	justify-content: $justify-content;
+}
+
+// mixin for Text content
+@mixin textContent() {
+	flex-grow: 1;
+	flex-basis: 0;
+	min-width: 0;
+}
+
+// mixin for vertical alignment
+@mixin vertical($vertical: top) {
+	display: inline-block;
+	vertical-align: $vertical;
+}
+
+// mixin opacity show
+@mixin OpacityShow() {
+	opacity: 1;
+	visibility: visible;
+}
+
+// mixin opacity hide
+@mixin OpacityHide() {
+	opacity: 0;
+	visibility: hidden;
+}
+

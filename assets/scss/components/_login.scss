@@ -1,0 +1,322 @@
+body {
+	min-width: 1200px;
+	
+	@include min-breakpoint($widescreen) {
+	}
+}
+
+.login-section {
+	position: relative;
+	background: $light-brown;
+	font-family: $poppins-font;
+	min-height: 100vh;
+}
+
+.login-header {
+	@include flex(flex, wrap, center, space-between);
+	position: relative;
+	padding: 20px 35px;
+
+	.email {
+		display: block;
+
+		a {
+			@include align(inline-block, top);
+			@include font(18, 22, 400);
+			letter-spacing: -1px;
+			position: relative;
+			padding: 0 0 0 30px;
+			color: $theme-color;
+			text-decoration: none;
+			transition: all 0.3s ease;
+
+			&:hover {
+				opacity: 0.9;
+			}
+		}
+
+		i {
+			position: absolute;
+			left: 0;
+			top: 2px;
+		}
+	}
+}
+
+.login-logo {
+	position: relative;
+	display: block;
+	width: 189px;
+
+	a {
+		display: block;
+	}
+
+	img {
+		@include img-style;
+	}
+}
+
+.login-block-holder {
+	@include flex(flex, wrap, center, center);
+	position: relative;
+	min-height: calc(100vh - 156px);
+
+	.container {
+		width: 100%;
+	}
+}
+
+.login-block-wrap {
+	position: relative;
+	max-width: 575px;
+	margin: 0 auto;
+}
+
+.login-block {
+	position: relative;
+	background: $white;
+	overflow: hidden;
+	border-radius: 7px;
+}
+
+.login-content {
+	position: relative;
+	padding: 0 32px;
+
+	.heading-area {
+		@include flex(flex, wrap, center, inherit);
+		position: relative;
+		margin: 60px 0;
+	}
+
+	.heading {
+		@include font(36, 42, 500);
+		position: relative;
+		display: block;
+		color: $theme-color;
+		letter-spacing: -1px;
+		padding: 0 0 0 60px;
+
+		i {
+			position: absolute;
+			left: 0;
+			top: 1px;
+			font-size: 42px;
+		}
+	}
+}
+
+.login-back-btn-wrap {
+	position: relative;
+	display: block;
+	margin: 0 15px 0 0;
+
+	a {
+		@include fontsize(16px, 18px);
+		display: block;
+		text-decoration: none;
+		color: $lighter-gray;
+		transition: $transition;
+
+		i {
+			position: relative;
+			display: block;
+		}
+
+		&:hover {
+			color: $theme-color;
+		}
+	}
+}
+
+.login-form {
+	position: relative;
+}
+
+.field-row {
+	position: relative;
+	margin: 0 0 15px;
+
+	.form-control {
+		@include placeholder($lighter-gray);
+		@include font(17, 20, 400);
+		@include size(100%, 60px);
+		outline: none;
+		box-shadow: none;
+		border-radius: 10px;
+		border: 2px solid $light-gray;
+		padding: 8px 15px 8px 60px;
+		color: $theme-color;
+	}
+
+	.field-label {
+		position: absolute;
+		left: 20px;
+		top: 22px;
+		margin: 0;
+		color: $lighter-gray;
+		font-size: 18px;
+		pointer-events: none;
+
+		i {
+			position: relative;
+			display: block;
+		}
+
+		.ico-lock {
+			font-size: 22px;
+			top: -3px;
+			left: 2px;
+		}
+	}
+}
+
+.form-btn-area {
+	@include flex(flex, wrap, center, space-between);
+	position: relative;
+	padding: 10px 0 35px;
+
+	.text {
+		@include font(17, 20, 400);
+		display: block;
+
+		a {
+			color: $theme-color;
+			text-decoration: none;
+			transition: $transition;
+
+			&:hover {
+				opacity: 0.9;
+			}
+		}
+	}
+}
+
+.submit-btn-holder {
+	@include flex(flex, wrap, center, flex-end);
+	@include textContent();
+	position: relative;
+}
+
+.submit-btn {
+	@include flex(flex, wrap, center, center);
+	@include font(18, 22, 500);
+	position: relative;
+	outline: none;
+	box-shadow: none;
+	min-width: 152px;
+	border: none;
+	height: 56px;
+	border-radius: 7px;
+	background: $theme-color;
+	color: $white;
+	padding: 10px 20px;
+	transition: $transition;
+	text-decoration: none;
+
+	&:hover {
+		background: darken($theme-color, 20%);
+		color: $white;
+		opacity: 0.85;
+	}
+}
+
+.form-social-area {
+	position: relative;
+	background: #f2f2f7;
+	padding: 30px 32px;
+	margin: -10px 0 0;
+}
+
+.form-social-list {
+	position: relative;
+	margin: 0;
+
+	li {
+		position: relative;
+		margin: 0 0 15px;
+	}
+
+	a {
+		@include flex(flex, wrap, center, inherit);
+		@include font(17, 22, 400);
+		@include size(100%, 60px);
+		position: relative;
+		text-decoration: none;
+		transition: $transition;
+		padding: 8px 16px;
+		color: $theme-color;
+		border-radius: 7px;
+		border: 2px solid $light-gray;
+
+		&:hover {
+			opacity: 0.9;
+		}
+	}
+
+	.icon-holder {
+		@include flex(flex, wrap, center, center);
+		width: 22px;
+
+		img {
+			max-width: 100%;
+			height: auto;
+			display: block;
+		}
+	}
+
+	.text {
+		@include textContent();
+		position: relative;
+		padding: 0 0 0 20px;
+		display: block;
+	}
+}
+
+.login-footer {
+	position: relative;
+	padding: 32px 0;
+}
+
+.terms-list {
+	@include flex(flex, wrap, center, center);
+	@include font(16, 20, 400);
+	position: relative;
+	margin: 0 -11px;
+
+	li {
+		position: relative;
+		padding: 0 11px;
+
+		&:before {
+			content: '';
+			position: absolute;
+			left: -2px;
+			top: 1px;
+			bottom: 1px;
+			width: 2px;
+			background: $theme-color;
+		}
+
+		&:first-child {
+
+			&:before {
+				display: none;
+			}
+		}
+	}
+
+	a {
+		position: relative;
+		display: inline-block;
+		vertical-align: top;
+		color: $theme-color;
+		text-decoration: none;
+		transition: $transition;
+
+		&:hover {
+			opacity: 0.9;
+		}
+	}
+}
