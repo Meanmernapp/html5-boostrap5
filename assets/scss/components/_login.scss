@@ -1,8 +1,5 @@
 body {
-	min-width: 1200px;
-	
-	@include min-breakpoint($widescreen) {
-	}
+	min-width: 320px;
 }
 
 .login-section {
@@ -15,20 +12,37 @@ body {
 .login-header {
 	@include flex(flex, wrap, center, space-between);
 	position: relative;
-	padding: 20px 35px;
+	padding: 15px 15px;
+
+	@include min-breakpoint($tablet) {
+		padding: 20px 25px;
+	}
+
+	@include min-breakpoint($desktop) {
+		padding: 20px 35px;
+	}
 
 	.email {
 		display: block;
 
 		a {
-			@include align(inline-block, top);
-			@include font(18, 22, 400);
-			letter-spacing: -1px;
+			@include font(14, 18, 400);
 			position: relative;
-			padding: 0 0 0 30px;
+			padding: 0 0 0 22px;
 			color: $theme-color;
+			display: block;
 			text-decoration: none;
-			transition: all 0.3s ease;
+			transition: $transition;
+
+			@include min-breakpoint($xs-phone) {
+				font-size: 15px;
+			}
+
+			@include min-breakpoint($tablet) {
+				@include font(18, 22, 400);
+				letter-spacing: -1px;
+				padding: 0 0 0 30px;
+			}
 
 			&:hover {
 				opacity: 0.9;
@@ -38,7 +52,11 @@ body {
 		i {
 			position: absolute;
 			left: 0;
-			top: 2px;
+			top: 1.5px;
+
+			@include min-breakpoint($tablet) {
+				top: 2px;
+			}
 		}
 	}
 }
@@ -46,7 +64,15 @@ body {
 .login-logo {
 	position: relative;
 	display: block;
-	width: 189px;
+	width: 120px;
+
+	@include min-breakpoint($xs-phone) {
+		width: 140px;
+	}
+
+	@include min-breakpoint($tablet) {
+		width: 189px;
+	}
 
 	a {
 		display: block;
@@ -58,9 +84,12 @@ body {
 }
 
 .login-block-holder {
-	@include flex(flex, wrap, center, center);
 	position: relative;
-	min-height: calc(100vh - 156px);
+
+	@include min-breakpoint($tablet) {
+		@include flex(flex, wrap, center, center);
+		min-height: calc(100vh - 156px);
+	}
 
 	.container {
 		width: 100%;
@@ -77,32 +106,63 @@ body {
 	position: relative;
 	background: $white;
 	overflow: hidden;
-	border-radius: 7px;
+	border-radius: 5px;
+
+	@include min-breakpoint($tablet) {
+		border-radius: 7px;
+	}
 }
 
 .login-content {
 	position: relative;
-	padding: 0 32px;
+	padding: 0 20px;
+
+	@include min-breakpoint($tablet) {
+		padding: 0 32px;
+	}
 
 	.heading-area {
 		@include flex(flex, wrap, center, inherit);
 		position: relative;
-		margin: 60px 0;
+		margin: 25px 0;
+
+		@include min-breakpoint($tablet) {
+			padding: 60px 0;
+		}
 	}
 
 	.heading {
-		@include font(36, 42, 500);
+		@include font(22, 32, 500);
 		position: relative;
 		display: block;
 		color: $theme-color;
-		letter-spacing: -1px;
-		padding: 0 0 0 60px;
+		padding: 0 0 0 36px;
+
+		@include min-breakpoint($xs-phone) {
+			font-size: 26px;
+			padding: 0 0 0 40px;
+		}
+
+		@include min-breakpoint($sm-phone) {
+			font-size: 28px;
+		}
+
+		@include min-breakpoint($tablet) {
+			@include font(36, 42, 500);
+			letter-spacing: -1px;
+			padding: 0 0 0 60px;
+		}
 
 		i {
 			position: absolute;
 			left: 0;
-			top: 1px;
-			font-size: 42px;
+			top: 2px;
+			font-size: 30px;
+
+			@include min-breakpoint($tablet) {
+				font-size: 42px;
+				top: 1px;
+			}
 		}
 	}
 }
@@ -110,14 +170,22 @@ body {
 .login-back-btn-wrap {
 	position: relative;
 	display: block;
-	margin: 0 15px 0 0;
+	margin: 0 8px 0 0;
+
+	@include min-breakpoint($tablet) {
+		margin: 0 15px 0 0;
+	}
 
 	a {
-		@include fontsize(16px, 18px);
+		@include fontsize(14px, 16px);
 		display: block;
 		text-decoration: none;
 		color: $lighter-gray;
 		transition: $transition;
+
+		@include min-breakpoint($tablet) {
+			@include fontsize(16px, 18px);
+		}
 
 		i {
 			position: relative;
@@ -136,28 +204,45 @@ body {
 
 .field-row {
 	position: relative;
-	margin: 0 0 15px;
+	margin: 0 0 10px;
+
+	@include min-breakpoint($tablet) {
+		margin: 0 0 15px;
+	}
 
 	.form-control {
 		@include placeholder($lighter-gray);
-		@include font(17, 20, 400);
-		@include size(100%, 60px);
+		@include font(14, 18, 400);
+		@include size(100%, 46px);
 		outline: none;
 		box-shadow: none;
-		border-radius: 10px;
+		border-radius: 5px;
 		border: 2px solid $light-gray;
-		padding: 8px 15px 8px 60px;
+		padding: 4px 10px 4px 38px;
 		color: $theme-color;
+
+		@include min-breakpoint($tablet) {
+			@include font(17, 20, 400);
+			@include size(100%, 60px);
+			padding: 8px 15px 8px 60px;
+			border-radius: 10px;
+		}
 	}
 
 	.field-label {
 		position: absolute;
-		left: 20px;
-		top: 22px;
+		left: 14px;
+		top: 16px;
 		margin: 0;
 		color: $lighter-gray;
-		font-size: 18px;
+		font-size: 14px;
 		pointer-events: none;
+
+		@include min-breakpoint($tablet) {
+			font-size: 18px;
+			left: 20px;
+			top: 22px;
+		}
 
 		i {
 			position: relative;
@@ -165,21 +250,39 @@ body {
 		}
 
 		.ico-lock {
-			font-size: 22px;
-			top: -3px;
-			left: 2px;
+			font-size: 17px;
+			top: -1px;
+			left: 1px;
+
+			@include min-breakpoint($tablet) {
+				font-size: 22px;
+				top: -3px;
+				left: 2px;
+			}
 		}
 	}
 }
 
 .form-btn-area {
-	@include flex(flex, wrap, center, space-between);
 	position: relative;
-	padding: 10px 0 35px;
+	padding: 5px 0 25px;
+	text-align: center;
+
+	@include min-breakpoint($tablet) {
+		@include flex(flex, wrap, center, space-between);
+		text-align: left;
+		padding: 10px 0 35px;
+	}
 
 	.text {
-		@include font(17, 20, 400);
+		@include font(14, 18, 400);
 		display: block;
+		margin: 0 0 10px;
+
+		@include min-breakpoint($tablet) {
+			@include font(17, 20, 400);
+			margin: 0;
+		}
 
 		a {
 			color: $theme-color;
@@ -194,26 +297,38 @@ body {
 }
 
 .submit-btn-holder {
-	@include flex(flex, wrap, center, flex-end);
-	@include textContent();
+	@include flex(flex, wrap, center, center);
 	position: relative;
+
+	@include min-breakpoint($tablet) {
+		@include textContent();
+		justify-content: flex-end;
+	}
 }
 
 .submit-btn {
 	@include flex(flex, wrap, center, center);
-	@include font(18, 22, 500);
+	@include font(15, 18, 500);
 	position: relative;
 	outline: none;
 	box-shadow: none;
-	min-width: 152px;
+	min-width: 140px;
 	border: none;
-	height: 56px;
-	border-radius: 7px;
+	height: 46px;
+	border-radius: 5px;
 	background: $theme-color;
 	color: $white;
-	padding: 10px 20px;
+	padding: 7px 20px;
 	transition: $transition;
 	text-decoration: none;
+
+	@include min-breakpoint($tablet) {
+		@include font(18, 22, 500);
+		min-width: 152px;
+		height: 56px;
+		border-radius: 7px;
+		padding: 10px 28px;
+	}
 
 	&:hover {
 		background: darken($theme-color, 20%);
@@ -225,8 +340,13 @@ body {
 .form-social-area {
 	position: relative;
 	background: #f2f2f7;
-	padding: 30px 32px;
-	margin: -10px 0 0;
+	padding: 22px 20px;
+	margin: -5px 0 0;
+
+	@include min-breakpoint($tablet) {
+		padding: 30px 32px;
+		margin: -10px 0 0;
+	}
 }
 
 .form-social-list {
@@ -235,20 +355,31 @@ body {
 
 	li {
 		position: relative;
-		margin: 0 0 15px;
+		margin: 0 0 10px;
+
+		@include min-breakpoint($tablet) {
+			margin: 0 0 15px;
+		}
 	}
 
 	a {
 		@include flex(flex, wrap, center, inherit);
-		@include font(17, 22, 400);
-		@include size(100%, 60px);
+		@include font(15, 18, 400);
+		@include size(100%, 50px);
 		position: relative;
 		text-decoration: none;
 		transition: $transition;
-		padding: 8px 16px;
+		padding: 8px 12px;
 		color: $theme-color;
-		border-radius: 7px;
+		border-radius: 5px;
 		border: 2px solid $light-gray;
+
+		@include min-breakpoint($tablet) {
+			@include font(17, 22, 400);
+			@include size(100%, 60px);
+			border-radius: 7px;
+			padding: 8px 16px;
+		}
 
 		&:hover {
 			opacity: 0.9;
@@ -257,7 +388,11 @@ body {
 
 	.icon-holder {
 		@include flex(flex, wrap, center, center);
-		width: 22px;
+		width: 20px;
+
+		@include min-breakpoint($tablet) {
+			width: 22px;
+		}
 
 		img {
 			max-width: 100%;
@@ -269,34 +404,114 @@ body {
 	.text {
 		@include textContent();
 		position: relative;
-		padding: 0 0 0 20px;
+		padding: 0 0 0 15px;
 		display: block;
+
+		@include min-breakpoint($tablet) {
+			padding: 0 0 0 20px;
+		}
+	}
+}
+
+.login-form-text {
+	@include font(18, 26, 400);
+	position: relative;
+	color: $dark-brown;
+	padding: 0 0 38px;
+
+	@include min-breakpoint($tablet) {
+		@include font(24, 32, 400);
+		padding: 0 0 65px;
+	}
+
+	p {
+		font-size: inherit;
+		margin: 0;
+	}
+}
+
+.login-success-message {
+	position: relative;
+	margin: 0 0 12px;
+
+	@include min-breakpoint($tablet) {
+		margin: 0 0 15px;
+	}
+}
+
+.success-text {
+	@include font(13, 20, 400);
+	position: relative;
+	padding: 10px 12px 10px 42px;
+	color: $white;
+	background: $light-green;
+	border-radius: 5px;
+	display: block;
+
+	@include min-breakpoint($sm-phone) {
+		padding: 10px 12px 10px 45px;
+		font-size: 15px;
+	}
+
+	@include min-breakpoint($tablet) {
+		@include font(22, 32, 400);
+		padding: 11px 20px 11px 70px;
+		border-radius: 10px;
+	}
+
+	i {
+		position: absolute;
+		left: 12px;
+		top: 13px;
+
+		@include min-breakpoint($tablet) {
+			left: 20px;
+			top: 15px;
+		}
 	}
 }
 
 .login-footer {
 	position: relative;
-	padding: 32px 0;
+	padding: 15px 0;
+
+	@include min-breakpoint($tablet) {
+		padding: 32px 0;
+	}
 }
 
 .terms-list {
 	@include flex(flex, wrap, center, center);
-	@include font(16, 20, 400);
+	@include font(15, 20, 400);
 	position: relative;
-	margin: 0 -11px;
+	margin: 0 -8px;
+
+	@include min-breakpoint($tablet) {
+		font-size: 16px;
+		margin: 0 -11px;
+	}
 
 	li {
 		position: relative;
-		padding: 0 11px;
+		padding: 0 8px;
+
+		@include min-breakpoint($tablet) {
+			padding: 0 11px;
+		}
 
 		&:before {
 			content: '';
 			position: absolute;
-			left: -2px;
+			left: -1px;
 			top: 1px;
 			bottom: 1px;
-			width: 2px;
+			width: 1px;
 			background: $theme-color;
+
+			@include min-breakpoint($tablet) {
+				width: 2px;
+				left: -2px;
+			}
 		}
 
 		&:first-child {

@@ -17,6 +17,226 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.ico-content:before {
+  content: "\e908";
+}
+
+.ico-ciontent:before {
+  content: "\e909";
+}
+
+.ico-play:before {
+  content: "\e90a";
+}
+
+.ico-bar:before {
+  content: "\e90b";
+}
+
+.ico-search:before {
+  content: "\e90c";
+}
+
+.ico-dashboard:before {
+  content: "\e90d";
+}
+
+.ico-tag-close:before {
+  content: "\e90e";
+}
+
+.ico-folder:before {
+  content: "\e90f";
+}
+
+.ico-plus:before {
+  content: "\e910";
+}
+
+.ico-me:before {
+  content: "\e911";
+}
+
+.ico-other:before {
+  content: "\e912";
+}
+
+.ico-arrow-top:before {
+  content: "\e913";
+}
+
+.ico-long-arrow-top:before {
+  content: "\e914";
+}
+
+.ico-at:before {
+  content: "\e915";
+}
+
+.ico-clock:before {
+  content: "\e916";
+}
+
+.ico-bell:before {
+  content: "\e917";
+}
+
+.ico-notebook:before {
+  content: "\e918";
+}
+
+.ico-polygon:before {
+  content: "\e919";
+}
+
+.ico-analytics:before {
+  content: "\e91a";
+}
+
+.ico-multi-user:before {
+  content: "\e91b";
+}
+
+.ico-help:before {
+  content: "\e91c";
+}
+
+.ico-integration:before {
+  content: "\e91d";
+}
+
+.ico-view-all:before {
+  content: "\e91e";
+}
+
+.ico-current:before {
+  content: "\e91f";
+}
+
+.ico-user:before {
+  content: "\e920";
+}
+
+.ico-double-user:before {
+  content: "\e921";
+}
+
+.ico-note:before {
+  content: "\e922";
+}
+
+.ico-prev:before {
+  content: "\e923";
+}
+
+.ico-next:before {
+  content: "\e924";
+}
+
+.ico-quick:before {
+  content: "\e925";
+}
+
+.ico-join:before {
+  content: "\e926";
+}
+
+.ico-num-note:before {
+  content: "\e927";
+}
+
+.ico-home:before {
+  content: "\e928";
+}
+
+.ico-down:before {
+  content: "\e929";
+}
+
+.ico-like:before {
+  content: "\e92a";
+}
+
+.ico-read:before {
+  content: "\e92b";
+}
+
+.ico-topic:before {
+  content: "\e92c";
+}
+
+.ico-summarize:before {
+  content: "\e92d";
+}
+
+.ico-share:before {
+  content: "\e92e";
+}
+
+.ico-write:before {
+  content: "\e92f";
+}
+
+.ico-calendar:before {
+  content: "\e930";
+}
+
+.ico-dislike:before {
+  content: "\e931";
+}
+
+.ico-logout:before {
+  content: "\e932";
+}
+
+.ico-read-note:before {
+  content: "\e933";
+}
+
+.ico-drafts:before {
+  content: "\e934";
+}
+
+.ico-subscription:before {
+  content: "\e935";
+}
+
+.ico-select:before {
+  content: "\e936";
+}
+
+.ico-delete:before {
+  content: "\e937";
+}
+
+.ico-edit:before {
+  content: "\e938";
+}
+
+.ico-user-circle:before {
+  content: "\e939";
+}
+
+.ico-reply:before {
+  content: "\e93a";
+}
+
+.ico-auto:before {
+  content: "\e93b";
+}
+
+.ico-add-user:before {
+  content: "\e93c";
+}
+
+.ico-upload:before {
+  content: "\e93d";
+}
+
+.ico-setting:before {
+  content: "\e93e";
+}
+
 .ico-filter:before {
   content: "\e906";
 }
@@ -50,8 +270,9 @@
 }
 
 body {
-  min-width: 1200px;
+  min-width: 320px;
 }
+
 .login-section {
   position: relative;
   background: #d0b99e;
@@ -72,24 +293,46 @@ body {
       -ms-flex-pack: justify;
           justify-content: space-between;
   position: relative;
-  padding: 20px 35px;
+  padding: 15px 15px;
+}
+@media (min-width: 768px) {
+  .login-header {
+    padding: 20px 25px;
+  }
+}
+@media (min-width: 992px) {
+  .login-header {
+    padding: 20px 35px;
+  }
 }
 .login-header .email {
   display: block;
 }
 .login-header .email a {
-  display: inline-block;
-  vertical-align: top;
-  font-size: 18px;
-  line-height: 22px;
+  font-size: 14px;
+  line-height: 18px;
   font-weight: 400;
-  letter-spacing: -1px;
   position: relative;
-  padding: 0 0 0 30px;
+  padding: 0 0 0 22px;
   color: #1e1e1e;
+  display: block;
   text-decoration: none;
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
+}
+@media (min-width: 375px) {
+  .login-header .email a {
+    font-size: 15px;
+  }
+}
+@media (min-width: 768px) {
+  .login-header .email a {
+    font-size: 18px;
+    line-height: 22px;
+    font-weight: 400;
+    letter-spacing: -1px;
+    padding: 0 0 0 30px;
+  }
 }
 .login-header .email a:hover {
   opacity: 0.9;
@@ -97,13 +340,28 @@ body {
 .login-header .email i {
   position: absolute;
   left: 0;
-  top: 2px;
+  top: 1.5px;
+}
+@media (min-width: 768px) {
+  .login-header .email i {
+    top: 2px;
+  }
 }
 
 .login-logo {
   position: relative;
   display: block;
-  width: 189px;
+  width: 120px;
+}
+@media (min-width: 375px) {
+  .login-logo {
+    width: 140px;
+  }
+}
+@media (min-width: 768px) {
+  .login-logo {
+    width: 189px;
+  }
 }
 .login-logo a {
   display: block;
@@ -115,19 +373,23 @@ body {
 }
 
 .login-block-holder {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   position: relative;
-  min-height: calc(100vh - 156px);
+}
+@media (min-width: 768px) {
+  .login-block-holder {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    min-height: calc(100vh - 156px);
+  }
 }
 .login-block-holder .container {
   width: 100%;
@@ -143,12 +405,22 @@ body {
   position: relative;
   background: #fff;
   overflow: hidden;
-  border-radius: 7px;
+  border-radius: 5px;
+}
+@media (min-width: 768px) {
+  .login-block {
+    border-radius: 7px;
+  }
 }
 
 .login-content {
   position: relative;
-  padding: 0 32px;
+  padding: 0 20px;
+}
+@media (min-width: 768px) {
+  .login-content {
+    padding: 0 32px;
+  }
 }
 .login-content .heading-area {
   display: -webkit-box;
@@ -163,38 +435,79 @@ body {
       -ms-flex-pack: inherit;
           justify-content: inherit;
   position: relative;
-  margin: 60px 0;
+  margin: 25px 0;
+}
+@media (min-width: 768px) {
+  .login-content .heading-area {
+    padding: 60px 0;
+  }
 }
 .login-content .heading {
-  font-size: 36px;
-  line-height: 42px;
+  font-size: 22px;
+  line-height: 32px;
   font-weight: 500;
   position: relative;
   display: block;
   color: #1e1e1e;
-  letter-spacing: -1px;
-  padding: 0 0 0 60px;
+  padding: 0 0 0 36px;
+}
+@media (min-width: 375px) {
+  .login-content .heading {
+    font-size: 26px;
+    padding: 0 0 0 40px;
+  }
+}
+@media (min-width: 480px) {
+  .login-content .heading {
+    font-size: 28px;
+  }
+}
+@media (min-width: 768px) {
+  .login-content .heading {
+    font-size: 36px;
+    line-height: 42px;
+    font-weight: 500;
+    letter-spacing: -1px;
+    padding: 0 0 0 60px;
+  }
 }
 .login-content .heading i {
   position: absolute;
   left: 0;
-  top: 1px;
-  font-size: 42px;
+  top: 2px;
+  font-size: 30px;
+}
+@media (min-width: 768px) {
+  .login-content .heading i {
+    font-size: 42px;
+    top: 1px;
+  }
 }
 
 .login-back-btn-wrap {
   position: relative;
   display: block;
-  margin: 0 15px 0 0;
+  margin: 0 8px 0 0;
+}
+@media (min-width: 768px) {
+  .login-back-btn-wrap {
+    margin: 0 15px 0 0;
+  }
 }
 .login-back-btn-wrap a {
-  font-size: 16px;
-  line-height: 18px;
+  font-size: 14px;
+  line-height: 16px;
   display: block;
   text-decoration: none;
   color: #a4a4a4;
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
+}
+@media (min-width: 768px) {
+  .login-back-btn-wrap a {
+    font-size: 16px;
+    line-height: 18px;
+  }
 }
 .login-back-btn-wrap a i {
   position: relative;
@@ -210,20 +523,25 @@ body {
 
 .field-row {
   position: relative;
-  margin: 0 0 15px;
+  margin: 0 0 10px;
+}
+@media (min-width: 768px) {
+  .field-row {
+    margin: 0 0 15px;
+  }
 }
 .field-row .form-control {
-  font-size: 17px;
-  line-height: 20px;
+  font-size: 14px;
+  line-height: 18px;
   font-weight: 400;
   width: 100%;
-  height: 60px;
+  height: 46px;
   outline: none;
   -webkit-box-shadow: none;
           box-shadow: none;
-  border-radius: 10px;
+  border-radius: 5px;
   border: 2px solid #dfdfdf;
-  padding: 8px 15px 8px 60px;
+  padding: 4px 10px 4px 38px;
   color: #1e1e1e;
 }
 .field-row .form-control:-moz-placeholder {
@@ -240,45 +558,86 @@ body {
 .field-row .form-control::-webkit-input-placeholder {
   color: #a4a4a4;
 }
+@media (min-width: 768px) {
+  .field-row .form-control {
+    font-size: 17px;
+    line-height: 20px;
+    font-weight: 400;
+    width: 100%;
+    height: 60px;
+    padding: 8px 15px 8px 60px;
+    border-radius: 10px;
+  }
+}
 .field-row .field-label {
   position: absolute;
-  left: 20px;
-  top: 22px;
+  left: 14px;
+  top: 16px;
   margin: 0;
   color: #a4a4a4;
-  font-size: 18px;
+  font-size: 14px;
   pointer-events: none;
+}
+@media (min-width: 768px) {
+  .field-row .field-label {
+    font-size: 18px;
+    left: 20px;
+    top: 22px;
+  }
 }
 .field-row .field-label i {
   position: relative;
   display: block;
 }
 .field-row .field-label .ico-lock {
-  font-size: 22px;
-  top: -3px;
-  left: 2px;
+  font-size: 17px;
+  top: -1px;
+  left: 1px;
+}
+@media (min-width: 768px) {
+  .field-row .field-label .ico-lock {
+    font-size: 22px;
+    top: -3px;
+    left: 2px;
+  }
 }
 
 .form-btn-area {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
   position: relative;
-  padding: 10px 0 35px;
+  padding: 5px 0 25px;
+  text-align: center;
+}
+@media (min-width: 768px) {
+  .form-btn-area {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    text-align: left;
+    padding: 10px 0 35px;
+  }
 }
 .form-btn-area .text {
-  font-size: 17px;
-  line-height: 20px;
+  font-size: 14px;
+  line-height: 18px;
   font-weight: 400;
   display: block;
+  margin: 0 0 10px;
+}
+@media (min-width: 768px) {
+  .form-btn-area .text {
+    font-size: 17px;
+    line-height: 20px;
+    font-weight: 400;
+    margin: 0;
+  }
 }
 .form-btn-area .text a {
   color: #1e1e1e;
@@ -299,16 +658,23 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-  -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
-  -ms-flex-preferred-size: 0;
-      flex-basis: 0;
-  min-width: 0;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   position: relative;
+}
+@media (min-width: 768px) {
+  .submit-btn-holder {
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
+    -ms-flex-preferred-size: 0;
+        flex-basis: 0;
+    min-width: 0;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+  }
 }
 
 .submit-btn {
@@ -323,23 +689,34 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  font-size: 18px;
-  line-height: 22px;
+  font-size: 15px;
+  line-height: 18px;
   font-weight: 500;
   position: relative;
   outline: none;
   -webkit-box-shadow: none;
           box-shadow: none;
-  min-width: 152px;
+  min-width: 140px;
   border: none;
-  height: 56px;
-  border-radius: 7px;
+  height: 46px;
+  border-radius: 5px;
   background: #1e1e1e;
   color: #fff;
-  padding: 10px 20px;
+  padding: 7px 20px;
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
   text-decoration: none;
+}
+@media (min-width: 768px) {
+  .submit-btn {
+    font-size: 18px;
+    line-height: 22px;
+    font-weight: 500;
+    min-width: 152px;
+    height: 56px;
+    border-radius: 7px;
+    padding: 10px 28px;
+  }
 }
 .submit-btn:hover {
   background: black;
@@ -350,8 +727,14 @@ body {
 .form-social-area {
   position: relative;
   background: #f2f2f7;
-  padding: 30px 32px;
-  margin: -10px 0 0;
+  padding: 22px 20px;
+  margin: -5px 0 0;
+}
+@media (min-width: 768px) {
+  .form-social-area {
+    padding: 30px 32px;
+    margin: -10px 0 0;
+  }
 }
 
 .form-social-list {
@@ -360,7 +743,12 @@ body {
 }
 .form-social-list li {
   position: relative;
-  margin: 0 0 15px;
+  margin: 0 0 10px;
+}
+@media (min-width: 768px) {
+  .form-social-list li {
+    margin: 0 0 15px;
+  }
 }
 .form-social-list a {
   display: -webkit-box;
@@ -374,19 +762,30 @@ body {
   -webkit-box-pack: inherit;
       -ms-flex-pack: inherit;
           justify-content: inherit;
-  font-size: 17px;
-  line-height: 22px;
+  font-size: 15px;
+  line-height: 18px;
   font-weight: 400;
   width: 100%;
-  height: 60px;
+  height: 50px;
   position: relative;
   text-decoration: none;
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
-  padding: 8px 16px;
+  padding: 8px 12px;
   color: #1e1e1e;
-  border-radius: 7px;
+  border-radius: 5px;
   border: 2px solid #dfdfdf;
+}
+@media (min-width: 768px) {
+  .form-social-list a {
+    font-size: 17px;
+    line-height: 22px;
+    font-weight: 400;
+    width: 100%;
+    height: 60px;
+    border-radius: 7px;
+    padding: 8px 16px;
+  }
 }
 .form-social-list a:hover {
   opacity: 0.9;
@@ -403,7 +802,12 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  width: 22px;
+  width: 20px;
+}
+@media (min-width: 768px) {
+  .form-social-list .icon-holder {
+    width: 22px;
+  }
 }
 .form-social-list .icon-holder img {
   max-width: 100%;
@@ -418,13 +822,92 @@ body {
       flex-basis: 0;
   min-width: 0;
   position: relative;
-  padding: 0 0 0 20px;
+  padding: 0 0 0 15px;
   display: block;
+}
+@media (min-width: 768px) {
+  .form-social-list .text {
+    padding: 0 0 0 20px;
+  }
+}
+
+.login-form-text {
+  font-size: 18px;
+  line-height: 26px;
+  font-weight: 400;
+  position: relative;
+  color: #a37d50;
+  padding: 0 0 38px;
+}
+@media (min-width: 768px) {
+  .login-form-text {
+    font-size: 24px;
+    line-height: 32px;
+    font-weight: 400;
+    padding: 0 0 65px;
+  }
+}
+.login-form-text p {
+  font-size: inherit;
+  margin: 0;
+}
+
+.login-success-message {
+  position: relative;
+  margin: 0 0 12px;
+}
+@media (min-width: 768px) {
+  .login-success-message {
+    margin: 0 0 15px;
+  }
+}
+
+.success-text {
+  font-size: 13px;
+  line-height: 20px;
+  font-weight: 400;
+  position: relative;
+  padding: 10px 12px 10px 42px;
+  color: #fff;
+  background: #50a37b;
+  border-radius: 5px;
+  display: block;
+}
+@media (min-width: 480px) {
+  .success-text {
+    padding: 10px 12px 10px 45px;
+    font-size: 15px;
+  }
+}
+@media (min-width: 768px) {
+  .success-text {
+    font-size: 22px;
+    line-height: 32px;
+    font-weight: 400;
+    padding: 11px 20px 11px 70px;
+    border-radius: 10px;
+  }
+}
+.success-text i {
+  position: absolute;
+  left: 12px;
+  top: 13px;
+}
+@media (min-width: 768px) {
+  .success-text i {
+    left: 20px;
+    top: 15px;
+  }
 }
 
 .login-footer {
   position: relative;
-  padding: 32px 0;
+  padding: 15px 0;
+}
+@media (min-width: 768px) {
+  .login-footer {
+    padding: 32px 0;
+  }
 }
 
 .terms-list {
@@ -439,24 +922,41 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  font-size: 16px;
+  font-size: 15px;
   line-height: 20px;
   font-weight: 400;
   position: relative;
-  margin: 0 -11px;
+  margin: 0 -8px;
+}
+@media (min-width: 768px) {
+  .terms-list {
+    font-size: 16px;
+    margin: 0 -11px;
+  }
 }
 .terms-list li {
   position: relative;
-  padding: 0 11px;
+  padding: 0 8px;
+}
+@media (min-width: 768px) {
+  .terms-list li {
+    padding: 0 11px;
+  }
 }
 .terms-list li:before {
   content: "";
   position: absolute;
-  left: -2px;
+  left: -1px;
   top: 1px;
   bottom: 1px;
-  width: 2px;
+  width: 1px;
   background: #1e1e1e;
+}
+@media (min-width: 768px) {
+  .terms-list li:before {
+    width: 2px;
+    left: -2px;
+  }
 }
 .terms-list li:first-child:before {
   display: none;

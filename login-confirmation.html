@@ -41,13 +41,13 @@
 			<section class="login-block-holder">
 				<div class="container">
 					<div class="login-block-wrap">
+						<div class="login-success-message">
+							<span class="success-text"><i class="ico-tick"></i> Password has successfully changed</span>
+						</div>
 						<div class="login-block">
 							<div class="login-content">
 								<div class="heading-area">
-									<span class="login-back-btn-wrap">
-										<a href="login.html" class="back-btn"><i class="ico-back"></i></a>
-									</span>
-									<strong class="heading"><i class="ico-logo-icon"></i> Forgot Password</strong>
+									<strong class="heading"><i class="ico-logo-icon"></i> Login</strong>
 								</div>
 								<form action="#" class="login-form">
 									<div class="field-row">
@@ -56,9 +56,18 @@
 										</label>
 										<input type="email" class="form-control" placeholder="Username or Email">
 									</div>
+									<div class="field-row">
+										<label class="field-label">
+											<i class="ico-lock"></i>
+										</label>
+										<input type="password" class="form-control" placeholder="Password">
+									</div>
 									<div class="form-btn-area">
+										<span class="text">
+											<a href="forgot-password.html">Forgot Password?</a>
+										</span>
 										<div class="submit-btn-holder">
-											<a href="email-confirmation.html" class="submit-btn">Reset</a>
+											<button type="submit" class="submit-btn">Login</button>
 										</div>
 									</div>
 								</form>

@@ -3,8 +3,10 @@ $white: #fff;
 $black: #000;
 $black-dark: #1e1e1e;
 $light-brown: #d0b99e;
+$dark-brown: #a37d50;
 $light-gray: #dfdfdf;
 $lighter-gray: #a4a4a4;
+$light-green: #50a37b;
 $theme-color: $black-dark;
 
 $arial-font: Arial, Helvetica, sans-serif;
@@ -13,6 +15,11 @@ $poppins-font: "Poppins", $arial-font;
 $transition: all 0.3s ease;
 
 // media queries breakpoints
-$widescreen: 1440;
-$largescreen: 1600;
-$tv-screen: 1700;
+$xs-phone: 375;
+$sm-phone: 480;
+$phone: 576;
+$tablet: 768;
+$desktop: 992;
+$widescreen: 1200;
+$largescreen: 1440;
+$tv-screen: 1600;
