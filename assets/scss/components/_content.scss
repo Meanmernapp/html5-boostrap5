@@ -1,0 +1,332 @@
+.wrapper {
+	position: relative;
+	overflow: hidden;
+	width: 100%;
+}
+
+.dashboard-header {
+	@include flex(flex, wrap, center, space-between);
+	@include position(fixed, 0, 0, auto, 0);
+	padding: 14px 30px 14px 35px;
+	border-bottom: 2px solid $light-gray;
+	background: $white;
+	z-index: 99;
+}
+
+.dashboard-logo {
+	position: relative;
+	width: 189px;
+
+	a {
+		display: block;
+	}
+
+	img {
+		@include img-style;
+	}
+}
+
+.header-info-area {
+	@include flex(flex, wrap, center, inherit);
+	position: relative;
+}
+
+.header-user-area {
+	position: relative;
+
+	.status-wrap {
+		@include size(20px, 20px);
+		background: $light-white;
+		position: absolute;
+		border-radius: 50%;
+		padding: 3px;
+		right: -4px;
+		bottom: -4px;
+		z-index: 3;
+	}
+
+	.status {
+		@include size(100%, 100%);
+		background: #4d46ae;
+		position: relative;
+		display: block;
+		border-radius: 50%;
+	}
+}
+
+.user-opener-wrap {
+	position: relative;
+	display: block;
+
+	.user-link {
+		@include size(49px, 49px);
+		position: relative;
+		display: block;
+		border-radius: 50%;
+
+		img {
+			@include img-style;
+			border-radius: 50%;
+		}
+	}
+}
+
+.header-info-list {
+	@include flex(flex, wrap, center, inherit);
+	position: relative;
+	padding: 0 8px 0 0;
+	margin: 0;
+
+	li {
+		position: relative;
+		padding: 0 47px 0 0;
+	}
+
+	a {
+		position: relative;
+		display: block;
+		color: $black-dark;
+		text-decoration: none;
+		font-size: 26px;
+
+		i {
+			position: relative;
+			display: block;
+		}
+
+		&:hover {
+			color: $theme-color;
+		}
+	}
+}
+
+.dashboard-main {
+	position: relative;
+	font-family: $poppins-font;
+	padding: 79px 0 0 100px;
+}
+
+.sidebar-area {
+	@include position(fixed, 79px, auto, 0, 0);
+	border-right: 2px solid $light-gray;
+	width: 100px;
+	background: $white;
+	z-index: 99;
+}
+
+.menu-list-holder {
+	@include flex(flex, wrap, center, space-between);
+	@include size(100%, 100%);
+	position: relative;
+	padding: 15px 0;
+	overflow: auto;
+
+	@include min-height-breakpoint(500) {
+		flex-direction: column;
+		overflow: hidden;
+	}
+}
+
+.menu-list {
+	position: relative;
+	width: 100%;
+	text-align: center;
+	margin: 0;
+
+	li {
+		position: relative;
+		margin: 0 0 8px;
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+
+		&.active {
+
+			a {
+				color: $black-dark;
+			}
+		}
+	}
+
+	a {
+		transition: $transition;
+		display: block;
+		color: $lighter-gray;
+		text-decoration: none;
+		padding: 18px 10px;
+		font-size: 28px;
+
+		&:hover,
+		&.active {
+			color: $black-dark;
+		}
+	}
+}
+
+.main-content-area {
+	@include flex(flex, wrap, flex-start, inherit);
+	position: relative;
+}
+
+.dashboard-sidebar {
+	position: relative;
+	background: $white;
+	border-right: 1px solid $light-gray;
+	width: 380px;
+}
+
+.sidebar-widget-area {
+	position: relative;
+	padding: 30px 18px 18px;
+	border-bottom: 1px solid $light-gray;
+
+	&:last-child {
+		border-bottom: none;
+	}
+}
+
+.widget-opener-holder {
+	position: relative;
+	display: block;
+	margin: 0 0 38px;
+}
+
+.widget-opener {
+	@include fontsize(16px, 24px);
+	font-weight: 400;
+	position: relative;
+	display: block;
+	text-decoration: none;
+	padding: 11px 44px 11px 14px;
+	border-radius: 7px;
+	background: $black-dark;
+	color: $white;
+	transition: $transition;
+
+	&:hover {
+		background: darken($black-dark, 20%);
+		color: $white;
+	}
+
+	i {
+		position: absolute;
+		right: 17px;
+		top: 50%;
+		transform: translateY(-50%);
+	}
+}
+
+.widget-heading-area {
+	@include flex(flex, wrap, center, space-between);
+	position: relative;
+	margin: 0 0 20px;
+
+	.heading {
+		@include font(17, 22, 400);
+		color: $lighter-gray;
+		display: block;
+	}
+}
+
+.view-link-holder {
+	position: relative;
+	display: block;
+}
+
+.view-link {
+	@include font(17, 22, 400);
+	position: relative;
+	display: block;
+	transition: $transition;
+	text-decoration: none;
+	color: $theme-color;
+
+	i {
+		@include align(inline-block, top);
+		font-size: 15px;
+		position: relative;
+		margin: 4px 0 0 5px;
+	}
+
+	&:hover {
+		opacity: 0.9;
+	}
+}
+
+.widget-search-area {
+	position: relative;
+	margin: 0 0 15px;
+
+	.label {
+		position: absolute;
+		left: 12px;
+		top: 10px;
+		display: block;
+		pointer-events: none;
+		color: $lighter-gray;
+		font-size: 18px;
+		margin: 0;
+
+		i {
+			display: block;
+		}
+	}
+
+	.form-control {
+		@include placeholder($lighter-gray);
+		@include font(14, 18, 400);
+		@include size(100%, 38px);
+		background: $white;
+		border: 1px solid $lighter-gray;
+		border-radius: 7px;
+		color: $theme-color;
+		padding: 4px 12px 4px 48px;
+		outline: none;
+		box-shadow: none;
+	}
+}
+
+.widget-list-holder {
+	position: relative;
+	overflow: hidden;
+}
+
+.widget-list {
+	position: relative;
+	margin: 0;
+
+	li {
+		@include flex(flex, wrap, center, space-between);
+		position: relative;
+		padding: 12px 0;
+		border-radius: 7px;
+		margin: 0 0 6px;
+
+		&.selected {
+			background: $light-brown;
+			padding: 12px 13px;
+
+			.text {
+				color: $theme-color;
+			}
+		}
+	}
+
+	.title {
+		@include font(17, 20, 400);
+		color: $theme-color;
+		display: block;
+	}
+
+	.text {
+		@include font(14, 18, 400);
+		color: $lighter-gray;
+		display: block;
+	}
+}
+
+.dashboard-content {
+	@include textContent();
+	position: relative;
+}

@@ -18,17 +18,160 @@
 	<link rel="manifest" href="manifest.webmanifest">
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link
-		href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+	<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
 		rel="stylesheet">
-		<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="./assets/css/index.css">
 	<link rel="stylesheet" type="text/css" href="assets/css/custom.css">
 </head>
 <body>
 	<div class="wrapper">
-		dash
+		<header class="dashboard-header">
+			<strong class="dashboard-logo">
+				<a href="#">
+					<img src="assets/images/adminimages/logo.svg" alt="Konstellate">
+				</a>
+			</strong>
+			<div class="header-info-area">
+				<ul class="header-info-list list-unstyled">
+					<li>
+						<a href="#"><i class="ico-bell"></i></a>
+					</li>
+					<li>
+						<a href="#"><i class="ico-clock"></i></a>
+					</li>
+				</ul>
+				<div class="header-user-area">
+					<span class="user-opener-wrap">
+						<a href="#" class="user-link">
+							<img src="assets/images/adminimages/user-image.png" alt="user image">
+						</a>
+						<div class="status-wrap">
+							<span class="status"></span>
+						</div>
+					</span>
+				</div>
+			</div>
+		</header>
+		<main class="dashboard-main">
+			<div class="sidebar-area">
+				<div class="menu-list-holder">
+					<ul class="menu-list list-unstyled">
+						<li class="active">
+							<a href="#"><i class="ico-dashboard"></i></a>
+						</li>
+						<li>
+							<a href="#"><i class="ico-search"></i></a>
+						</li>
+						<li>
+							<a href="#"><i class="ico-notebook"></i></a>
+						</li>
+					</ul>
+					<ul class="menu-list list-unstyled">
+						<li>
+							<a href="#"><i class="ico-integration"></i></a>
+						</li>
+						<li>
+							<a href="#"><i class="ico-help"></i></a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="main-content-area">
+				<aside class="dashboard-sidebar">
+					<div class="sidebar-widget-area">
+						<div class="widget-opener-holder">
+							<a href="#" class="widget-opener">GU Oncology Key Opinion Leaders <i class="ico-arrow-top"></i></a>
+						</div>
+						<div class="widget-heading-area">
+							<strong class="heading">My KOLs</strong>
+						</div>
+						<div class="widget-list-holder">
+							<ul class="widget-list list-unstyled">
+								<li>
+									<strong class="title">Matt Campbell</strong>
+									<span class="text">MDACC</span>
+								</li>
+								<li>
+									<strong class="title">Arlene Siefker-Radtke</strong>
+									<span class="text">Huntsman Can</span>
+								</li>
+								<li>
+									<strong class="title">Neeraj Agarwal</strong>
+									<span class="text">USC</span>
+								</li>
+								<li>
+									<strong class="title">Tanya Dorff</strong>
+									<span class="text">UCLA</span>
+								</li>
+								<li>
+									<strong class="title">Alexandra Drakaki</strong>
+									<span class="text">U of Colorado</span>
+								</li>
+								<li>
+									<strong class="title">Thomas Flaig</strong>
+									<span class="text">UCSF</span>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="sidebar-widget-area">
+						<div class="widget-heading-area">
+							<strong class="heading">My KOLs</strong>
+							<span class="view-link-holder">
+								<a href="#" class="view-link">View all <i class="ico-view-all"></i></a>
+							</span>
+						</div>
+						<div class="widget-search-area">
+							<label class="label"><i class="ico-search"></i></label>
+							<input type="search" class="form-control" placeholder="Search in Videos">
+						</div>
+						<div class="widget-list-holder">
+							<ul class="widget-list list-unstyled">
+								<li>
+									<strong class="title">Matt Campbell</strong>
+									<span class="text">MDACC</span>
+								</li>
+								<li>
+									<strong class="title">Arlene Siefker-Radtke</strong>
+									<span class="text">Huntsman Can</span>
+								</li>
+								<li>
+									<strong class="title">Neeraj Agarwal</strong>
+									<span class="text">USC</span>
+								</li>
+								<li>
+									<strong class="title">Tanya Dorff</strong>
+									<span class="text">UCLA</span>
+								</li>
+								<li>
+									<strong class="title">Alexandra Drakaki</strong>
+									<span class="text">U of Colorado</span>
+								</li>
+								<li>
+									<strong class="title">Thomas Flaig</strong>
+									<span class="text">UCSF</span>
+								</li>
+								<li>
+									<strong class="title">Matt Campbell</strong>
+									<span class="text">MDACC</span>
+								</li>
+								<li>
+									<strong class="title">Arlene Siefker-Radtke</strong>
+									<span class="text">Huntsman Can</span>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</aside>
+				<div class="dashboard-content">
+					content
+				</div>
+			</div>
+		</main>
 	</div>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script>window.jQuery || document.write('<script src="js/jquery-3.3.1.min.js"><\/script>')</script>
 	<script src="assets/js/custom.js"></script>
 </body>
 </html>
