@@ -173,6 +173,7 @@
 	position: relative;
 	background: $white;
 	border-right: 1px solid $light-gray;
+	overflow: auto;
 	width: 380px;
 }
 
@@ -301,9 +302,11 @@
 		position: relative;
 		padding: 12px 0;
 		border-radius: 7px;
-		margin: 0 0 6px;
+		transition: $transition;
+		margin: 0 0 4px;
 
-		&.selected {
+		&.selected,
+		&:hover {
 			background: $light-brown;
 			padding: 12px 13px;
 
@@ -316,12 +319,14 @@
 	.title {
 		@include font(17, 20, 400);
 		color: $theme-color;
+		transition: $transition;
 		display: block;
 	}
 
 	.text {
 		@include font(14, 18, 400);
 		color: $lighter-gray;
+		transition: $transition;
 		display: block;
 	}
 }
@@ -329,4 +334,527 @@
 .dashboard-content {
 	@include textContent();
 	position: relative;
+	padding: 25px 18px;
+}
+
+.content-heading-area {
+	position: relative;
+	border-radius: 7px;
+	overflow: hidden;
+	background: $white;
+	padding: 24px 20px 20px;
+	margin: 0 0 24px;
+}
+
+.content-serach-area {
+	position: relative;
+
+	.form-control {
+		@include placeholder($lighter-gray);
+		@include font(17, 22, 400);
+		@include size(100%, 60px);
+		border: 2px solid $light-gray;
+		background: $white;
+		border-radius: 7px;
+		outline: none;
+		box-shadow: none;
+		padding: 8px 105px 8px 74px;
+		color: $theme-color;
+	}
+
+	.search-label {
+		@include position(absolute, 14px, auto, 0, 22px);
+		display: block;
+		color: $black;
+		font-size: 32px;
+		pointer-events: none;
+		margin: 0;
+
+		i {
+			position: relative;
+			display: block;
+		}
+	}
+
+	.field-options {
+		@include position(absolute, 14px, 14px, auto, auto);
+		@include flex(flex, wrap, center, inherit);
+		margin: 0;
+
+		li {
+			position: relative;
+			margin: 0 0 0 18px;
+
+			&:first-child {
+				margin-left: 0;
+			}
+		}
+
+		.sub-text {
+			position: relative;
+			display: block;
+			color: $lighter-gray;
+			text-decoration: none;
+
+			i {
+				font-size: 28px;
+				display: block;
+			}
+		}
+
+		a {
+			pointer-events: none;
+		}
+
+		.arrow-wrap {
+			@include flex(flex, wrap, center, center);
+			@include size(34px, 34px);
+			position: relative;
+			background: $light-brown;
+			border-radius: 50%;
+			color: $white;
+
+			i {
+				font-size: 16px;
+				display: block;
+			}
+		}
+	}
+}
+
+.tags-list-area {
+	@include flex(flex, wrap, center, space-between);
+	position: relative;
+	margin: 20px 0 0;
+}
+
+.tags-list-holder {
+	position: relative;
+	overflow: hidden;
+}
+
+.tags-list {
+	@include flex(flex, wrap, flex-start, inherit);
+	position: relative;
+	margin: 0 -5px;
+
+	li {
+		position: relative;
+		margin: 0 5px 10px;
+
+		&.selected,
+		&:hover {
+
+			.tags-text {
+				background: $theme-color;
+				border-color: $theme-color;
+				color: $white;
+			}
+
+			.close-item {
+				@include OpacityShow();
+			}
+	
+			.add-item {
+				@include OpacityHide();
+			}
+		}
+	}
+}
+
+.tags-text {
+	@include flex(flex, wrap, center, center);
+	@include font(17, 20, 400);
+	position: relative;
+	border: 2px solid $light-gray;
+	border-radius: 7px;
+	text-decoration: none;
+	padding: 5px 18px;
+	color: $lighter-gray;
+	transition: $transition;
+	height: 36px;
+
+	.sub-text {
+		position: relative;
+		display: block;
+		padding: 0 0 0 10px;
+	}
+
+	.icon-holder {
+		position: relative;
+		display: block;
+		font-size: 15px;
+
+		i {
+			position: relative;
+			display: block;
+		}
+
+		.close-item {
+			@include OpacityHide();
+			position: absolute;
+			left: 0;
+			top: 0;
+			font-size: 14px;
+			text-decoration: none;
+			transition: all 0.1s ease;
+			color: $white;
+		}
+
+		.add-item {
+			position: relative;
+			transition: all 0.1s ease;
+			display: block;
+			text-decoration: none;
+			color: inherit;
+		}
+	}
+}
+
+.filter-opener-holder {
+	position: relative;
+	display: block;
+}
+
+.filter-opener {
+	@include font(18, 22, 400);
+	position: relative;
+	display: block;
+	color: $theme-color;
+	text-decoration: none;
+	padding: 0 0 0 30px;
+
+	i {
+		position: absolute;
+		left: 0;
+		top: 2px;
+	}
+}
+
+.content-block-area {
+	position: relative;
+}
+
+.block-row {
+	position: relative;
+	display: flex;
+	flex-wrap: wrap;
+	margin: 0 -10px;
+}
+
+.block-col {
+	position: relative;
+	width: 50%;
+	padding: 0 10px;
+}
+
+.content-detail-block {
+	position: relative;
+	overflow: hidden;
+	background: $white;
+	border-radius: 7px;
+	padding: 0 20px;
+	margin: 0 0 15px;
+}
+
+.block-heading-area {
+	@include flex(flex, wrap, center, space-between);
+	position: relative;
+	padding: 20px 0 25px;
+
+	.heading {
+		@include font(18, 22, 400);
+		position: relative;
+		color: $theme-color;
+		display: block;
+		padding: 0 0 0 32px;
+
+		i {
+			position: absolute;
+			left: 0;
+			top: 0;
+			color: $dark-brown;
+			font-size: 20px;
+		}
+
+		.ico-notebook {
+			top: 1px;
+		}
+	}
+}
+
+.block-slider-area {
+	position: relative;
+	margin: 0 -20px;
+}
+
+.block-slider {
+	position: relative;
+
+	.slick-arrow {
+		position: absolute;
+		bottom: 14px;
+		z-index: 3;
+	}
+
+	.slick-next {
+		right: 20px;
+	}
+
+	.slick-prev {
+		right: 66px;
+	}
+
+	.slick-dots {
+		padding: 20px 20px 40px;
+	}
+}
+
+.block-list-row-holder {
+	position: relative;
+
+	&.video-list-row-holder {
+
+		.block-list-row {
+
+			&:last-child {
+
+				&:before {
+					display: none;
+				}
+			}
+		}
+	}
+}
+
+.block-list-row {
+	@include flex(flex, wrap, center, inherit);
+	position: relative;
+	padding: 10px 20px 11px;
+
+	&:before {
+		@include position(absolute, auto, 0, 0, 0);
+		content: '';
+		background: $light-gray;
+		height: 1px;
+	}
+
+	.block-image {
+		position: relative;
+		overflow: hidden;
+		border-radius: 7px;
+
+		img {
+			@include img-style;
+		}
+
+		+ .block-description {
+			padding: 0 0 0 11px;
+		}
+	}
+
+	.video-play {
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		color: $white;
+		transition: all 0.3s ease;
+		text-decoration: none;
+		transform: translate(-50%, -50%);
+		font-size: 20px;
+
+		i {
+			display: block;
+		}
+	}
+}
+
+.block-description {
+	@include textContent();
+	position: relative;
+
+	.block-title {
+		@include font(18, 22, 400);
+		position: relative;
+		display: block;
+		white-space: nowrap;
+		text-overflow: ellipsis;
+		overflow: hidden;
+		color: $theme-color;
+
+		&.has-icon {
+			padding: 0 0 0 23px;
+		}
+
+		i {
+			@include fontsize(16px, 18px);
+			position: absolute;
+			left: 0;
+			top: 2px;
+			color: $light-brown;
+		}
+
+		+ .block-info-area {
+			padding: 5px 0 0;
+		}
+	}
+
+	.time,
+	.date,
+	.block-text {
+		@include font(14, 18, 400);
+		position: relative;
+		display: block;
+		color: $lighter-gray;
+	}
+
+	.time {
+		color: $theme-color;
+	}
+}
+
+.block-link-holder {
+	@include flex(flex, wrap, center, inherit);
+	@include font(14, 18, 400);
+	position: relative;
+	color: $lighter-gray;
+	margin: 0;
+
+	li {
+		position: relative;
+		padding: 0 0 0 18px;
+
+		&:before {
+			@include size(4px, 4px);
+			background: $lighter-gray;
+			content: '';
+			border-radius: 50%;
+			position: absolute;
+			left: 6px;
+			top: 50%;
+			margin: -2px 0 0;
+		}
+	}
+
+	a {
+		text-decoration: none;
+		color: $dark-brown;
+		transition: $transition;
+
+		&:hover {
+			color: $theme-color;
+		}
+	}
+}
+
+.block-info-area {
+	@include flex(flex, wrap, center, space-between);
+	position: relative;
+}
+
+.block-info-holder {
+	@include flex(flex, wrap, center, inherit);
+	position: relative;
+}
+
+// .slider-pagination-area {
+// 	position: relative;
+// 	margin: 30px 20px;
+// 	height: 40px;
+// }
+
+.slick-dots {
+	@include flex(flex, wrap, center, inherit);
+	@include listreset();
+	position: relative;
+	height: 40px;
+	margin: 0 -3px;
+
+	li {
+		position: relative;
+		padding: 0 3px;
+
+		&.slick-active {
+
+			button {
+				background: $theme-color;
+				width: 24px;
+			}
+		}
+	}
+
+	button {
+		@include fontsize(0, 0);
+		@include size(12px, 7px);
+		background: $light-gray;
+		border: none;
+		outline: none;
+		box-shadow: none;
+		display: block;
+		padding: 0;
+		border-radius: 8px;
+		transition: $transition;
+
+		&:hover {
+			background: $theme-color;
+		}
+	}
+}
+
+.slick-arrow {
+	@include size(40px, 40px);
+	background: none;
+	border: none;
+	outline: none;
+	box-shadow: none;
+	background: $light-white;
+	color: $lighter-gray;
+	transition: $transition;
+	border-radius: 5px;
+	padding: 0;
+
+	i {
+		font-size: 16px;
+		position: relative;
+		display: block;
+	}
+
+	&:hover {
+		background: $theme-color;
+		color: $white;
+	}
+}
+
+.note-detail-block {
+
+	.block-list-row {
+		padding-top: 15px;
+		padding-bottom: 16px;
+
+		&:first-child {
+			
+			.block-description {
+
+				.date {
+					margin: 0;
+				}
+			}
+		}
+	}
+
+	.block-description {
+
+		.block-title {
+			padding-right: 65px;
+		}
+
+		.date {
+			margin: -26px 0 0;
+		}
+	}
+
+	.slick-dots {
+		padding-top: 30px;
+		padding-bottom: 37px;
+	}
 }

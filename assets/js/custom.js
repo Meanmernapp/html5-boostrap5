@@ -5,17 +5,14 @@ jQuery(function() {
 
 // slick init
 function initSlickCarousel() {
-	jQuery('.visual-slider').slick({
+	jQuery('.block-slider').slick({
 		slidesToScroll: 1,
 		slidesToShow: 1,
 		rows: 0,
-		arrows: false,
-		autoplay: true,
-		infinite: true,
-		speed: 500,
-		fade: true,
-		cssEase: 'linear',
-		autoplaySpeed: 5000,
+		dots: true,
+		arrows: true,
+		prevArrow: '<button class="slick-prev"><i class="ico-prev"></i></button>',
+		nextArrow: '<button class="slick-next"><i class="ico-next"></i></button>',
 	});
 }
 

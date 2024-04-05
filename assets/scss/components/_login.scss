@@ -427,6 +427,11 @@ body {
 	p {
 		font-size: inherit;
 		margin: 0;
+
+		a {
+			color: $dark-brown;
+			text-decoration: none;
+		}
 	}
 }
 
