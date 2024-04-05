@@ -757,12 +757,6 @@
 	position: relative;
 }
 
-// .slider-pagination-area {
-// 	position: relative;
-// 	margin: 30px 20px;
-// 	height: 40px;
-// }
-
 .slick-dots {
 	@include flex(flex, wrap, center, inherit);
 	@include listreset();
