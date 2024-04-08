@@ -11,6 +11,7 @@ function initSlickCarousel() {
 		rows: 0,
 		dots: true,
 		arrows: true,
+		infinite: false,
 		prevArrow: '<button class="slick-prev"><i class="ico-prev"></i></button>',
 		nextArrow: '<button class="slick-next"><i class="ico-next"></i></button>',
 	});
