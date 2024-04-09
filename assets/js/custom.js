@@ -1,6 +1,8 @@
 jQuery(function() {
+	initMobileNav();
 	initSlickCarousel();
 	initCustomForms();
+	initOutsideClick();
 });
 
 // slick init
@@ -12,6 +14,7 @@ function initSlickCarousel() {
 		dots: true,
 		arrows: true,
 		infinite: false,
+		swipe: false,
 		prevArrow: '<button class="slick-prev"><i class="ico-prev"></i></button>',
 		nextArrow: '<button class="slick-next"><i class="ico-next"></i></button>',
 	});
@@ -24,6 +27,31 @@ function initCustomForms() {
 		wrapNativeOnMobile: false,
 	});
 	jcf.replaceAll();
+}
+
+// mobile menu init
+function initMobileNav() {
+	jQuery(document).on('click', '.menu-opener', function (e) {
+		e.preventDefault();
+		jQuery('body').toggleClass('menu-active');
+	});
+
+	jQuery(document).on('click', '.menu-overlay', function (e) {
+		e.preventDefault();
+		jQuery('body').removeClass('menu-active');
+	});
+}
+
+// Outside Click init
+function initOutsideClick() {
+	jQuery(document).click(function (e) {
+		var target = e.target;
+		if (jQuery(".header-search-area").hasClass('active')) {
+			if (!jQuery(target).parents('.header-search-area').length > 0) {
+				jQuery('.header-search-area').removeClass('active');
+			}
+		}
+	});
 }
 
 /*!

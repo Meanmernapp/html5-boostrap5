@@ -4,18 +4,67 @@
 	width: 100%;
 }
 
+.body-overlay {
+	@include position(fixed, 0, 0, 0, 0);
+	background: rgba($black, 0.5);
+	transition: $transition;
+	display: none;
+	z-index: 90;
+}
+
+.menu-overlay {
+
+	.menu-active & {
+		@include breakpoint($tablet-max) {
+			display: block;
+		}
+	}
+}
+
 .dashboard-header {
-	@include flex(flex, wrap, center, space-between);
 	@include position(fixed, 0, 0, auto, 0);
-	padding: 14px 30px 14px 35px;
-	border-bottom: 2px solid $light-gray;
+	padding: 12px 15px;
+	border-bottom: 1px solid $light-gray;
 	background: $white;
 	z-index: 99;
+
+	@include min-breakpoint($tablet) {
+		padding: 12px 20px;
+		border-bottom-width: 1px;
+	}
+
+	@include min-breakpoint($largescreen) {
+		padding: 14px 25px;
+	}
+
+	@include min-breakpoint($tv-screen) {
+		padding: 14px 30px 14px 35px;
+	}
+}
+
+.dashboard-header-holder {
+	@include flex(flex, wrap, center, space-between);
+	position: relative;
 }
 
 .dashboard-logo {
 	position: relative;
-	width: 189px;
+	margin: 0 0 0 35px;
+	top: 3px;
+	width: 125px;
+
+	@include min-breakpoint($xs-phone) {
+		width: 140px;
+	}
+
+	@include min-breakpoint($tablet) {
+		width: 175px;
+		margin: 0;
+	}
+
+	@include min-breakpoint($largescreen) {
+		width: 189px;
+	}
 
 	a {
 		display: block;
@@ -35,14 +84,21 @@
 	position: relative;
 
 	.status-wrap {
-		@include size(20px, 20px);
+		@include size(16px, 16px);
 		background: $light-white;
 		position: absolute;
 		border-radius: 50%;
-		padding: 3px;
-		right: -4px;
-		bottom: -4px;
+		padding: 2px;
+		right: -2px;
+		bottom: -2px;
 		z-index: 3;
+
+		@include min-breakpoint($tablet) {
+			@include size(20px, 20px);
+			padding: 3px;
+			right: -4px;
+			bottom: -4px;
+		}
 	}
 
 	.status {
@@ -59,10 +115,14 @@
 	display: block;
 
 	.user-link {
-		@include size(49px, 49px);
+		@include size(38px, 38px);
 		position: relative;
 		display: block;
 		border-radius: 50%;
+
+		@include min-breakpoint($tablet) {
+			@include size(49px, 49px);
+		}
 
 		img {
 			@include img-style;
@@ -74,12 +134,24 @@
 .header-info-list {
 	@include flex(flex, wrap, center, inherit);
 	position: relative;
-	padding: 0 8px 0 0;
+	padding: 0;
 	margin: 0;
+
+	@include min-breakpoint($largescreen) {
+		padding: 0 8px 0 0;
+	}
 
 	li {
 		position: relative;
-		padding: 0 47px 0 0;
+		padding: 0 15px 0 0;
+
+		@include min-breakpoint($tablet) {
+			padding: 0 35px 0 0;
+		}
+
+		@include min-breakpoint($largescreen) {
+			padding: 0 47px 0 0;
+		}
 	}
 
 	a {
@@ -87,7 +159,11 @@
 		display: block;
 		color: $black-dark;
 		text-decoration: none;
-		font-size: 26px;
+		font-size: 20px;
+
+		@include min-breakpoint($tablet) {
+			font-size: 26px;
+		}
 
 		i {
 			position: relative;
@@ -100,18 +176,100 @@
 	}
 }
 
+.menu-opener {
+	@include size(24px, 20px);
+	border-top: 2px solid $theme-color;
+	transition: $transition;
+	position: absolute;
+	left: 15px;
+	top: 24px;
+	z-index: 4;
+
+	@include min-breakpoint($tablet) {
+		display: none;
+	}
+
+	.menu-active & {
+		border-top: none;
+	}
+
+	&:before,
+	&:after {
+		@include size(24px, 2px);
+		background: $theme-color;
+		position: absolute;
+		content: '';
+		transition: $transition;
+		left: 0;
+		top: 16px;
+
+		.menu-active & {
+			top: 9px;
+			transform: rotate(45deg);
+		}
+	}
+
+	&:after {
+		top: 7px;
+
+		.menu-active & {
+			top: 9px;
+			transform: rotate(-45deg);
+		}
+	}
+}
+
 .dashboard-main {
 	position: relative;
 	font-family: $poppins-font;
-	padding: 79px 0 0 100px;
+	padding: 63px 0 0;
+
+	@include min-breakpoint($tablet) {
+		position: relative;
+		padding: 75px 0 0 65px;
+	}
+
+	@include min-breakpoint($largescreen) {
+		padding: 79px 0 0 80px;
+	}
+
+	@include min-breakpoint($tv-screen) {
+		padding: 79px 0 0 100px;
+	}
 }
 
 .sidebar-area {
-	@include position(fixed, 79px, auto, 0, 0);
-	border-right: 2px solid $light-gray;
-	width: 100px;
+	@include position(fixed, 75px, auto, 0, 0);
+	border-right: 1px solid $light-gray;
 	background: $white;
+	width: 65px;
 	z-index: 99;
+
+	@include min-breakpoint($largescreen) {
+		top: 79px;
+		width: 80px;
+		border-right-width: 2px;
+	}
+
+	@include min-breakpoint($tv-screen) {
+		width: 100px;
+	}
+
+	@include breakpoint($tablet-max) {
+		@include position(fixed, 63px, auto, 0, 0);
+		transition: $transition;
+		transform: translateX(-100%);
+		width: 80px;
+
+		.menu-active & {
+			transform: none
+		}
+	}
+}
+
+.sidebar-holder {
+	@include size(100%, 100%);
+	position: relative;
 }
 
 .menu-list-holder {
@@ -135,7 +293,11 @@
 
 	li {
 		position: relative;
-		margin: 0 0 8px;
+		margin: 0 0 4px;
+
+		@include min-breakpoint($largescreen) {
+			margin: 0 0 8px;
+		}
 
 		&:last-child {
 			margin-bottom: 0;
@@ -154,8 +316,18 @@
 		display: block;
 		color: $lighter-gray;
 		text-decoration: none;
-		padding: 18px 10px;
-		font-size: 28px;
+		padding: 12px 5px;
+		font-size: 22px;
+
+		@include min-breakpoint($largescreen) {
+			padding: 15px 10px;
+			font-size: 24px;
+		}
+
+		@include min-breakpoint($xl-screen) {
+			padding: 18px 10px;
+			font-size: 28px;
+		}
 
 		&:hover,
 		&.active {
@@ -165,21 +337,78 @@
 }
 
 .main-content-area {
-	@include flex(flex, wrap, flex-start, inherit);
 	position: relative;
+
+	@include min-breakpoint($widescreen) {
+		@include flex(flex, wrap, flex-start, inherit);
+	}
 }
 
 .dashboard-sidebar {
 	position: relative;
 	background: $white;
-	border-right: 1px solid $light-gray;
-	width: 21.1%;
+	width: 100%;
+	border-bottom: 1px solid $light-gray;
+
+	@include min-breakpoint($widescreen) {
+		width: 24%;
+		border-bottom: none;
+		border-right: 1px solid $light-gray;
+	}
+
+	@include min-breakpoint($largescreen) {
+		width: 23%;
+	}
+
+	@include min-breakpoint($xl-screen) {
+		width: 21.1%;
+	}
+}
+
+.dashboard-sidebar-content {
+	position: relative;
+
+	@include min-breakpoint($tablet) {
+		display: flex;
+		flex-wrap: wrap;
+	}
+
+	@include min-breakpoint($widescreen) {
+		display: block;
+	}
 }
 
 .sidebar-widget-area {
 	position: relative;
-	padding: 30px 18px 18px;
+	padding: 18px 15px 12px;
+	width: 100%;
 	border-bottom: 1px solid $light-gray;
+
+	@include min-breakpoint($tablet) {
+		border-left: 1px solid $light-gray;
+		border-bottom: none;
+		width: 50%;
+		padding: 20px 18px;
+	}
+
+	&:first-child {
+		border-left: none;
+	}
+
+	@include min-breakpoint($widescreen) {
+		border-bottom: 1px solid $light-gray;
+		padding: 18px 10px 15px;
+		border-left: none;
+		width: 100%;
+	}
+
+	@include min-breakpoint($largescreen) {
+		padding: 22px 14px 15px;
+	}
+
+	@include min-breakpoint($tv-screen) {
+		padding: 30px 18px 18px;
+	}
 
 	&:last-child {
 		border-bottom: none;
@@ -189,20 +418,39 @@
 .widget-opener-holder {
 	position: relative;
 	display: block;
-	margin: 0 0 38px;
+	margin: 0 0 25px;
+
+	@include min-breakpoint($tv-screen) {
+		margin: 0 0 38px;
+	}
 }
 
 .widget-opener {
-	@include fontsize(16px, 24px);
+	@include fontsize(12px, 18px);
 	font-weight: 400;
 	position: relative;
 	display: block;
 	text-decoration: none;
-	padding: 11px 44px 11px 14px;
+	padding: 10px 28px 10px 10px;
 	border-radius: 7px;
 	background: $black-dark;
 	color: $white;
 	transition: $transition;
+
+	@include min-breakpoint($largescreen) {
+		@include fontsize(14px, 22px);
+		padding: 10px 30px 10px 12px;
+	}
+
+	@include min-breakpoint($tv-screen) {
+		@include fontsize(15px, 24px);
+		padding: 11px 38px 11px 14px;
+	}
+
+	@include min-breakpoint($xl-screen) {
+		padding: 11px 44px 11px 14px;
+		font-size: 16px;
+	}
 
 	&:hover {
 		background: darken($black-dark, 20%);
@@ -211,21 +459,37 @@
 
 	i {
 		position: absolute;
-		right: 17px;
+		right: 10px;
 		top: 50%;
 		transform: translateY(-50%);
+
+		@include min-breakpoint($tv-screen) {
+			right: 12px;
+		}
+
+		@include min-breakpoint($xl-screen) {
+			right: 17px;
+		}
 	}
 }
 
 .widget-heading-area {
 	@include flex(flex, wrap, center, space-between);
 	position: relative;
-	margin: 0 0 20px;
+	margin: 0 0 15px;
+
+	@include min-breakpoint($tv-screen) {
+		margin: 0 0 20px;
+	}
 
 	.heading {
-		@include font(17, 22, 400);
+		@include font(16, 20, 400);
 		color: $lighter-gray;
 		display: block;
+
+		@include min-breakpoint($tv-screen) {
+			@include font(17, 22, 400);
+		}
 	}
 }
 
@@ -235,18 +499,35 @@
 }
 
 .view-link {
-	@include font(17, 22, 400);
+	@include font(15, 20, 400);
 	position: relative;
 	display: block;
 	transition: $transition;
 	text-decoration: none;
 	color: $theme-color;
 
+	@include min-breakpoint($tablet) {
+		@include font(16, 22, 400);
+	}
+
+	@include min-breakpoint($tv-screen) {
+		font-size: 17px;
+	}
+
 	i {
 		@include align(inline-block, top);
-		font-size: 15px;
+		font-size: 13px;
 		position: relative;
-		margin: 4px 0 0 5px;
+		margin: 4px 0 0 4px;
+
+		@include min-breakpoint($tablet) {
+			font-size: 14px;
+		}
+
+		@include min-breakpoint($tv-screen) {
+			font-size: 15px;
+			margin: 4px 0 0 5px;
+		}
 	}
 
 	&:hover {
@@ -260,13 +541,18 @@
 
 	.label {
 		position: absolute;
-		left: 12px;
+		left: 10px;
 		top: 10px;
 		display: block;
 		pointer-events: none;
 		color: $lighter-gray;
-		font-size: 18px;
+		font-size: 16px;
 		margin: 0;
+
+		@include min-breakpoint($tv-screen) {
+			left: 12px;
+			font-size: 18px;
+		}
 
 		i {
 			display: block;
@@ -281,9 +567,13 @@
 		border: 1px solid $lighter-gray;
 		border-radius: 7px;
 		color: $theme-color;
-		padding: 4px 12px 4px 48px;
+		padding: 4px 12px 4px 38px;
 		outline: none;
 		box-shadow: none;
+
+		@include min-breakpoint($tv-screen) {
+			padding: 4px 12px 4px 48px;
+		}
 	}
 }
 
@@ -307,7 +597,15 @@
 		&.selected,
 		&:hover {
 			background: $light-brown;
-			padding: 12px 13px;
+			padding: 10px 8px;
+
+			@include min-breakpoint($tv-screen) {
+				padding: 11px 10px;
+			}
+
+			@include min-breakpoint($xl-screen) {
+				padding: 12px 13px;
+			}
 
 			.text {
 				color: $theme-color;
@@ -316,24 +614,59 @@
 	}
 
 	.title {
-		@include font(17, 20, 400);
+		@include font(13, 16, 400);
 		color: $theme-color;
 		transition: $transition;
 		display: block;
+
+		@include min-breakpoint($largescreen) {
+			@include font(14, 18, 400);
+		}
+
+		@include min-breakpoint($tv-screen) {
+			@include font(16, 20, 400);
+		}
+
+		@include min-breakpoint($xl-screen) {
+			font-size: 17px;
+		}
 	}
 
 	.text {
-		@include font(14, 18, 400);
+		@include font(12, 16, 400);
 		color: $lighter-gray;
 		transition: $transition;
 		display: block;
+
+		@include min-breakpoint($largescreen) {
+			font-size: 13px;
+		}
+
+		@include min-breakpoint($tv-screen) {
+			@include font(14, 18, 400);
+		}
 	}
 }
 
 .dashboard-content {
-	@include textContent();
 	position: relative;
-	padding: 25px 18px;
+	padding: 16px 12px 10px;
+
+	@include min-breakpoint($tablet) {
+		padding: 18px 12px 15px;
+	}
+
+	@include min-breakpoint($widescreen) {
+		@include textContent();
+	}
+
+	@include min-breakpoint($largescreen) {
+		padding: 20px 15px 15px;
+	}
+
+	@include min-breakpoint($xl-screen) {
+		padding: 25px 18px 15px;
+	}
 }
 
 .content-heading-area {
@@ -341,8 +674,18 @@
 	border-radius: 7px;
 	overflow: hidden;
 	background: $white;
-	padding: 24px 20px 20px;
-	margin: 0 0 24px;
+	padding: 18px 12px 10px;
+	margin: 0 0 15px;
+
+	@include min-breakpoint($tablet) {
+		padding: 19px 15px 10px;
+		margin: 0 0 20px;
+	}
+
+	@include min-breakpoint($xl-screen) {
+		padding: 24px 20px 20px;
+		margin: 0 0 24px;
+	}
 }
 
 .content-serach-area {
@@ -350,24 +693,48 @@
 
 	.form-control {
 		@include placeholder($lighter-gray);
-		@include font(17, 22, 400);
-		@include size(100%, 60px);
-		border: 2px solid $light-gray;
+		@include font(14, 20, 400);
+		@include size(100%, 48px);
+		border: 1px solid $light-gray;
 		background: $white;
 		border-radius: 7px;
 		outline: none;
 		box-shadow: none;
-		padding: 8px 105px 8px 74px;
+		padding: 6px 60px 6px 35px;
 		color: $theme-color;
+
+		@include min-breakpoint($tablet) {
+			padding: 8px 92px 8px 55px;
+			font-size: 15px;
+			border-width: 2px;
+		}
+
+		@include min-breakpoint($largescreen) {
+			@include font(17, 22, 400);
+			@include size(100%, 60px);
+			padding: 8px 105px 8px 74px;
+		}
 	}
 
 	.search-label {
-		@include position(absolute, 14px, auto, 0, 22px);
+		@include position(absolute, 13px, auto, 0, 8px);
 		display: block;
 		color: $black;
-		font-size: 32px;
+		font-size: 22px;
 		pointer-events: none;
 		margin: 0;
+
+		@include min-breakpoint($tablet) {
+			font-size: 26px;
+			top: 12px;
+			left: 15px;
+		}
+
+		@include min-breakpoint($largescreen) {
+			left: 22px;
+			top: 14px;
+			font-size: 32px;
+		}
 
 		i {
 			position: relative;
@@ -376,13 +743,30 @@
 	}
 
 	.field-options {
-		@include position(absolute, 14px, 14px, auto, auto);
+		@include position(absolute, 14px, 10px, auto, auto);
 		@include flex(flex, wrap, center, inherit);
 		margin: 0;
 
+		@include min-breakpoint($tablet) {
+			top: 10px;
+			right: 14px;
+		}
+
+		@include min-breakpoint($largescreen) {
+			top: 14px;
+		}
+
 		li {
 			position: relative;
-			margin: 0 0 0 18px;
+			margin: 0 0 0 8px;
+
+			@include min-breakpoint($tablet) {
+				margin: 0 0 0 14px;
+			}
+
+			@include min-breakpoint($largescreen) {
+				margin: 0 0 0 18px;
+			}
 
 			&:first-child {
 				margin-left: 0;
@@ -396,8 +780,16 @@
 			text-decoration: none;
 
 			i {
-				font-size: 28px;
+				font-size: 15px;
 				display: block;
+
+				@include min-breakpoint($tablet) {
+					font-size: 22px;
+				}
+
+				@include min-breakpoint($largescreen) {
+					font-size: 28px;
+				}
 			}
 		}
 
@@ -407,15 +799,31 @@
 
 		.arrow-wrap {
 			@include flex(flex, wrap, center, center);
-			@include size(34px, 34px);
+			@include size(22px, 22px);
 			position: relative;
 			background: $light-brown;
 			border-radius: 50%;
 			color: $white;
 
+			@include min-breakpoint($tablet) {
+				@include size(30px, 30px);
+			}
+
+			@include min-breakpoint($largescreen) {
+				@include size(34px, 34px);
+			}
+
 			i {
-				font-size: 16px;
+				font-size: 10px;
 				display: block;
+
+				@include min-breakpoint($tablet) {
+					font-size: 13px;
+				}
+
+				@include min-breakpoint($largescreen) {
+					font-size: 16px;
+				}
 			}
 		}
 	}
@@ -424,22 +832,42 @@
 .tags-list-area {
 	@include flex(flex, wrap, center, space-between);
 	position: relative;
-	margin: 20px 0 0;
+	margin: 10px 0 0;
+
+	@include min-breakpoint($tablet) {
+		margin: 15px 0 0;
+	}
+
+	@include min-breakpoint($largescreen) {
+		margin: 20px 0 0;
+	}
 }
 
 .tags-list-holder {
 	position: relative;
 	overflow: hidden;
+
+	@include min-breakpoint($tablet) {
+		@include textContent();
+	}
 }
 
 .tags-list {
 	@include flex(flex, wrap, flex-start, inherit);
 	position: relative;
-	margin: 0 -5px;
+	margin: 0 -3px;
+
+	@include min-breakpoint($tablet) {
+		margin: 0 -5px;
+	}
 
 	li {
 		position: relative;
-		margin: 0 5px 10px;
+		margin: 0 3px 8px;
+
+		@include min-breakpoint($tablet) {
+			margin: 0 5px 10px;
+		}
 
 		&.selected,
 		&:hover {
@@ -463,26 +891,59 @@
 
 .tags-text {
 	@include flex(flex, wrap, center, center);
-	@include font(17, 20, 400);
+	@include font(13, 16, 400);
 	position: relative;
-	border: 2px solid $light-gray;
+	border: 1px solid $light-gray;
 	border-radius: 7px;
 	text-decoration: none;
-	padding: 5px 18px;
+	padding: 5px 10px;
 	color: $lighter-gray;
 	transition: $transition;
-	height: 36px;
+	height: 34px;
+
+	@include min-breakpoint($tablet) {
+		@include font(14, 18, 400);
+		border-width: 2px;
+		padding: 5px 12px;
+	}
+
+	@include min-breakpoint($desktop) {
+		padding: 5px 14px;
+		font-size: 15px;
+	}
+
+	@include min-breakpoint($largescreen) {
+		@include font(17, 20, 400);
+		padding: 5px 18px;
+		height: 36px;
+	}
 
 	.sub-text {
 		position: relative;
 		display: block;
-		padding: 0 0 0 10px;
+		padding: 0 0 0 6px;
+
+		@include min-breakpoint($tablet) {
+			padding: 0 0 0 8px;
+		}
+
+		@include min-breakpoint($largescreen) {
+			padding: 0 0 0 10px;
+		}
 	}
 
 	.icon-holder {
 		position: relative;
 		display: block;
-		font-size: 15px;
+		font-size: 11px;
+
+		@include min-breakpoint($tablet) {
+			font-size: 13px;
+		}
+
+		@include min-breakpoint($largescreen) {
+			font-size: 15px;
+		}
 
 		i {
 			position: relative;
@@ -494,10 +955,18 @@
 			position: absolute;
 			left: 0;
 			top: 0;
-			font-size: 14px;
+			font-size: 10px;
 			text-decoration: none;
 			transition: all 0.1s ease;
 			color: $white;
+
+			@include min-breakpoint($tablet) {
+				font-size: 12px;
+			}
+
+			@include min-breakpoint($largescreen) {
+				font-size: 14px;
+			}
 		}
 
 		.add-item {
@@ -513,20 +982,39 @@
 .filter-opener-holder {
 	position: relative;
 	display: block;
+	margin: 8px 0 4px;
+
+	@include min-breakpoint($tablet) {
+		margin: -8px 0 0;
+	}
 }
 
 .filter-opener {
-	@include font(18, 22, 400);
+	@include font(14, 18, 400);
 	position: relative;
 	display: block;
 	color: $theme-color;
 	text-decoration: none;
-	padding: 0 0 0 30px;
+	padding: 0 0 0 20px;
+
+	@include min-breakpoint($tablet) {
+		@include font(16, 20, 400);
+		padding: 0 0 0 24px;
+	}
+
+	@include min-breakpoint($largescreen) {
+		@include font(18, 22, 400);
+		padding: 0 0 0 30px;
+	}
 
 	i {
 		position: absolute;
 		left: 0;
-		top: 2px;
+		top: 3px;
+
+		@include min-breakpoint($tablet) {
+			top: 2px;
+		}
 	}
 }
 
@@ -536,23 +1024,34 @@
 
 .block-row {
 	position: relative;
-	display: flex;
-	flex-wrap: wrap;
-	margin: 0 -10px;
+
+	@include min-breakpoint($desktop) {
+		display: flex;
+		flex-wrap: wrap;
+		margin: 0 -10px;
+	}
 }
 
 .block-col {
 	position: relative;
-	padding: 0 10px;
 
-	@include min-breakpoint($widescreen) {
+	@include min-breakpoint($desktop) {
+		padding: 0 8px;
 
 		&:nth-child(1) {
-			width: 44.5%;
+			width: 46.5%;
 		}
 
 		&:nth-child(2) {
 			@include textContent();
+		}
+	}
+
+	@include min-breakpoint($xl-screen) {
+		padding: 0 10px;
+
+		&:nth-child(1) {
+			width: 44.5%;
 		}
 	}
 }
@@ -562,27 +1061,57 @@
 	overflow: hidden;
 	background: $white;
 	border-radius: 7px;
-	padding: 0 20px;
-	margin: 0 0 15px;
+	padding: 0 12px;
+	margin: 0 0 14px;
+
+	@include min-breakpoint($largescreen) {
+		padding: 0 15px;
+	}
+
+	@include min-breakpoint($xl-screen) {
+		padding: 0 20px;
+		margin: 0 0 15px;
+	}
 }
 
 .block-heading-area {
 	@include flex(flex, wrap, center, space-between);
 	position: relative;
-	padding: 20px 0 25px;
+	padding: 16px 0 10px;
+
+	@include min-breakpoint($tablet) {
+		padding: 18px 0;
+	}
+
+	@include min-breakpoint($xl-screen) {
+		padding: 20px 0 25px;
+	}
 
 	.heading {
-		@include font(18, 22, 400);
+		@include font(15, 20, 400);
 		position: relative;
 		color: $theme-color;
 		display: block;
+
+		@include min-breakpoint($tablet) {
+			font-size: 16px;
+		}
+
+		@include min-breakpoint($xl-screen) {
+			@include font(18, 22, 400);
+		}
 
 		i {
 			@include align(inline-block, top);
 			position: relative;
 			color: $dark-brown;
-			font-size: 20px;
-			margin: 0 8px 0 0;
+			font-size: 17px;
+			margin: 0 5px 0 0;
+
+			@include min-breakpoint($xl-screen) {
+				font-size: 20px;
+				margin: 0 8px 0 0;
+			}
 		}
 
 		.ico-notebook {
@@ -590,15 +1119,24 @@
 		}
 
 		.ico-analytics {
-			font-size: 15px;
-			top: 3px;
+			font-size: 13px;
+			top: 4px;
+
+			@include min-breakpoint($xl-screen) {
+				font-size: 15px;
+				top: 3px;
+			}
 		}
 	}
 }
 
 .block-slider-area {
 	position: relative;
-	margin: 0 -20px;
+	margin: 0 -15px;
+
+	@include min-breakpoint($xl-screen) {
+		margin: 0 -20px;
+	}
 }
 
 .block-slider {
@@ -641,9 +1179,13 @@
 }
 
 .block-list-row {
-	@include flex(flex, wrap, center, inherit);
 	position: relative;
-	padding: 10px 20px 11px;
+	padding: 10px 15px 11px;
+
+	@include min-breakpoint($tablet) {
+		@include flex(flex, wrap, center, inherit);
+		padding: 10px 20px 11px;
+	}
 
 	&:before {
 		@include position(absolute, auto, 0, 0, 0);
@@ -656,13 +1198,34 @@
 		position: relative;
 		overflow: hidden;
 		border-radius: 7px;
+		width: 90px;
+
+		@include min-breakpoint($tablet) {
+			width: 75px;
+		}
+
+		@include min-breakpoint($largescreen) {
+			width: 85px;
+		}
+
+		@include min-breakpoint($xl-screen) {
+			width: 95px;
+		}
 
 		img {
 			@include img-style;
 		}
 
 		+ .block-description {
-			padding: 0 0 0 11px;
+			padding: 9px 0 0;
+
+			@include min-breakpoint($tablet) {
+				padding: 0 0 0 8px;
+			}
+
+			@include min-breakpoint($largescreen) {
+				padding: 0 0 0 11px;
+			}
 		}
 	}
 
@@ -674,7 +1237,19 @@
 		transition: all 0.3s ease;
 		text-decoration: none;
 		transform: translate(-50%, -50%);
-		font-size: 20px;
+		font-size: 18px;
+
+		@include min-breakpoint($tablet) {
+			font-size: 15px;
+		}
+
+		@include min-breakpoint($largescreen) {
+			font-size: 17px;
+		}
+
+		@include min-breakpoint($xl-screen) {
+			font-size: 20px;
+		}
 
 		i {
 			display: block;
@@ -687,7 +1262,7 @@
 	position: relative;
 
 	.block-title {
-		@include font(18, 22, 400);
+		@include font(15, 20, 400);
 		position: relative;
 		display: block;
 		white-space: nowrap;
@@ -695,16 +1270,37 @@
 		overflow: hidden;
 		color: $theme-color;
 
+		@include min-breakpoint($largescreen) {
+			font-size: 16px;
+		}
+
+		@include min-breakpoint($xl-screen) {
+			@include font(18, 22, 400);
+		}
+
 		&.has-icon {
-			padding: 0 0 0 23px;
+			padding: 0 0 0 20px;
+
+			@include min-breakpoint($largescreen) {
+				padding: 0 0 0 23px;
+			}
 		}
 
 		i {
-			@include fontsize(16px, 18px);
+			@include fontsize(14px, 18px);
 			position: absolute;
 			left: 0;
 			top: 2px;
 			color: $light-brown;
+
+			@include min-breakpoint($largescreen) {
+				font-size: 15px;
+				top: 2px;
+			}
+
+			@include min-breakpoint($xl-screen) {
+				font-size: 16px;
+			}
 		}
 
 		+ .block-info-area {
@@ -715,37 +1311,76 @@
 	.time,
 	.date,
 	.block-text {
-		@include font(14, 18, 400);
+		@include font(12, 16, 400);
 		position: relative;
 		display: block;
 		color: $lighter-gray;
+
+		@include min-breakpoint($largescreen) {
+			@include font(13, 18, 400);
+		}
+
+		@include min-breakpoint($xl-screen) {
+			font-size: 14px;
+		}
 	}
 
 	.time {
 		color: $theme-color;
 	}
+
+	.date {
+		@include breakpoint($tablet-max) {
+			margin: 6px 0 0;
+		}
+	}
 }
 
 .block-link-holder {
 	@include flex(flex, wrap, center, inherit);
-	@include font(14, 18, 400);
+	@include font(12, 16, 400);
 	position: relative;
 	color: $lighter-gray;
 	margin: 0;
 
+	@include min-breakpoint($largescreen) {
+		@include font(13, 18, 400);
+	}
+
+	@include min-breakpoint($xl-screen) {
+		font-size: 14px;
+	}
+
 	li {
 		position: relative;
-		padding: 0 0 0 18px;
+		padding: 0 0 0 12px;
+
+		@include min-breakpoint($largescreen) {
+			padding: 0 0 0 14px;
+		}
+
+		@include min-breakpoint($xl-screen) {
+			padding: 0 0 0 18px;
+		}
 
 		&:before {
-			@include size(4px, 4px);
+			@include size(3px, 3px);
 			background: $lighter-gray;
 			content: '';
 			border-radius: 50%;
 			position: absolute;
-			left: 6px;
+			left: 5px;
 			top: 50%;
 			margin: -2px 0 0;
+
+			@include min-breakpoint($largescreen) {
+				@include size(4px, 4px);
+				margin: -2px 0 0;
+			}
+
+			@include min-breakpoint($xl-screen) {
+				left: 6px;
+			}
 		}
 	}
 
@@ -761,8 +1396,11 @@
 }
 
 .block-info-area {
-	@include flex(flex, wrap, center, space-between);
 	position: relative;
+
+	@include min-breakpoint($tablet) {
+		@include flex(flex, wrap, center, space-between);
+	}
 }
 
 .block-info-holder {
@@ -842,19 +1480,39 @@
 
 .block-table-area {
 	position: relative;
-	padding: 0 0 16px;
+	padding: 8px 0 10px;
+
+	@include min-breakpoint($tablet) {
+		padding: 0 0 10px;
+	}
+
+	@include min-breakpoint($xl-screen) {
+		padding: 0 0 16px;
+	}
+
+	@include breakpoint($tablet-max) {
+		overflow: auto;
+	}
 }
 
 .block-table-row-holder {
 	position: relative;
+
+	@include breakpoint($tablet-max) {
+		min-width: 450px;
+	}
 }
 
 .block-table-row {
 	position: relative;
 	display: flex;
 	flex-wrap: wrap;
-	padding: 0 15px;
+	padding: 0 10px;
 	border-bottom: 1px solid $light-gray;
+
+	@include min-breakpoint($xl-screen) {
+		padding: 0 15px;
+	}
 
 	&.head {
 
@@ -867,13 +1525,29 @@
 
 .block-table-col {
 	position: relative;
-	padding: 15px 5px;
+	padding: 12px 5px;
+
+	@include min-breakpoint($largescreen) {
+		padding: 14px 5px;
+	}
+
+	@include min-breakpoint($xl-screen) {
+		padding: 15px 5px;
+	}
 
 	.table-text {
-		@include font(16, 22, 400);
+		@include font(14, 20, 400);
 		position: relative;
 		display: block;
 		color: $black-dark;
+
+		@include min-breakpoint($largescreen) {
+			font-size: 15px;
+		}
+
+		@include min-breakpoint($xl-screen) {
+			@include font(16, 22, 400);
+		}
 
 		i {
 			@include fontsize(16px, 18px);
@@ -881,27 +1555,45 @@
 			display: inline-block;
 			vertical-align: top;
 			color: $light-brown;
-			margin: 0 8px 0 0;
+			margin: 0 6px 0 0;
 			top: 1px;
+
+			@include min-breakpoint($largescreen) {
+				margin: 0 8px 0 0;
+			}
 		}
 
 		.ico-bar {
-			margin: 0 0 0 12px;
+			margin: 0 0 0 8px;
+			font-size: 12px;
 			top: 0;
+
+			@include min-breakpoint($largescreen) {
+				font-size: 16px;
+				margin: 0 0 0 12px;
+			}
 		}
 
 		&.no-data {
-			font-size: 18px;
+			font-size: 16px;
 			font-style: italic;
 			color: $lighter-gray;
+
+			@include min-breakpoint($xl-screen) {
+				font-size: 18px;
+			}
 		}
 	}
 
 	.table-heading {
-		@include font(14, 18, 400);
+		@include font(13, 18, 400);
 		position: relative;
 		display: block;
 		color: $lighter-gray;
+
+		@include min-breakpoint($xl-screen) {
+			font-size: 14px;
+		}
 	}
 
 	&:nth-child(1) {
@@ -909,7 +1601,15 @@
 	}
 
 	&:nth-child(2) {
-		padding-right: 45px;
+		padding-right: 25px;
+
+		@include min-breakpoint($largescreen) {
+			padding-right: 35px;
+		}
+
+		@include min-breakpoint($xl-screen) {
+			padding-right: 45px;
+		}
 	}
 
 	&:nth-child(2),
@@ -926,8 +1626,13 @@
 .note-detail-block {
 
 	.block-list-row {
-		padding-top: 14px;
-		padding-bottom: 15px;
+		padding-top: 11px;
+		padding-bottom: 12px;
+
+		@include min-breakpoint($xl-screen) {
+			padding-top: 14px;
+			padding-bottom: 15px;
+		}
 
 		&:first-child {
 			
@@ -943,11 +1648,21 @@
 	.block-description {
 
 		.block-title {
-			padding-right: 65px;
+
+			@include min-breakpoint($tablet) {
+				padding-right: 55px;
+			}
+			
+			@include min-breakpoint($xl-screen) {
+				padding-right: 65px;
+			}
 		}
 
 		.date {
-			margin: -26px 0 0;
+
+			@include min-breakpoint($tablet) {
+				margin: -26px 0 0;
+			}
 		}
 	}
 
@@ -963,7 +1678,15 @@
 
 		&:nth-child(2),
 		&:nth-child(3) {
-			width: 200px;
+			width: 120px;
+
+			@include min-breakpoint($largescreen) {
+				width: 150px;
+			}
+
+			@include min-breakpoint($xl-screen) {
+				width: 200px;
+			}
 		}
 
 		&:nth-child(3) {

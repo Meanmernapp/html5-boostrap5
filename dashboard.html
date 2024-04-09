@@ -27,140 +27,148 @@
 <body>
 	<div class="wrapper">
 		<header class="dashboard-header">
-			<strong class="dashboard-logo">
-				<a href="#">
-					<img src="assets/images/adminimages/logo.svg" alt="Konstellate">
-				</a>
-			</strong>
-			<div class="header-info-area">
-				<ul class="header-info-list list-unstyled">
-					<li>
-						<a href="#"><i class="ico-bell"></i></a>
-					</li>
-					<li>
-						<a href="#"><i class="ico-clock"></i></a>
-					</li>
-				</ul>
-				<div class="header-user-area">
-					<span class="user-opener-wrap">
-						<a href="#" class="user-link">
-							<img src="assets/images/adminimages/user-image.png" alt="user image">
-						</a>
-						<div class="status-wrap">
-							<span class="status"></span>
-						</div>
-					</span>
+			<div class="dashboard-header-holder">
+				<strong class="dashboard-logo">
+					<a href="#">
+						<img src="assets/images/adminimages/logo.svg" alt="Konstellate">
+					</a>
+				</strong>
+				<div class="header-info-area">
+					<ul class="header-info-list list-unstyled">
+						<li>
+							<a href="#"><i class="ico-bell"></i></a>
+						</li>
+						<li>
+							<a href="#"><i class="ico-clock"></i></a>
+						</li>
+					</ul>
+					<div class="header-user-area">
+						<span class="user-opener-wrap">
+							<a href="#" class="user-link">
+								<img src="assets/images/adminimages/user-image.png" alt="user image">
+							</a>
+							<div class="status-wrap">
+								<span class="status"></span>
+							</div>
+						</span>
+					</div>
 				</div>
 			</div>
+			<a href="#" class="menu-opener"></a>
 		</header>
 		<main class="dashboard-main">
+			<span class="body-overlay menu-overlay"></span>
 			<div class="sidebar-area">
-				<div class="menu-list-holder">
-					<ul class="menu-list list-unstyled">
-						<li class="active">
-							<a href="#"><i class="ico-dashboard"></i></a>
-						</li>
-						<li>
-							<a href="#"><i class="ico-search"></i></a>
-						</li>
-						<li>
-							<a href="#"><i class="ico-notebook"></i></a>
-						</li>
-					</ul>
-					<ul class="menu-list list-unstyled">
-						<li>
-							<a href="#"><i class="ico-integration"></i></a>
-						</li>
-						<li>
-							<a href="#"><i class="ico-help"></i></a>
-						</li>
-					</ul>
+				<div class="sidebar-holder">
+					<div class="menu-list-holder">
+						<ul class="menu-list list-unstyled">
+							<li class="active">
+								<a href="#"><i class="ico-dashboard"></i></a>
+							</li>
+							<li>
+								<a href="#"><i class="ico-search"></i></a>
+							</li>
+							<li>
+								<a href="#"><i class="ico-notebook"></i></a>
+							</li>
+						</ul>
+						<ul class="menu-list list-unstyled">
+							<li>
+								<a href="#"><i class="ico-integration"></i></a>
+							</li>
+							<li>
+								<a href="#"><i class="ico-help"></i></a>
+							</li>
+						</ul>
+					</div>
 				</div>
 			</div>
 			<div class="main-content-area">
 				<aside class="dashboard-sidebar">
-					<div class="sidebar-widget-area">
-						<div class="widget-opener-holder">
-							<a href="#" class="widget-opener">GU Oncology Key Opinion Leaders <i class="ico-arrow-top"></i></a>
+					<div class="dashboard-sidebar-content">
+						<div class="sidebar-widget-area">
+							<div class="widget-opener-holder">
+								<a href="#" class="widget-opener">GU Oncology Key Opinion Leaders <i class="ico-arrow-top"></i></a>
+							</div>
+							<div class="widget-heading-area">
+								<strong class="heading">My KOLs</strong>
+							</div>
+							<div class="widget-list-holder">
+								<ul class="widget-list list-unstyled">
+									<li>
+										<strong class="title">Matt Campbell</strong>
+										<span class="text">MDACC</span>
+									</li>
+									<li>
+										<strong class="title">Arlene Siefker-Radtke</strong>
+										<span class="text">Huntsman Can</span>
+									</li>
+									<li>
+										<strong class="title">Neeraj Agarwal</strong>
+										<span class="text">USC</span>
+									</li>
+									<li>
+										<strong class="title">Tanya Dorff</strong>
+										<span class="text">UCLA</span>
+									</li>
+									<li>
+										<strong class="title">Alexandra Drakaki</strong>
+										<span class="text">U of Colorado</span>
+									</li>
+									<li>
+										<strong class="title">Thomas Flaig</strong>
+										<span class="text">UCSF</span>
+									</li>
+								</ul>
+							</div>
 						</div>
-						<div class="widget-heading-area">
-							<strong class="heading">My KOLs</strong>
-						</div>
-						<div class="widget-list-holder">
-							<ul class="widget-list list-unstyled">
-								<li>
-									<strong class="title">Matt Campbell</strong>
-									<span class="text">MDACC</span>
-								</li>
-								<li>
-									<strong class="title">Arlene Siefker-Radtke</strong>
-									<span class="text">Huntsman Can</span>
-								</li>
-								<li>
-									<strong class="title">Neeraj Agarwal</strong>
-									<span class="text">USC</span>
-								</li>
-								<li>
-									<strong class="title">Tanya Dorff</strong>
-									<span class="text">UCLA</span>
-								</li>
-								<li>
-									<strong class="title">Alexandra Drakaki</strong>
-									<span class="text">U of Colorado</span>
-								</li>
-								<li>
-									<strong class="title">Thomas Flaig</strong>
-									<span class="text">UCSF</span>
-								</li>
-							</ul>
-						</div>
-					</div>
-					<div class="sidebar-widget-area">
-						<div class="widget-heading-area">
-							<strong class="heading">My KOLs</strong>
-							<span class="view-link-holder">
-								<a href="#" class="view-link">View all <i class="ico-view-all"></i></a>
-							</span>
-						</div>
-						<div class="widget-search-area">
-							<label class="label"><i class="ico-search"></i></label>
-							<input type="search" class="form-control" placeholder="Search in Videos">
-						</div>
-						<div class="widget-list-holder">
-							<ul class="widget-list list-unstyled">
-								<li>
-									<strong class="title">Matt Campbell</strong>
-									<span class="text">MDACC</span>
-								</li>
-								<li>
-									<strong class="title">Arlene Siefker-Radtke</strong>
-									<span class="text">Huntsman Can</span>
-								</li>
-								<li>
-									<strong class="title">Neeraj Agarwal</strong>
-									<span class="text">USC</span>
-								</li>
-								<li>
-									<strong class="title">Tanya Dorff</strong>
-									<span class="text">UCLA</span>
-								</li>
-								<li>
-									<strong class="title">Alexandra Drakaki</strong>
-									<span class="text">U of Colorado</span>
-								</li>
-								<li>
-									<strong class="title">Thomas Flaig</strong>
-									<span class="text">UCSF</span>
-								</li>
-								<li>
-									<strong class="title">Matt Campbell</strong>
-									<span class="text">MDACC</span>
-								</li>
-								<li>
-									<strong class="title">Arlene Siefker-Radtke</strong>
-									<span class="text">Huntsman Can</span>
-								</li>
-							</ul>
+						<div class="sidebar-widget-area">
+							<div class="widget-heading-area">
+								<strong class="heading">All KOLs</strong>
+								<span class="view-link-holder">
+									<a href="#" class="view-link">View all <i class="ico-view-all"></i></a>
+								</span>
+							</div>
+							<div class="widget-search-area">
+								<label class="label"><i class="ico-search"></i></label>
+								<input type="search" class="form-control" placeholder="Search in Videos">
+							</div>
+							<div class="widget-list-holder">
+								<ul class="widget-list list-unstyled">
+									<li>
+										<strong class="title">Matt Campbell</strong>
+										<span class="text">MDACC</span>
+									</li>
+									<li>
+										<strong class="title">Arlene Siefker-Radtke</strong>
+										<span class="text">Huntsman Can</span>
+									</li>
+									<li>
+										<strong class="title">Neeraj Agarwal</strong>
+										<span class="text">USC</span>
+									</li>
+									<li>
+										<strong class="title">Tanya Dorff</strong>
+										<span class="text">UCLA</span>
+									</li>
+									<li>
+										<strong class="title">Alexandra Drakaki</strong>
+										<span class="text">U of Colorado</span>
+									</li>
+									<li>
+										<strong class="title">Thomas Flaig</strong>
+										<span class="text">UCSF</span>
+									</li>
+									<li>
+										<strong class="title">Matt Campbell</strong>
+										<span class="text">MDACC</span>
+									</li>
+									<li>
+										<strong class="title">Arlene Siefker-Radtke</strong>
+										<span class="text">Huntsman Can</span>
+									</li>
+								</ul>
+							</div>
 						</div>
 					</div>
 				</aside>
