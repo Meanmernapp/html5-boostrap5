@@ -2,6 +2,8 @@ jQuery(function() {
 	initMobileNav();
 	initSlickCarousel();
 	initCustomForms();
+	initOpenClose();
+	initCustomModal();
 	initOutsideClick();
 });
 
@@ -42,13 +44,63 @@ function initMobileNav() {
 	});
 }
 
+// Custom Modal init
+function initCustomModal() {
+	jQuery(document).on('click', '.add-folder-button', function (e) {
+		e.preventDefault();
+		jQuery('body').addClass('folder-modal-active');
+	});
+
+	jQuery(document).on('click', '.add-folder-modal-close', function (e) {
+		e.preventDefault();
+		jQuery('body').removeClass('folder-modal-active');
+	});
+}
+
+// Open Close init
+function initOpenClose() {
+	// profile dropdown
+	jQuery(document).on('click', '.user-profile-opener', function (e) {
+		e.preventDefault();
+		jQuery(this).parents('.header-user-area').toggleClass('active');
+		jQuery(this).parents('.header-user-area').find('.header-user-slide').slideToggle();
+	});
+
+	// Widget dropdown
+	jQuery(document).on('click', '.widget-opener', function (e) {
+		e.preventDefault();
+		jQuery(this).parents('.widget-dropdown-area').toggleClass('active');
+		jQuery(this).parents('.widget-dropdown-area').find('.widget-dropdown-slide').slideToggle();
+	});
+
+	// Filter Sidebar Open
+	jQuery(document).on('click', '.filter-opener', function (e) {
+		e.preventDefault();
+		jQuery('body').addClass('filter-sidebar-open');
+	});
+
+	// Filter Sidebar Close
+	jQuery(document).on('click', '.filter-close-button', function (e) {
+		e.preventDefault();
+		jQuery('body').removeClass('filter-sidebar-open');
+	});
+}
+
 // Outside Click init
 function initOutsideClick() {
 	jQuery(document).click(function (e) {
 		var target = e.target;
-		if (jQuery(".header-search-area").hasClass('active')) {
-			if (!jQuery(target).parents('.header-search-area').length > 0) {
-				jQuery('.header-search-area').removeClass('active');
+		if (jQuery(".header-user-area").hasClass('active')) {
+			if (!jQuery(target).parents('.header-user-area').length > 0) {
+				jQuery('.header-user-area').removeClass('active');
+				jQuery('.header-user-slide').slideUp();
+			}
+		}
+
+		if (jQuery(".widget-dropdown-area").hasClass('active')) {
+			if (!jQuery(target).parents('.widget-dropdown-area').length > 0) {
+				jQuery('.widget-dropdown-area').removeClass('active');
+				jQuery('.widget-dropdown-slide').slideUp();
 			}
 		}
 	});

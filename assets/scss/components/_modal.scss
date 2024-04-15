@@ -1,0 +1,127 @@
+.folder-modal-active {
+  overflow: hidden;
+
+  .filter-overlay {
+    display: none !important;
+  }
+
+  .add-folder-dashboard-modal {
+    @include OpacityShow();
+  }
+}
+
+.dashboard-modal-area {
+  @include position(fixed, 0, 0, 0, 0);
+  background: $overlay-bg;
+  transition: $transition;
+  @include OpacityHide();
+  z-index: 112;
+}
+
+.dashboard-modal-holder {
+  @include flex(flex, wrap, center, center);
+  flex-direction: column;
+  position: relative;
+  height: 100%;
+}
+
+.dashboard-modal-container {
+  position: relative;
+  max-width: 435px;
+  padding: 25px 15px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.dashboard-modal-content {
+  position: relative;
+  border-radius: 7px;
+  background: $white;
+  padding: 18px;
+  overflow: hidden;
+}
+
+.dashboard-modal-header {
+  @include flex(flex, wrap, center, space-between);
+  position: relative;
+  margin: 0 0 24px;
+}
+
+.modal-heading {
+  @include flex(flex, wrap, center, inherit);
+  @include font(16, 22, 400);
+  color: $theme-color;
+
+  .icon {
+    @include fontsize(19px, 1);
+    position: relative;
+    display: block;
+    color: $dark-brown;
+    margin: 0 12px 0 0;
+  }
+
+  .ico-add-folder {
+    top: -1px;
+  }
+}
+
+.dashboard-modal-close {
+  position: relative;
+  display: block;
+  transition: $transition;
+  text-decoration: none;
+  color: $lighter-gray;
+
+  i {
+    position: relative;
+    font-size: 15px;
+    display: block;
+  }
+
+  &:hover {
+    color: $theme-color;
+  }
+}
+
+.dashboard-modal-body {
+  position: relative;
+
+  .field-row {
+    margin: 0;
+
+    .form-control {
+      height: 48px;
+      font-size: 14px;
+
+      @include min-breakpoint($tablet) {
+        font-size: 16px;
+      }
+    }
+  }
+}
+
+.modal-submit-btn-holder {
+  @include flex(flex, wrap, center, flex-end);
+  position: relative;
+  padding: 15px 0 0;
+}
+
+.modal-submit-btn {
+  @include font(16, 20, 500);
+  display: block;
+  text-decoration: none;
+  border: none;
+  transition: $transition;
+  outline: none;
+  padding: 11px 24px;
+  border-radius: 7px;
+  min-width: 100px;
+  height: 40px;
+  background: $theme-color;
+  color: $white;
+
+  &:hover {
+    background: $dark-brown;
+    color: $white;
+  }
+}

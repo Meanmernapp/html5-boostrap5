@@ -44,13 +44,49 @@
 					</ul>
 					<div class="header-user-area">
 						<span class="user-opener-wrap">
-							<a href="#" class="user-link">
+							<a href="#" class="user-link user-profile-opener">
 								<img src="assets/images/adminimages/user-image.png" alt="user image">
 							</a>
 							<div class="status-wrap">
 								<span class="status"></span>
 							</div>
 						</span>
+						<div class="header-user-slide">
+							<div class="user-info-list-holder">
+								<div class="user-heading-area">
+									<div class="user-image">
+										<a href="#" class="user-link">
+											<img src="assets/images/adminimages/user-image.png" alt="user image">
+										</a>
+										<div class="status-wrap">
+											<span class="status"></span>
+										</div>
+									</div>
+									<div class="user-description">
+										<strong class="name">Matt Campbell</strong>
+										<span class="desination">Competitive Intelligence</span>
+									</div>
+								</div>
+								<ul class="user-info-list list-unstyled">
+									<li>
+										<a href="#">
+											<span class="icon-wrap">
+												<i class="ico-setting"></i>
+											</span>
+											<span class="sub-text">Setting</span>
+										</a>
+									</li>
+									<li>
+										<a href="index.html">
+											<span class="icon-wrap">
+												<i class="ico-logout"></i>
+											</span>
+											<span class="sub-text">Logout</span>
+										</a>
+									</li>
+								</ul>
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -87,8 +123,22 @@
 				<aside class="dashboard-sidebar">
 					<div class="dashboard-sidebar-content">
 						<div class="sidebar-widget-area">
-							<div class="widget-opener-holder">
-								<a href="#" class="widget-opener">GU Oncology Key Opinion Leaders <i class="ico-arrow-top"></i></a>
+							<div class="widget-dropdown-area">
+								<div class="widget-opener-holder">
+									<a href="#" class="widget-opener">GU Oncology Key Opinion Leaders <i class="ico-arrow-top"></i></a>
+								</div>
+								<div class="widget-dropdown-slide">
+									<div class="widget-dropdown-list-holder">
+										<ul class="widget-dropdown-list">
+											<li>
+												<a href="#" class="sub-text">Dladder Cancer</a>
+											</li>
+											<li>
+												<a href="#" class="sub-text">Blood Cancer</a>
+											</li>
+										</ul>
+									</div>
+								</div>
 							</div>
 							<div class="widget-heading-area">
 								<strong class="heading">My KOLs</strong>
@@ -173,1286 +223,842 @@
 					</div>
 				</aside>
 				<div class="dashboard-content">
-					<div class="content-heading-area">
-						<div class="content-serach-area">
-							<label class="search-label"><i class="ico-logo-icon"></i></label>
-							<input type="search" class="form-control" placeholder="Ask Konstellate about KOLs">
-							<ul class="field-options list-unstyled">
-								<li>
-									<span class="sub-text"><i class="ico-at"></i></span>
-								</li>
-								<li>
-									<a href="#" class="sub-text">
-										<span class="arrow-wrap"><i class="ico-long-arrow-top"></i></span>
-									</a>
-								</li>
-							</ul>
-						</div>
-						<div class="tags-list-area">
-							<div class="tags-list-holder">
-								<ul class="tags-list list-unstyled">
-									<li class="selected">
-										<span class="tags-text">
-											<span class="icon-holder">
-												<a href="#" class="add-item">
-													<i class="ico-plus"></i>
-												</a>
-												<a href="#" class="close-item">
-													<i class="ico-tag-close"></i>
-												</a>
-											</span>
-											<span class="sub-text">Sources</span>
-										</span>
+					<div class="dashboard-detail-content">
+						<div class="content-heading-area">
+							<div class="content-serach-area">
+								<label class="search-label"><i class="ico-logo-icon"></i></label>
+								<input type="search" class="form-control" placeholder="Ask Konstellate about KOLs">
+								<ul class="field-options list-unstyled">
+									<li>
+										<span class="sub-text"><i class="ico-at"></i></span>
 									</li>
 									<li>
-										<span class="tags-text">
-											<span class="icon-holder">
-												<span class="icon-holder">
-													<a href="#" class="add-item">
-														<i class="ico-plus"></i>
-													</a>
-													<a href="#" class="close-item">
-														<i class="ico-tag-close"></i>
-													</a>
-												</span>
-											</span>
-											<span class="sub-text">All content</span>
-										</span>
-									</li>
-									<li>
-										<span class="tags-text">
-											<span class="icon-holder">
-												<span class="icon-holder">
-													<a href="#" class="add-item">
-														<i class="ico-plus"></i>
-													</a>
-													<a href="#" class="close-item">
-														<i class="ico-tag-close"></i>
-													</a>
-												</span>
-											</span>
-											<span class="sub-text">Notes</span>
-										</span>
-									</li>
-									<li>
-										<span class="tags-text">
-											<span class="icon-holder">
-												<span class="icon-holder">
-													<a href="#" class="add-item">
-														<i class="ico-plus"></i>
-													</a>
-													<a href="#" class="close-item">
-														<i class="ico-tag-close"></i>
-													</a>
-												</span>
-											</span>
-											<span class="sub-text">Last 28 days</span>
-										</span>
+										<a href="#" class="sub-text">
+											<span class="arrow-wrap"><i class="ico-long-arrow-top"></i></span>
+										</a>
 									</li>
 								</ul>
 							</div>
-							<span class="filter-opener-holder">
-								<a href="#" class="filter-opener"><i class="ico-filter"></i> Advance Filter</a>
-							</span>
-						</div>
-					</div>
-					<div class="content-block-area">
-						<div class="block-row">
-							<div class="block-col">
-								<div class="content-detail-block video-detail-block">
-									<div class="block-heading-area">
-										<strong class="heading"><i class="icon ico-multi-user"></i> Content</strong>
-										<span class="view-link-holder">
-											<a href="#" class="view-link">View all <i class="ico-view-all"></i></a>
-										</span>
-									</div>
-									<div class="block-slider-area">
-										<div class="block-slider">
-											<div class="slide">
-												<div class="block-list-row-holder video-list-row-holder">
-													<div class="block-list-row">
-														<div class="block-image">
-															<img src="assets/images/adminimages/image01.png" alt="video">
-															<a href="#" class="video-play">
-																<i class="ico-polygon"></i>
-															</a>
-														</div>
-														<div class="block-description">
-															<strong class="block-title">Uromiogs Live 2023: Dr. Petros Grivas on . . .</strong>
-															<div class="block-info-area">
-																<div class="block-info-holder">
-																	<span class="time">3:36</span>
-																	<ul class="block-link-holder list-unstyled">
-																		<li><a href="#" class="block-link">GU Oncology Now</a></li>
-																	</ul>
-																</div>
-															</div>
-														</div>
-													</div>
-													<div class="block-list-row">
-														<div class="block-image">
-															<img src="assets/images/adminimages/image01.png" alt="video">
-															<a href="#" class="video-play">
-																<i class="ico-polygon"></i>
-															</a>
-														</div>
-														<div class="block-description">
-															<strong class="block-title">Uromiogs Live 2023: Dr. Petros Grivas on . . .</strong>
-															<div class="block-info-area">
-																<div class="block-info-holder">
-																	<span class="time">3:36</span>
-																	<ul class="block-link-holder list-unstyled">
-																		<li><a href="#" class="block-link">GU Oncology Now</a></li>
-																	</ul>
-																</div>
-																<span class="date">Nov 9, 2023</span>
-															</div>
-														</div>
-													</div>
-													<div class="block-list-row">
-														<div class="block-image">
-															<img src="assets/images/adminimages/image01.png" alt="video">
-															<a href="#" class="video-play">
-																<i class="ico-polygon"></i>
-															</a>
-														</div>
-														<div class="block-description">
-															<strong class="block-title">Uromiogs Live 2023: Dr. Petros Grivas on . . .</strong>
-															<div class="block-info-area">
-																<div class="block-info-holder">
-																	<span class="time">3:36</span>
-																	<ul class="block-link-holder list-unstyled">
-																		<li><a href="#" class="block-link">GU Oncology Now</a></li>
-																	</ul>
-																</div>
-																<span class="date">Nov 9, 2023</span>
-															</div>
-														</div>
-													</div>
-												</div>
-											</div>
-											<div class="slide">
-												<div class="block-list-row-holder video-list-row-holder">
-													<div class="block-list-row">
-														<div class="block-image">
-															<img src="assets/images/adminimages/image01.png" alt="video">
-															<a href="#" class="video-play">
-																<i class="ico-polygon"></i>
-															</a>
-														</div>
-														<div class="block-description">
-															<strong class="block-title">Uromiogs Live 2023: Dr. Petros Grivas on . . .</strong>
-															<div class="block-info-area">
-																<div class="block-info-holder">
-																	<span class="time">3:36</span>
-																	<ul class="block-link-holder list-unstyled">
-																		<li><a href="#" class="block-link">GU Oncology Now</a></li>
-																	</ul>
-																</div>
-															</div>
-														</div>
-													</div>
-													<div class="block-list-row">
-														<div class="block-image">
-															<img src="assets/images/adminimages/image01.png" alt="video">
-															<a href="#" class="video-play">
-																<i class="ico-polygon"></i>
-															</a>
-														</div>
-														<div class="block-description">
-															<strong class="block-title">Uromiogs Live 2023: Dr. Petros Grivas on . . .</strong>
-															<div class="block-info-area">
-																<div class="block-info-holder">
-																	<span class="time">3:36</span>
-																	<ul class="block-link-holder list-unstyled">
-																		<li><a href="#" class="block-link">GU Oncology Now</a></li>
-																	</ul>
-																</div>
-																<span class="date">Nov 9, 2023</span>
-															</div>
-														</div>
-													</div>
-													<div class="block-list-row">
-														<div class="block-image">
-															<img src="assets/images/adminimages/image01.png" alt="video">
-															<a href="#" class="video-play">
-																<i class="ico-polygon"></i>
-															</a>
-														</div>
-														<div class="block-description">
-															<strong class="block-title">Uromiogs Live 2023: Dr. Petros Grivas on . . .</strong>
-															<div class="block-info-area">
-																<div class="block-info-holder">
-																	<span class="time">3:36</span>
-																	<ul class="block-link-holder list-unstyled">
-																		<li><a href="#" class="block-link">GU Oncology Now</a></li>
-																	</ul>
-																</div>
-																<span class="date">Nov 9, 2023</span>
-															</div>
-														</div>
-													</div>
-												</div>
-											</div>
-											<div class="slide">
-												<div class="block-list-row-holder video-list-row-holder">
-													<div class="block-list-row">
-														<div class="block-image">
-															<img src="assets/images/adminimages/image01.png" alt="video">
-															<a href="#" class="video-play">
-																<i class="ico-polygon"></i>
-															</a>
-														</div>
-														<div class="block-description">
-															<strong class="block-title">Uromiogs Live 2023: Dr. Petros Grivas on . . .</strong>
-															<div class="block-info-area">
-																<div class="block-info-holder">
-																	<span class="time">3:36</span>
-																	<ul class="block-link-holder list-unstyled">
-																		<li><a href="#" class="block-link">GU Oncology Now</a></li>
-																	</ul>
-																</div>
-															</div>
-														</div>
-													</div>
-													<div class="block-list-row">
-														<div class="block-image">
-															<img src="assets/images/adminimages/image01.png" alt="video">
-															<a href="#" class="video-play">
-																<i class="ico-polygon"></i>
-															</a>
-														</div>
-														<div class="block-description">
-															<strong class="block-title">Uromiogs Live 2023: Dr. Petros Grivas on . . .</strong>
-															<div class="block-info-area">
-																<div class="block-info-holder">
-																	<span class="time">3:36</span>
-																	<ul class="block-link-holder list-unstyled">
-																		<li><a href="#" class="block-link">GU Oncology Now</a></li>
-																	</ul>
-																</div>
-																<span class="date">Nov 9, 2023</span>
-															</div>
-														</div>
-													</div>
-													<div class="block-list-row">
-														<div class="block-image">
-															<img src="assets/images/adminimages/image01.png" alt="video">
-															<a href="#" class="video-play">
-																<i class="ico-polygon"></i>
-															</a>
-														</div>
-														<div class="block-description">
-															<strong class="block-title">Uromiogs Live 2023: Dr. Petros Grivas on . . .</strong>
-															<div class="block-info-area">
-																<div class="block-info-holder">
-																	<span class="time">3:36</span>
-																	<ul class="block-link-holder list-unstyled">
-																		<li><a href="#" class="block-link">GU Oncology Now</a></li>
-																	</ul>
-																</div>
-																<span class="date">Nov 9, 2023</span>
-															</div>
-														</div>
-													</div>
-												</div>
-											</div>
-											<div class="slide">
-												<div class="block-list-row-holder video-list-row-holder">
-													<div class="block-list-row">
-														<div class="block-image">
-															<img src="assets/images/adminimages/image01.png" alt="video">
-															<a href="#" class="video-play">
-																<i class="ico-polygon"></i>
-															</a>
-														</div>
-														<div class="block-description">
-															<strong class="block-title">Uromiogs Live 2023: Dr. Petros Grivas on . . .</strong>
-															<div class="block-info-area">
-																<div class="block-info-holder">
-																	<span class="time">3:36</span>
-																	<ul class="block-link-holder list-unstyled">
-																		<li><a href="#" class="block-link">GU Oncology Now</a></li>
-																	</ul>
-																</div>
-															</div>
-														</div>
-													</div>
-													<div class="block-list-row">
-														<div class="block-image">
-															<img src="assets/images/adminimages/image01.png" alt="video">
-															<a href="#" class="video-play">
-																<i class="ico-polygon"></i>
-															</a>
-														</div>
-														<div class="block-description">
-															<strong class="block-title">Uromiogs Live 2023: Dr. Petros Grivas on . . .</strong>
-															<div class="block-info-area">
-																<div class="block-info-holder">
-																	<span class="time">3:36</span>
-																	<ul class="block-link-holder list-unstyled">
-																		<li><a href="#" class="block-link">GU Oncology Now</a></li>
-																	</ul>
-																</div>
-																<span class="date">Nov 9, 2023</span>
-															</div>
-														</div>
-													</div>
-													<div class="block-list-row">
-														<div class="block-image">
-															<img src="assets/images/adminimages/image01.png" alt="video">
-															<a href="#" class="video-play">
-																<i class="ico-polygon"></i>
-															</a>
-														</div>
-														<div class="block-description">
-															<strong class="block-title">Uromiogs Live 2023: Dr. Petros Grivas on . . .</strong>
-															<div class="block-info-area">
-																<div class="block-info-holder">
-																	<span class="time">3:36</span>
-																	<ul class="block-link-holder list-unstyled">
-																		<li><a href="#" class="block-link">GU Oncology Now</a></li>
-																	</ul>
-																</div>
-																<span class="date">Nov 9, 2023</span>
-															</div>
-														</div>
-													</div>
-												</div>
-											</div>
-											<div class="slide">
-												<div class="block-list-row-holder video-list-row-holder">
-													<div class="block-list-row">
-														<div class="block-image">
-															<img src="assets/images/adminimages/image01.png" alt="video">
-															<a href="#" class="video-play">
-																<i class="ico-polygon"></i>
-															</a>
-														</div>
-														<div class="block-description">
-															<strong class="block-title">Uromiogs Live 2023: Dr. Petros Grivas on . . .</strong>
-															<div class="block-info-area">
-																<div class="block-info-holder">
-																	<span class="time">3:36</span>
-																	<ul class="block-link-holder list-unstyled">
-																		<li><a href="#" class="block-link">GU Oncology Now</a></li>
-																	</ul>
-																</div>
-															</div>
-														</div>
-													</div>
-													<div class="block-list-row">
-														<div class="block-image">
-															<img src="assets/images/adminimages/image01.png" alt="video">
-															<a href="#" class="video-play">
-																<i class="ico-polygon"></i>
-															</a>
-														</div>
-														<div class="block-description">
-															<strong class="block-title">Uromiogs Live 2023: Dr. Petros Grivas on . . .</strong>
-															<div class="block-info-area">
-																<div class="block-info-holder">
-																	<span class="time">3:36</span>
-																	<ul class="block-link-holder list-unstyled">
-																		<li><a href="#" class="block-link">GU Oncology Now</a></li>
-																	</ul>
-																</div>
-																<span class="date">Nov 9, 2023</span>
-															</div>
-														</div>
-													</div>
-													<div class="block-list-row">
-														<div class="block-image">
-															<img src="assets/images/adminimages/image01.png" alt="video">
-															<a href="#" class="video-play">
-																<i class="ico-polygon"></i>
-															</a>
-														</div>
-														<div class="block-description">
-															<strong class="block-title">Uromiogs Live 2023: Dr. Petros Grivas on . . .</strong>
-															<div class="block-info-area">
-																<div class="block-info-holder">
-																	<span class="time">3:36</span>
-																	<ul class="block-link-holder list-unstyled">
-																		<li><a href="#" class="block-link">GU Oncology Now</a></li>
-																	</ul>
-																</div>
-																<span class="date">Nov 9, 2023</span>
-															</div>
-														</div>
-													</div>
-												</div>
-											</div>
-											<div class="slide">
-												<div class="block-list-row-holder video-list-row-holder">
-													<div class="block-list-row">
-														<div class="block-image">
-															<img src="assets/images/adminimages/image01.png" alt="video">
-															<a href="#" class="video-play">
-																<i class="ico-polygon"></i>
-															</a>
-														</div>
-														<div class="block-description">
-															<strong class="block-title">Uromiogs Live 2023: Dr. Petros Grivas on . . .</strong>
-															<div class="block-info-area">
-																<div class="block-info-holder">
-																	<span class="time">3:36</span>
-																	<ul class="block-link-holder list-unstyled">
-																		<li><a href="#" class="block-link">GU Oncology Now</a></li>
-																	</ul>
-																</div>
-															</div>
-														</div>
-													</div>
-													<div class="block-list-row">
-														<div class="block-image">
-															<img src="assets/images/adminimages/image01.png" alt="video">
-															<a href="#" class="video-play">
-																<i class="ico-polygon"></i>
-															</a>
-														</div>
-														<div class="block-description">
-															<strong class="block-title">Uromiogs Live 2023: Dr. Petros Grivas on . . .</strong>
-															<div class="block-info-area">
-																<div class="block-info-holder">
-																	<span class="time">3:36</span>
-																	<ul class="block-link-holder list-unstyled">
-																		<li><a href="#" class="block-link">GU Oncology Now</a></li>
-																	</ul>
-																</div>
-																<span class="date">Nov 9, 2023</span>
-															</div>
-														</div>
-													</div>
-													<div class="block-list-row">
-														<div class="block-image">
-															<img src="assets/images/adminimages/image01.png" alt="video">
-															<a href="#" class="video-play">
-																<i class="ico-polygon"></i>
-															</a>
-														</div>
-														<div class="block-description">
-															<strong class="block-title">Uromiogs Live 2023: Dr. Petros Grivas on . . .</strong>
-															<div class="block-info-area">
-																<div class="block-info-holder">
-																	<span class="time">3:36</span>
-																	<ul class="block-link-holder list-unstyled">
-																		<li><a href="#" class="block-link">GU Oncology Now</a></li>
-																	</ul>
-																</div>
-																<span class="date">Nov 9, 2023</span>
-															</div>
-														</div>
-													</div>
-												</div>
-											</div>
-										</div>
-									</div>
+							<div class="tags-list-area">
+								<div class="tags-list-holder">
+									<ul class="tags-list list-unstyled">
+										<li class="selected">
+											<span class="tags-text">
+												<span class="icon-holder">
+													<a href="#" class="add-item">
+														<i class="ico-plus"></i>
+													</a>
+													<a href="#" class="close-item">
+														<i class="ico-tag-close"></i>
+													</a>
+												</span>
+												<span class="sub-text">Sources</span>
+											</span>
+										</li>
+										<li>
+											<span class="tags-text">
+												<span class="icon-holder">
+													<span class="icon-holder">
+														<a href="#" class="add-item">
+															<i class="ico-plus"></i>
+														</a>
+														<a href="#" class="close-item">
+															<i class="ico-tag-close"></i>
+														</a>
+													</span>
+												</span>
+												<span class="sub-text">All content</span>
+											</span>
+										</li>
+										<li>
+											<span class="tags-text">
+												<span class="icon-holder">
+													<span class="icon-holder">
+														<a href="#" class="add-item">
+															<i class="ico-plus"></i>
+														</a>
+														<a href="#" class="close-item">
+															<i class="ico-tag-close"></i>
+														</a>
+													</span>
+												</span>
+												<span class="sub-text">Notes</span>
+											</span>
+										</li>
+										<li>
+											<span class="tags-text">
+												<span class="icon-holder">
+													<span class="icon-holder">
+														<a href="#" class="add-item">
+															<i class="ico-plus"></i>
+														</a>
+														<a href="#" class="close-item">
+															<i class="ico-tag-close"></i>
+														</a>
+													</span>
+												</span>
+												<span class="sub-text">Last 28 days</span>
+											</span>
+										</li>
+									</ul>
 								</div>
-								<div class="content-detail-block note-detail-block">
-									<div class="block-heading-area">
-										<strong class="heading"><i class="icon ico-notebook"></i> My Notes</strong>
-										<span class="view-link-holder">
-											<a href="#" class="view-link">View all <i class="ico-view-all"></i></a>
-										</span>
-									</div>
-									<div class="block-slider-area">
-										<div class="block-slider">
-											<div class="slide">
-												<div class="block-list-row-holder">
-													<div class="block-list-row">
-														<div class="block-description">
-															<div class="block-info-area">
-																<div class="block-info-holder">
-																	<span class="block-text">3:36</span>
-																</div>
-																<span class="date">Date</span>
-															</div>
-														</div>
-													</div>
-													<div class="block-list-row">
-														<div class="block-description">
-															<strong class="block-title has-icon"><i class="ico-logo-icon"></i>Petros Grivas thoughts on EV-302 Data</strong>
-															<div class="block-info-area">
-																<div class="block-info-holder">
-																	<ul class="block-link-holder list-unstyled">
-																		<li>Kol Name</li>
-																		<li>How many Video</li>
-																		<li>Total hour of video</li>
-																	</ul>
-																</div>
-																<span class="date">19 Now</span>
-															</div>
-														</div>
-													</div>
-													<div class="block-list-row">
-														<div class="block-description">
-															<strong class="block-title has-icon"><i class="ico-logo-icon"></i>Nivo+Chemo, will it be competitive in first line?</strong>
-															<div class="block-info-area">
-																<div class="block-info-holder">
-																	<ul class="block-link-holder list-unstyled">
-																		<li>Kol Name</li>
-																		<li>How many Video</li>
-																		<li>Total hour of video</li>
-																	</ul>
-																</div>
-																<span class="date">19 Now</span>
-															</div>
-														</div>
-													</div>
-													<div class="block-list-row">
-														<div class="block-description">
-															<strong class="block-title has-icon"><i class="ico-logo-icon"></i>Follow up with Monty on new Data</strong>
-															<div class="block-info-area">
-																<div class="block-info-holder">
-																	<ul class="block-link-holder list-unstyled">
-																		<li>Kol Name</li>
-																		<li>How many Video</li>
-																		<li>Total hour of video</li>
-																	</ul>
-																</div>
-																<span class="date">19 Now</span>
-															</div>
-														</div>
-													</div>
-												</div>
-											</div>
-											<div class="slide">
-												<div class="block-list-row-holder">
-													<div class="block-list-row">
-														<div class="block-description">
-															<div class="block-info-area">
-																<div class="block-info-holder">
-																	<span class="block-text">3:36</span>
-																</div>
-																<span class="date">Date</span>
-															</div>
-														</div>
-													</div>
-													<div class="block-list-row">
-														<div class="block-description">
-															<strong class="block-title has-icon"><i class="ico-logo-icon"></i>Petros Grivas thoughts on EV-302 Data</strong>
-															<div class="block-info-area">
-																<div class="block-info-holder">
-																	<ul class="block-link-holder list-unstyled">
-																		<li>Kol Name</li>
-																		<li>How many Video</li>
-																		<li>Total hour of video</li>
-																	</ul>
-																</div>
-																<span class="date">19 Now</span>
-															</div>
-														</div>
-													</div>
-													<div class="block-list-row">
-														<div class="block-description">
-															<strong class="block-title has-icon"><i class="ico-logo-icon"></i>Nivo+Chemo, will it be competitive in first line?</strong>
-															<div class="block-info-area">
-																<div class="block-info-holder">
-																	<ul class="block-link-holder list-unstyled">
-																		<li>Kol Name</li>
-																		<li>How many Video</li>
-																		<li>Total hour of video</li>
-																	</ul>
-																</div>
-																<span class="date">19 Now</span>
-															</div>
-														</div>
-													</div>
-													<div class="block-list-row">
-														<div class="block-description">
-															<strong class="block-title has-icon"><i class="ico-logo-icon"></i>Follow up with Monty on new Data</strong>
-															<div class="block-info-area">
-																<div class="block-info-holder">
-																	<ul class="block-link-holder list-unstyled">
-																		<li>Kol Name</li>
-																		<li>How many Video</li>
-																		<li>Total hour of video</li>
-																	</ul>
-																</div>
-																<span class="date">19 Now</span>
-															</div>
-														</div>
-													</div>
-												</div>
-											</div>
-											<div class="slide">
-												<div class="block-list-row-holder">
-													<div class="block-list-row">
-														<div class="block-description">
-															<div class="block-info-area">
-																<div class="block-info-holder">
-																	<span class="block-text">3:36</span>
-																</div>
-																<span class="date">Date</span>
-															</div>
-														</div>
-													</div>
-													<div class="block-list-row">
-														<div class="block-description">
-															<strong class="block-title has-icon"><i class="ico-logo-icon"></i>Petros Grivas thoughts on EV-302 Data</strong>
-															<div class="block-info-area">
-																<div class="block-info-holder">
-																	<ul class="block-link-holder list-unstyled">
-																		<li>Kol Name</li>
-																		<li>How many Video</li>
-																		<li>Total hour of video</li>
-																	</ul>
-																</div>
-																<span class="date">19 Now</span>
-															</div>
-														</div>
-													</div>
-													<div class="block-list-row">
-														<div class="block-description">
-															<strong class="block-title has-icon"><i class="ico-logo-icon"></i>Nivo+Chemo, will it be competitive in first line?</strong>
-															<div class="block-info-area">
-																<div class="block-info-holder">
-																	<ul class="block-link-holder list-unstyled">
-																		<li>Kol Name</li>
-																		<li>How many Video</li>
-																		<li>Total hour of video</li>
-																	</ul>
-																</div>
-																<span class="date">19 Now</span>
-															</div>
-														</div>
-													</div>
-													<div class="block-list-row">
-														<div class="block-description">
-															<strong class="block-title has-icon"><i class="ico-logo-icon"></i>Follow up with Monty on new Data</strong>
-															<div class="block-info-area">
-																<div class="block-info-holder">
-																	<ul class="block-link-holder list-unstyled">
-																		<li>Kol Name</li>
-																		<li>How many Video</li>
-																		<li>Total hour of video</li>
-																	</ul>
-																</div>
-																<span class="date">19 Now</span>
-															</div>
-														</div>
-													</div>
-												</div>
-											</div>
-											<div class="slide">
-												<div class="block-list-row-holder">
-													<div class="block-list-row">
-														<div class="block-description">
-															<div class="block-info-area">
-																<div class="block-info-holder">
-																	<span class="block-text">3:36</span>
-																</div>
-																<span class="date">Date</span>
-															</div>
-														</div>
-													</div>
-													<div class="block-list-row">
-														<div class="block-description">
-															<strong class="block-title has-icon"><i class="ico-logo-icon"></i>Petros Grivas thoughts on EV-302 Data</strong>
-															<div class="block-info-area">
-																<div class="block-info-holder">
-																	<ul class="block-link-holder list-unstyled">
-																		<li>Kol Name</li>
-																		<li>How many Video</li>
-																		<li>Total hour of video</li>
-																	</ul>
-																</div>
-																<span class="date">19 Now</span>
-															</div>
-														</div>
-													</div>
-													<div class="block-list-row">
-														<div class="block-description">
-															<strong class="block-title has-icon"><i class="ico-logo-icon"></i>Nivo+Chemo, will it be competitive in first line?</strong>
-															<div class="block-info-area">
-																<div class="block-info-holder">
-																	<ul class="block-link-holder list-unstyled">
-																		<li>Kol Name</li>
-																		<li>How many Video</li>
-																		<li>Total hour of video</li>
-																	</ul>
-																</div>
-																<span class="date">19 Now</span>
-															</div>
-														</div>
-													</div>
-													<div class="block-list-row">
-														<div class="block-description">
-															<strong class="block-title has-icon"><i class="ico-logo-icon"></i>Follow up with Monty on new Data</strong>
-															<div class="block-info-area">
-																<div class="block-info-holder">
-																	<ul class="block-link-holder list-unstyled">
-																		<li>Kol Name</li>
-																		<li>How many Video</li>
-																		<li>Total hour of video</li>
-																	</ul>
-																</div>
-																<span class="date">19 Now</span>
-															</div>
-														</div>
-													</div>
-												</div>
-											</div>
-											<div class="slide">
-												<div class="block-list-row-holder">
-													<div class="block-list-row">
-														<div class="block-description">
-															<div class="block-info-area">
-																<div class="block-info-holder">
-																	<span class="block-text">3:36</span>
-																</div>
-																<span class="date">Date</span>
-															</div>
-														</div>
-													</div>
-													<div class="block-list-row">
-														<div class="block-description">
-															<strong class="block-title has-icon"><i class="ico-logo-icon"></i>Petros Grivas thoughts on EV-302 Data</strong>
-															<div class="block-info-area">
-																<div class="block-info-holder">
-																	<ul class="block-link-holder list-unstyled">
-																		<li>Kol Name</li>
-																		<li>How many Video</li>
-																		<li>Total hour of video</li>
-																	</ul>
-																</div>
-																<span class="date">19 Now</span>
-															</div>
-														</div>
-													</div>
-													<div class="block-list-row">
-														<div class="block-description">
-															<strong class="block-title has-icon"><i class="ico-logo-icon"></i>Nivo+Chemo, will it be competitive in first line?</strong>
-															<div class="block-info-area">
-																<div class="block-info-holder">
-																	<ul class="block-link-holder list-unstyled">
-																		<li>Kol Name</li>
-																		<li>How many Video</li>
-																		<li>Total hour of video</li>
-																	</ul>
-																</div>
-																<span class="date">19 Now</span>
-															</div>
-														</div>
-													</div>
-													<div class="block-list-row">
-														<div class="block-description">
-															<strong class="block-title has-icon"><i class="ico-logo-icon"></i>Follow up with Monty on new Data</strong>
-															<div class="block-info-area">
-																<div class="block-info-holder">
-																	<ul class="block-link-holder list-unstyled">
-																		<li>Kol Name</li>
-																		<li>How many Video</li>
-																		<li>Total hour of video</li>
-																	</ul>
-																</div>
-																<span class="date">19 Now</span>
-															</div>
-														</div>
-													</div>
-												</div>
-											</div>
-											<div class="slide">
-												<div class="block-list-row-holder">
-													<div class="block-list-row">
-														<div class="block-description">
-															<div class="block-info-area">
-																<div class="block-info-holder">
-																	<span class="block-text">3:36</span>
-																</div>
-																<span class="date">Date</span>
-															</div>
-														</div>
-													</div>
-													<div class="block-list-row">
-														<div class="block-description">
-															<strong class="block-title has-icon"><i class="ico-logo-icon"></i>Petros Grivas thoughts on EV-302 Data</strong>
-															<div class="block-info-area">
-																<div class="block-info-holder">
-																	<ul class="block-link-holder list-unstyled">
-																		<li>Kol Name</li>
-																		<li>How many Video</li>
-																		<li>Total hour of video</li>
-																	</ul>
-																</div>
-																<span class="date">19 Now</span>
-															</div>
-														</div>
-													</div>
-													<div class="block-list-row">
-														<div class="block-description">
-															<strong class="block-title has-icon"><i class="ico-logo-icon"></i>Nivo+Chemo, will it be competitive in first line?</strong>
-															<div class="block-info-area">
-																<div class="block-info-holder">
-																	<ul class="block-link-holder list-unstyled">
-																		<li>Kol Name</li>
-																		<li>How many Video</li>
-																		<li>Total hour of video</li>
-																	</ul>
-																</div>
-																<span class="date">19 Now</span>
-															</div>
-														</div>
-													</div>
-													<div class="block-list-row">
-														<div class="block-description">
-															<strong class="block-title has-icon"><i class="ico-logo-icon"></i>Follow up with Monty on new Data</strong>
-															<div class="block-info-area">
-																<div class="block-info-holder">
-																	<ul class="block-link-holder list-unstyled">
-																		<li>Kol Name</li>
-																		<li>How many Video</li>
-																		<li>Total hour of video</li>
-																	</ul>
-																</div>
-																<span class="date">19 Now</span>
-															</div>
-														</div>
-													</div>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
+								<span class="filter-opener-holder">
+									<a href="#" class="filter-opener"><i class="ico-filter"></i> Advance Filter</a>
+								</span>
 							</div>
-							<div class="block-col">
-								<div class="content-detail-block topics-detail-block">
-									<div class="block-heading-area">
-										<strong class="heading"><i class="icon ico-analytics"></i> Trending KOL Topics</strong>
-										<span class="view-link-holder">
-											<a href="#" class="view-link">View all <i class="ico-view-all"></i></a>
-										</span>
+						</div>
+						<div class="content-block-area">
+							<div class="block-row">
+								<div class="block-col">
+									<div class="content-detail-block video-detail-block">
+										<div class="block-heading-area">
+											<strong class="heading"><i class="icon ico-multi-user"></i> Content</strong>
+											<span class="view-link-holder">
+												<a href="#" class="view-link">View all <i class="ico-view-all"></i></a>
+											</span>
+										</div>
+										<div class="block-slider-area">
+											<div class="block-slider">
+												<div class="slide">
+													<div class="block-list-row-holder video-list-row-holder">
+														<div class="block-list-row">
+															<div class="block-image">
+																<img src="assets/images/adminimages/image01.png" alt="video">
+																<a href="#" class="video-play">
+																	<i class="ico-polygon"></i>
+																</a>
+															</div>
+															<div class="block-description">
+																<strong class="block-title">Uromiogs Live 2023: Dr. Petros Grivas on . . .</strong>
+																<div class="block-info-area">
+																	<div class="block-info-holder">
+																		<span class="time">3:36</span>
+																		<ul class="block-link-holder list-unstyled">
+																			<li><a href="#" class="block-link">GU Oncology Now</a></li>
+																		</ul>
+																	</div>
+																</div>
+															</div>
+														</div>
+														<div class="block-list-row">
+															<div class="block-image">
+																<img src="assets/images/adminimages/image01.png" alt="video">
+																<a href="#" class="video-play">
+																	<i class="ico-polygon"></i>
+																</a>
+															</div>
+															<div class="block-description">
+																<strong class="block-title">Uromiogs Live 2023: Dr. Petros Grivas on . . .</strong>
+																<div class="block-info-area">
+																	<div class="block-info-holder">
+																		<span class="time">3:36</span>
+																		<ul class="block-link-holder list-unstyled">
+																			<li><a href="#" class="block-link">GU Oncology Now</a></li>
+																		</ul>
+																	</div>
+																	<span class="date">Nov 9, 2023</span>
+																</div>
+															</div>
+														</div>
+														<div class="block-list-row">
+															<div class="block-image">
+																<img src="assets/images/adminimages/image01.png" alt="video">
+																<a href="#" class="video-play">
+																	<i class="ico-polygon"></i>
+																</a>
+															</div>
+															<div class="block-description">
+																<strong class="block-title">Uromiogs Live 2023: Dr. Petros Grivas on . . .</strong>
+																<div class="block-info-area">
+																	<div class="block-info-holder">
+																		<span class="time">3:36</span>
+																		<ul class="block-link-holder list-unstyled">
+																			<li><a href="#" class="block-link">GU Oncology Now</a></li>
+																		</ul>
+																	</div>
+																	<span class="date">Nov 9, 2023</span>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+												<div class="slide">
+													<div class="block-list-row-holder video-list-row-holder">
+														<div class="block-list-row">
+															<div class="block-image">
+																<img src="assets/images/adminimages/image01.png" alt="video">
+																<a href="#" class="video-play">
+																	<i class="ico-polygon"></i>
+																</a>
+															</div>
+															<div class="block-description">
+																<strong class="block-title">Uromiogs Live 2023: Dr. Petros Grivas on . . .</strong>
+																<div class="block-info-area">
+																	<div class="block-info-holder">
+																		<span class="time">3:36</span>
+																		<ul class="block-link-holder list-unstyled">
+																			<li><a href="#" class="block-link">GU Oncology Now</a></li>
+																		</ul>
+																	</div>
+																</div>
+															</div>
+														</div>
+														<div class="block-list-row">
+															<div class="block-image">
+																<img src="assets/images/adminimages/image01.png" alt="video">
+																<a href="#" class="video-play">
+																	<i class="ico-polygon"></i>
+																</a>
+															</div>
+															<div class="block-description">
+																<strong class="block-title">Uromiogs Live 2023: Dr. Petros Grivas on . . .</strong>
+																<div class="block-info-area">
+																	<div class="block-info-holder">
+																		<span class="time">3:36</span>
+																		<ul class="block-link-holder list-unstyled">
+																			<li><a href="#" class="block-link">GU Oncology Now</a></li>
+																		</ul>
+																	</div>
+																	<span class="date">Nov 9, 2023</span>
+																</div>
+															</div>
+														</div>
+														<div class="block-list-row">
+															<div class="block-image">
+																<img src="assets/images/adminimages/image01.png" alt="video">
+																<a href="#" class="video-play">
+																	<i class="ico-polygon"></i>
+																</a>
+															</div>
+															<div class="block-description">
+																<strong class="block-title">Uromiogs Live 2023: Dr. Petros Grivas on . . .</strong>
+																<div class="block-info-area">
+																	<div class="block-info-holder">
+																		<span class="time">3:36</span>
+																		<ul class="block-link-holder list-unstyled">
+																			<li><a href="#" class="block-link">GU Oncology Now</a></li>
+																		</ul>
+																	</div>
+																	<span class="date">Nov 9, 2023</span>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+												<div class="slide">
+													<div class="block-list-row-holder video-list-row-holder">
+														<div class="block-list-row">
+															<div class="block-image">
+																<img src="assets/images/adminimages/image01.png" alt="video">
+																<a href="#" class="video-play">
+																	<i class="ico-polygon"></i>
+																</a>
+															</div>
+															<div class="block-description">
+																<strong class="block-title">Uromiogs Live 2023: Dr. Petros Grivas on . . .</strong>
+																<div class="block-info-area">
+																	<div class="block-info-holder">
+																		<span class="time">3:36</span>
+																		<ul class="block-link-holder list-unstyled">
+																			<li><a href="#" class="block-link">GU Oncology Now</a></li>
+																		</ul>
+																	</div>
+																</div>
+															</div>
+														</div>
+														<div class="block-list-row">
+															<div class="block-image">
+																<img src="assets/images/adminimages/image01.png" alt="video">
+																<a href="#" class="video-play">
+																	<i class="ico-polygon"></i>
+																</a>
+															</div>
+															<div class="block-description">
+																<strong class="block-title">Uromiogs Live 2023: Dr. Petros Grivas on . . .</strong>
+																<div class="block-info-area">
+																	<div class="block-info-holder">
+																		<span class="time">3:36</span>
+																		<ul class="block-link-holder list-unstyled">
+																			<li><a href="#" class="block-link">GU Oncology Now</a></li>
+																		</ul>
+																	</div>
+																	<span class="date">Nov 9, 2023</span>
+																</div>
+															</div>
+														</div>
+														<div class="block-list-row">
+															<div class="block-image">
+																<img src="assets/images/adminimages/image01.png" alt="video">
+																<a href="#" class="video-play">
+																	<i class="ico-polygon"></i>
+																</a>
+															</div>
+															<div class="block-description">
+																<strong class="block-title">Uromiogs Live 2023: Dr. Petros Grivas on . . .</strong>
+																<div class="block-info-area">
+																	<div class="block-info-holder">
+																		<span class="time">3:36</span>
+																		<ul class="block-link-holder list-unstyled">
+																			<li><a href="#" class="block-link">GU Oncology Now</a></li>
+																		</ul>
+																	</div>
+																	<span class="date">Nov 9, 2023</span>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+												<div class="slide">
+													<div class="block-list-row-holder video-list-row-holder">
+														<div class="block-list-row">
+															<div class="block-image">
+																<img src="assets/images/adminimages/image01.png" alt="video">
+																<a href="#" class="video-play">
+																	<i class="ico-polygon"></i>
+																</a>
+															</div>
+															<div class="block-description">
+																<strong class="block-title">Uromiogs Live 2023: Dr. Petros Grivas on . . .</strong>
+																<div class="block-info-area">
+																	<div class="block-info-holder">
+																		<span class="time">3:36</span>
+																		<ul class="block-link-holder list-unstyled">
+																			<li><a href="#" class="block-link">GU Oncology Now</a></li>
+																		</ul>
+																	</div>
+																</div>
+															</div>
+														</div>
+														<div class="block-list-row">
+															<div class="block-image">
+																<img src="assets/images/adminimages/image01.png" alt="video">
+																<a href="#" class="video-play">
+																	<i class="ico-polygon"></i>
+																</a>
+															</div>
+															<div class="block-description">
+																<strong class="block-title">Uromiogs Live 2023: Dr. Petros Grivas on . . .</strong>
+																<div class="block-info-area">
+																	<div class="block-info-holder">
+																		<span class="time">3:36</span>
+																		<ul class="block-link-holder list-unstyled">
+																			<li><a href="#" class="block-link">GU Oncology Now</a></li>
+																		</ul>
+																	</div>
+																	<span class="date">Nov 9, 2023</span>
+																</div>
+															</div>
+														</div>
+														<div class="block-list-row">
+															<div class="block-image">
+																<img src="assets/images/adminimages/image01.png" alt="video">
+																<a href="#" class="video-play">
+																	<i class="ico-polygon"></i>
+																</a>
+															</div>
+															<div class="block-description">
+																<strong class="block-title">Uromiogs Live 2023: Dr. Petros Grivas on . . .</strong>
+																<div class="block-info-area">
+																	<div class="block-info-holder">
+																		<span class="time">3:36</span>
+																		<ul class="block-link-holder list-unstyled">
+																			<li><a href="#" class="block-link">GU Oncology Now</a></li>
+																		</ul>
+																	</div>
+																	<span class="date">Nov 9, 2023</span>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+												<div class="slide">
+													<div class="block-list-row-holder video-list-row-holder">
+														<div class="block-list-row">
+															<div class="block-image">
+																<img src="assets/images/adminimages/image01.png" alt="video">
+																<a href="#" class="video-play">
+																	<i class="ico-polygon"></i>
+																</a>
+															</div>
+															<div class="block-description">
+																<strong class="block-title">Uromiogs Live 2023: Dr. Petros Grivas on . . .</strong>
+																<div class="block-info-area">
+																	<div class="block-info-holder">
+																		<span class="time">3:36</span>
+																		<ul class="block-link-holder list-unstyled">
+																			<li><a href="#" class="block-link">GU Oncology Now</a></li>
+																		</ul>
+																	</div>
+																</div>
+															</div>
+														</div>
+														<div class="block-list-row">
+															<div class="block-image">
+																<img src="assets/images/adminimages/image01.png" alt="video">
+																<a href="#" class="video-play">
+																	<i class="ico-polygon"></i>
+																</a>
+															</div>
+															<div class="block-description">
+																<strong class="block-title">Uromiogs Live 2023: Dr. Petros Grivas on . . .</strong>
+																<div class="block-info-area">
+																	<div class="block-info-holder">
+																		<span class="time">3:36</span>
+																		<ul class="block-link-holder list-unstyled">
+																			<li><a href="#" class="block-link">GU Oncology Now</a></li>
+																		</ul>
+																	</div>
+																	<span class="date">Nov 9, 2023</span>
+																</div>
+															</div>
+														</div>
+														<div class="block-list-row">
+															<div class="block-image">
+																<img src="assets/images/adminimages/image01.png" alt="video">
+																<a href="#" class="video-play">
+																	<i class="ico-polygon"></i>
+																</a>
+															</div>
+															<div class="block-description">
+																<strong class="block-title">Uromiogs Live 2023: Dr. Petros Grivas on . . .</strong>
+																<div class="block-info-area">
+																	<div class="block-info-holder">
+																		<span class="time">3:36</span>
+																		<ul class="block-link-holder list-unstyled">
+																			<li><a href="#" class="block-link">GU Oncology Now</a></li>
+																		</ul>
+																	</div>
+																	<span class="date">Nov 9, 2023</span>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+												<div class="slide">
+													<div class="block-list-row-holder video-list-row-holder">
+														<div class="block-list-row">
+															<div class="block-image">
+																<img src="assets/images/adminimages/image01.png" alt="video">
+																<a href="#" class="video-play">
+																	<i class="ico-polygon"></i>
+																</a>
+															</div>
+															<div class="block-description">
+																<strong class="block-title">Uromiogs Live 2023: Dr. Petros Grivas on . . .</strong>
+																<div class="block-info-area">
+																	<div class="block-info-holder">
+																		<span class="time">3:36</span>
+																		<ul class="block-link-holder list-unstyled">
+																			<li><a href="#" class="block-link">GU Oncology Now</a></li>
+																		</ul>
+																	</div>
+																</div>
+															</div>
+														</div>
+														<div class="block-list-row">
+															<div class="block-image">
+																<img src="assets/images/adminimages/image01.png" alt="video">
+																<a href="#" class="video-play">
+																	<i class="ico-polygon"></i>
+																</a>
+															</div>
+															<div class="block-description">
+																<strong class="block-title">Uromiogs Live 2023: Dr. Petros Grivas on . . .</strong>
+																<div class="block-info-area">
+																	<div class="block-info-holder">
+																		<span class="time">3:36</span>
+																		<ul class="block-link-holder list-unstyled">
+																			<li><a href="#" class="block-link">GU Oncology Now</a></li>
+																		</ul>
+																	</div>
+																	<span class="date">Nov 9, 2023</span>
+																</div>
+															</div>
+														</div>
+														<div class="block-list-row">
+															<div class="block-image">
+																<img src="assets/images/adminimages/image01.png" alt="video">
+																<a href="#" class="video-play">
+																	<i class="ico-polygon"></i>
+																</a>
+															</div>
+															<div class="block-description">
+																<strong class="block-title">Uromiogs Live 2023: Dr. Petros Grivas on . . .</strong>
+																<div class="block-info-area">
+																	<div class="block-info-holder">
+																		<span class="time">3:36</span>
+																		<ul class="block-link-holder list-unstyled">
+																			<li><a href="#" class="block-link">GU Oncology Now</a></li>
+																		</ul>
+																	</div>
+																	<span class="date">Nov 9, 2023</span>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
 									</div>
-									<div class="block-slider-area">
-										<div class="block-slider">
-											<div class="slide">
-												<div class="block-table-area">
-													<div class="block-table-row-holder">
-														<div class="block-table-row head">
-															<div class="block-table-col">
-																<strong class="table-heading">Topics</strong>
-															</div>
-															<div class="block-table-col">
-																<strong class="table-heading">Mentions</strong>
-															</div>
-															<div class="block-table-col">
-																<strong class="table-heading">sources</strong>
-															</div>
-														</div>
-														<div class="block-table-row">
-															<div class="block-table-col">
-																<span class="table-text"><i class="ico-logo-icon"></i>Enfortumab Vedotin</span>
-															</div>
-															<div class="block-table-col">
-																<span class="table-text">3,4850</span>
-															</div>
-															<div class="block-table-col">
-																<span class="table-text">1,049</span>
+									<div class="content-detail-block note-detail-block">
+										<div class="block-heading-area">
+											<strong class="heading"><i class="icon ico-notebook"></i> My Notes</strong>
+											<span class="view-link-holder">
+												<a href="#" class="view-link">View all <i class="ico-view-all"></i></a>
+											</span>
+										</div>
+										<div class="block-slider-area">
+											<div class="block-slider">
+												<div class="slide">
+													<div class="block-list-row-holder">
+														<div class="block-list-row">
+															<div class="block-description">
+																<div class="block-info-area">
+																	<div class="block-info-holder">
+																		<span class="block-text">3:36</span>
+																	</div>
+																	<span class="date">Date</span>
+																</div>
 															</div>
 														</div>
-														<div class="block-table-row">
-															<div class="block-table-col">
-																<span class="table-text"><i class="ico-logo-icon"></i>Checkmate-901</span>
-															</div>
-															<div class="block-table-col">
-																<span class="table-text">3,4850</span>
-															</div>
-															<div class="block-table-col">
-																<span class="table-text">1,049</span>
-															</div>
-														</div>
-														<div class="block-table-row">
-															<div class="block-table-col">
-																<span class="table-text"><i class="ico-logo-icon"></i>Pembrolizumab</span>
-															</div>
-															<div class="block-table-col">
-																<span class="table-text">3,4850</span>
-															</div>
-															<div class="block-table-col">
-																<span class="table-text">1,049</span>
+														<div class="block-list-row">
+															<div class="block-description">
+																<strong class="block-title has-icon"><i class="ico-logo-icon"></i>Petros Grivas thoughts on EV-302 Data</strong>
+																<div class="block-info-area">
+																	<div class="block-info-holder">
+																		<ul class="block-link-holder list-unstyled">
+																			<li>Kol Name</li>
+																			<li>How many Video</li>
+																			<li>Total hour of video</li>
+																		</ul>
+																	</div>
+																	<span class="date">19 Now</span>
+																</div>
 															</div>
 														</div>
-														<div class="block-table-row">
-															<div class="block-table-col">
-																<span class="table-text"><i class="ico-logo-icon"></i>Standard of Care</span>
-															</div>
-															<div class="block-table-col">
-																<span class="table-text">3,4850</span>
-															</div>
-															<div class="block-table-col">
-																<span class="table-text">1,049</span>
+														<div class="block-list-row">
+															<div class="block-description">
+																<strong class="block-title has-icon"><i class="ico-logo-icon"></i>Nivo+Chemo, will it be competitive in first line?</strong>
+																<div class="block-info-area">
+																	<div class="block-info-holder">
+																		<ul class="block-link-holder list-unstyled">
+																			<li>Kol Name</li>
+																			<li>How many Video</li>
+																			<li>Total hour of video</li>
+																		</ul>
+																	</div>
+																	<span class="date">19 Now</span>
+																</div>
 															</div>
 														</div>
-														<div class="block-table-row">
-															<div class="block-table-col">
-																<span class="table-text"><i class="ico-logo-icon"></i>Anti-Body Drug Conjugate</span>
-															</div>
-															<div class="block-table-col">
-																<span class="table-text">3,4850</span>
-															</div>
-															<div class="block-table-col">
-																<span class="table-text">1,049</span>
+														<div class="block-list-row">
+															<div class="block-description">
+																<strong class="block-title has-icon"><i class="ico-logo-icon"></i>Follow up with Monty on new Data</strong>
+																<div class="block-info-area">
+																	<div class="block-info-holder">
+																		<ul class="block-link-holder list-unstyled">
+																			<li>Kol Name</li>
+																			<li>How many Video</li>
+																			<li>Total hour of video</li>
+																		</ul>
+																	</div>
+																	<span class="date">19 Now</span>
+																</div>
 															</div>
 														</div>
 													</div>
 												</div>
-											</div>
-											<div class="slide">
-												<div class="block-table-area">
-													<div class="block-table-row-holder">
-														<div class="block-table-row head">
-															<div class="block-table-col">
-																<strong class="table-heading">Topics</strong>
-															</div>
-															<div class="block-table-col">
-																<strong class="table-heading">Mentions</strong>
-															</div>
-															<div class="block-table-col">
-																<strong class="table-heading">sources</strong>
+												<div class="slide">
+													<div class="block-list-row-holder">
+														<div class="block-list-row">
+															<div class="block-description">
+																<div class="block-info-area">
+																	<div class="block-info-holder">
+																		<span class="block-text">3:36</span>
+																	</div>
+																	<span class="date">Date</span>
+																</div>
 															</div>
 														</div>
-														<div class="block-table-row">
-															<div class="block-table-col">
-																<span class="table-text"><i class="ico-logo-icon"></i>Enfortumab Vedotin</span>
-															</div>
-															<div class="block-table-col">
-																<span class="table-text">3,4850</span>
-															</div>
-															<div class="block-table-col">
-																<span class="table-text">1,049</span>
-															</div>
-														</div>
-														<div class="block-table-row">
-															<div class="block-table-col">
-																<span class="table-text"><i class="ico-logo-icon"></i>Checkmate-901</span>
-															</div>
-															<div class="block-table-col">
-																<span class="table-text">3,4850</span>
-															</div>
-															<div class="block-table-col">
-																<span class="table-text">1,049</span>
+														<div class="block-list-row">
+															<div class="block-description">
+																<strong class="block-title has-icon"><i class="ico-logo-icon"></i>Petros Grivas thoughts on EV-302 Data</strong>
+																<div class="block-info-area">
+																	<div class="block-info-holder">
+																		<ul class="block-link-holder list-unstyled">
+																			<li>Kol Name</li>
+																			<li>How many Video</li>
+																			<li>Total hour of video</li>
+																		</ul>
+																	</div>
+																	<span class="date">19 Now</span>
+																</div>
 															</div>
 														</div>
-														<div class="block-table-row">
-															<div class="block-table-col">
-																<span class="table-text"><i class="ico-logo-icon"></i>Pembrolizumab</span>
-															</div>
-															<div class="block-table-col">
-																<span class="table-text">3,4850</span>
-															</div>
-															<div class="block-table-col">
-																<span class="table-text">1,049</span>
-															</div>
-														</div>
-														<div class="block-table-row">
-															<div class="block-table-col">
-																<span class="table-text"><i class="ico-logo-icon"></i>Standard of Care</span>
-															</div>
-															<div class="block-table-col">
-																<span class="table-text">3,4850</span>
-															</div>
-															<div class="block-table-col">
-																<span class="table-text">1,049</span>
+														<div class="block-list-row">
+															<div class="block-description">
+																<strong class="block-title has-icon"><i class="ico-logo-icon"></i>Nivo+Chemo, will it be competitive in first line?</strong>
+																<div class="block-info-area">
+																	<div class="block-info-holder">
+																		<ul class="block-link-holder list-unstyled">
+																			<li>Kol Name</li>
+																			<li>How many Video</li>
+																			<li>Total hour of video</li>
+																		</ul>
+																	</div>
+																	<span class="date">19 Now</span>
+																</div>
 															</div>
 														</div>
-														<div class="block-table-row">
-															<div class="block-table-col">
-																<span class="table-text"><i class="ico-logo-icon"></i>Anti-Body Drug Conjugate</span>
-															</div>
-															<div class="block-table-col">
-																<span class="table-text">3,4850</span>
-															</div>
-															<div class="block-table-col">
-																<span class="table-text">1,049</span>
+														<div class="block-list-row">
+															<div class="block-description">
+																<strong class="block-title has-icon"><i class="ico-logo-icon"></i>Follow up with Monty on new Data</strong>
+																<div class="block-info-area">
+																	<div class="block-info-holder">
+																		<ul class="block-link-holder list-unstyled">
+																			<li>Kol Name</li>
+																			<li>How many Video</li>
+																			<li>Total hour of video</li>
+																		</ul>
+																	</div>
+																	<span class="date">19 Now</span>
+																</div>
 															</div>
 														</div>
 													</div>
 												</div>
-											</div>
-											<div class="slide">
-												<div class="block-table-area">
-													<div class="block-table-row-holder">
-														<div class="block-table-row head">
-															<div class="block-table-col">
-																<strong class="table-heading">Topics</strong>
-															</div>
-															<div class="block-table-col">
-																<strong class="table-heading">Mentions</strong>
-															</div>
-															<div class="block-table-col">
-																<strong class="table-heading">sources</strong>
+												<div class="slide">
+													<div class="block-list-row-holder">
+														<div class="block-list-row">
+															<div class="block-description">
+																<div class="block-info-area">
+																	<div class="block-info-holder">
+																		<span class="block-text">3:36</span>
+																	</div>
+																	<span class="date">Date</span>
+																</div>
 															</div>
 														</div>
-														<div class="block-table-row">
-															<div class="block-table-col">
-																<span class="table-text"><i class="ico-logo-icon"></i>Enfortumab Vedotin</span>
-															</div>
-															<div class="block-table-col">
-																<span class="table-text">3,4850</span>
-															</div>
-															<div class="block-table-col">
-																<span class="table-text">1,049</span>
-															</div>
-														</div>
-														<div class="block-table-row">
-															<div class="block-table-col">
-																<span class="table-text"><i class="ico-logo-icon"></i>Checkmate-901</span>
-															</div>
-															<div class="block-table-col">
-																<span class="table-text">3,4850</span>
-															</div>
-															<div class="block-table-col">
-																<span class="table-text">1,049</span>
+														<div class="block-list-row">
+															<div class="block-description">
+																<strong class="block-title has-icon"><i class="ico-logo-icon"></i>Petros Grivas thoughts on EV-302 Data</strong>
+																<div class="block-info-area">
+																	<div class="block-info-holder">
+																		<ul class="block-link-holder list-unstyled">
+																			<li>Kol Name</li>
+																			<li>How many Video</li>
+																			<li>Total hour of video</li>
+																		</ul>
+																	</div>
+																	<span class="date">19 Now</span>
+																</div>
 															</div>
 														</div>
-														<div class="block-table-row">
-															<div class="block-table-col">
-																<span class="table-text"><i class="ico-logo-icon"></i>Pembrolizumab</span>
-															</div>
-															<div class="block-table-col">
-																<span class="table-text">3,4850</span>
-															</div>
-															<div class="block-table-col">
-																<span class="table-text">1,049</span>
-															</div>
-														</div>
-														<div class="block-table-row">
-															<div class="block-table-col">
-																<span class="table-text"><i class="ico-logo-icon"></i>Standard of Care</span>
-															</div>
-															<div class="block-table-col">
-																<span class="table-text">3,4850</span>
-															</div>
-															<div class="block-table-col">
-																<span class="table-text">1,049</span>
+														<div class="block-list-row">
+															<div class="block-description">
+																<strong class="block-title has-icon"><i class="ico-logo-icon"></i>Nivo+Chemo, will it be competitive in first line?</strong>
+																<div class="block-info-area">
+																	<div class="block-info-holder">
+																		<ul class="block-link-holder list-unstyled">
+																			<li>Kol Name</li>
+																			<li>How many Video</li>
+																			<li>Total hour of video</li>
+																		</ul>
+																	</div>
+																	<span class="date">19 Now</span>
+																</div>
 															</div>
 														</div>
-														<div class="block-table-row">
-															<div class="block-table-col">
-																<span class="table-text"><i class="ico-logo-icon"></i>Anti-Body Drug Conjugate</span>
-															</div>
-															<div class="block-table-col">
-																<span class="table-text">3,4850</span>
-															</div>
-															<div class="block-table-col">
-																<span class="table-text">1,049</span>
+														<div class="block-list-row">
+															<div class="block-description">
+																<strong class="block-title has-icon"><i class="ico-logo-icon"></i>Follow up with Monty on new Data</strong>
+																<div class="block-info-area">
+																	<div class="block-info-holder">
+																		<ul class="block-link-holder list-unstyled">
+																			<li>Kol Name</li>
+																			<li>How many Video</li>
+																			<li>Total hour of video</li>
+																		</ul>
+																	</div>
+																	<span class="date">19 Now</span>
+																</div>
 															</div>
 														</div>
 													</div>
 												</div>
-											</div>
-											<div class="slide">
-												<div class="block-table-area">
-													<div class="block-table-row-holder">
-														<div class="block-table-row head">
-															<div class="block-table-col">
-																<strong class="table-heading">Topics</strong>
-															</div>
-															<div class="block-table-col">
-																<strong class="table-heading">Mentions</strong>
-															</div>
-															<div class="block-table-col">
-																<strong class="table-heading">sources</strong>
+												<div class="slide">
+													<div class="block-list-row-holder">
+														<div class="block-list-row">
+															<div class="block-description">
+																<div class="block-info-area">
+																	<div class="block-info-holder">
+																		<span class="block-text">3:36</span>
+																	</div>
+																	<span class="date">Date</span>
+																</div>
 															</div>
 														</div>
-														<div class="block-table-row">
-															<div class="block-table-col">
-																<span class="table-text"><i class="ico-logo-icon"></i>Enfortumab Vedotin</span>
-															</div>
-															<div class="block-table-col">
-																<span class="table-text">3,4850</span>
-															</div>
-															<div class="block-table-col">
-																<span class="table-text">1,049</span>
-															</div>
-														</div>
-														<div class="block-table-row">
-															<div class="block-table-col">
-																<span class="table-text"><i class="ico-logo-icon"></i>Checkmate-901</span>
-															</div>
-															<div class="block-table-col">
-																<span class="table-text">3,4850</span>
-															</div>
-															<div class="block-table-col">
-																<span class="table-text">1,049</span>
+														<div class="block-list-row">
+															<div class="block-description">
+																<strong class="block-title has-icon"><i class="ico-logo-icon"></i>Petros Grivas thoughts on EV-302 Data</strong>
+																<div class="block-info-area">
+																	<div class="block-info-holder">
+																		<ul class="block-link-holder list-unstyled">
+																			<li>Kol Name</li>
+																			<li>How many Video</li>
+																			<li>Total hour of video</li>
+																		</ul>
+																	</div>
+																	<span class="date">19 Now</span>
+																</div>
 															</div>
 														</div>
-														<div class="block-table-row">
-															<div class="block-table-col">
-																<span class="table-text"><i class="ico-logo-icon"></i>Pembrolizumab</span>
-															</div>
-															<div class="block-table-col">
-																<span class="table-text">3,4850</span>
-															</div>
-															<div class="block-table-col">
-																<span class="table-text">1,049</span>
-															</div>
-														</div>
-														<div class="block-table-row">
-															<div class="block-table-col">
-																<span class="table-text"><i class="ico-logo-icon"></i>Standard of Care</span>
-															</div>
-															<div class="block-table-col">
-																<span class="table-text">3,4850</span>
-															</div>
-															<div class="block-table-col">
-																<span class="table-text">1,049</span>
+														<div class="block-list-row">
+															<div class="block-description">
+																<strong class="block-title has-icon"><i class="ico-logo-icon"></i>Nivo+Chemo, will it be competitive in first line?</strong>
+																<div class="block-info-area">
+																	<div class="block-info-holder">
+																		<ul class="block-link-holder list-unstyled">
+																			<li>Kol Name</li>
+																			<li>How many Video</li>
+																			<li>Total hour of video</li>
+																		</ul>
+																	</div>
+																	<span class="date">19 Now</span>
+																</div>
 															</div>
 														</div>
-														<div class="block-table-row">
-															<div class="block-table-col">
-																<span class="table-text"><i class="ico-logo-icon"></i>Anti-Body Drug Conjugate</span>
-															</div>
-															<div class="block-table-col">
-																<span class="table-text">3,4850</span>
-															</div>
-															<div class="block-table-col">
-																<span class="table-text">1,049</span>
+														<div class="block-list-row">
+															<div class="block-description">
+																<strong class="block-title has-icon"><i class="ico-logo-icon"></i>Follow up with Monty on new Data</strong>
+																<div class="block-info-area">
+																	<div class="block-info-holder">
+																		<ul class="block-link-holder list-unstyled">
+																			<li>Kol Name</li>
+																			<li>How many Video</li>
+																			<li>Total hour of video</li>
+																		</ul>
+																	</div>
+																	<span class="date">19 Now</span>
+																</div>
 															</div>
 														</div>
 													</div>
 												</div>
-											</div>
-											<div class="slide">
-												<div class="block-table-area">
-													<div class="block-table-row-holder">
-														<div class="block-table-row head">
-															<div class="block-table-col">
-																<strong class="table-heading">Topics</strong>
-															</div>
-															<div class="block-table-col">
-																<strong class="table-heading">Mentions</strong>
-															</div>
-															<div class="block-table-col">
-																<strong class="table-heading">sources</strong>
+												<div class="slide">
+													<div class="block-list-row-holder">
+														<div class="block-list-row">
+															<div class="block-description">
+																<div class="block-info-area">
+																	<div class="block-info-holder">
+																		<span class="block-text">3:36</span>
+																	</div>
+																	<span class="date">Date</span>
+																</div>
 															</div>
 														</div>
-														<div class="block-table-row">
-															<div class="block-table-col">
-																<span class="table-text"><i class="ico-logo-icon"></i>Enfortumab Vedotin</span>
-															</div>
-															<div class="block-table-col">
-																<span class="table-text">3,4850</span>
-															</div>
-															<div class="block-table-col">
-																<span class="table-text">1,049</span>
-															</div>
-														</div>
-														<div class="block-table-row">
-															<div class="block-table-col">
-																<span class="table-text"><i class="ico-logo-icon"></i>Checkmate-901</span>
-															</div>
-															<div class="block-table-col">
-																<span class="table-text">3,4850</span>
-															</div>
-															<div class="block-table-col">
-																<span class="table-text">1,049</span>
+														<div class="block-list-row">
+															<div class="block-description">
+																<strong class="block-title has-icon"><i class="ico-logo-icon"></i>Petros Grivas thoughts on EV-302 Data</strong>
+																<div class="block-info-area">
+																	<div class="block-info-holder">
+																		<ul class="block-link-holder list-unstyled">
+																			<li>Kol Name</li>
+																			<li>How many Video</li>
+																			<li>Total hour of video</li>
+																		</ul>
+																	</div>
+																	<span class="date">19 Now</span>
+																</div>
 															</div>
 														</div>
-														<div class="block-table-row">
-															<div class="block-table-col">
-																<span class="table-text"><i class="ico-logo-icon"></i>Pembrolizumab</span>
-															</div>
-															<div class="block-table-col">
-																<span class="table-text">3,4850</span>
-															</div>
-															<div class="block-table-col">
-																<span class="table-text">1,049</span>
-															</div>
-														</div>
-														<div class="block-table-row">
-															<div class="block-table-col">
-																<span class="table-text"><i class="ico-logo-icon"></i>Standard of Care</span>
-															</div>
-															<div class="block-table-col">
-																<span class="table-text">3,4850</span>
-															</div>
-															<div class="block-table-col">
-																<span class="table-text">1,049</span>
+														<div class="block-list-row">
+															<div class="block-description">
+																<strong class="block-title has-icon"><i class="ico-logo-icon"></i>Nivo+Chemo, will it be competitive in first line?</strong>
+																<div class="block-info-area">
+																	<div class="block-info-holder">
+																		<ul class="block-link-holder list-unstyled">
+																			<li>Kol Name</li>
+																			<li>How many Video</li>
+																			<li>Total hour of video</li>
+																		</ul>
+																	</div>
+																	<span class="date">19 Now</span>
+																</div>
 															</div>
 														</div>
-														<div class="block-table-row">
-															<div class="block-table-col">
-																<span class="table-text"><i class="ico-logo-icon"></i>Anti-Body Drug Conjugate</span>
-															</div>
-															<div class="block-table-col">
-																<span class="table-text">3,4850</span>
-															</div>
-															<div class="block-table-col">
-																<span class="table-text">1,049</span>
+														<div class="block-list-row">
+															<div class="block-description">
+																<strong class="block-title has-icon"><i class="ico-logo-icon"></i>Follow up with Monty on new Data</strong>
+																<div class="block-info-area">
+																	<div class="block-info-holder">
+																		<ul class="block-link-holder list-unstyled">
+																			<li>Kol Name</li>
+																			<li>How many Video</li>
+																			<li>Total hour of video</li>
+																		</ul>
+																	</div>
+																	<span class="date">19 Now</span>
+																</div>
 															</div>
 														</div>
 													</div>
 												</div>
-											</div>
-											<div class="slide">
-												<div class="block-table-area">
-													<div class="block-table-row-holder">
-														<div class="block-table-row head">
-															<div class="block-table-col">
-																<strong class="table-heading">Topics</strong>
-															</div>
-															<div class="block-table-col">
-																<strong class="table-heading">Mentions</strong>
-															</div>
-															<div class="block-table-col">
-																<strong class="table-heading">sources</strong>
+												<div class="slide">
+													<div class="block-list-row-holder">
+														<div class="block-list-row">
+															<div class="block-description">
+																<div class="block-info-area">
+																	<div class="block-info-holder">
+																		<span class="block-text">3:36</span>
+																	</div>
+																	<span class="date">Date</span>
+																</div>
 															</div>
 														</div>
-														<div class="block-table-row">
-															<div class="block-table-col">
-																<span class="table-text"><i class="ico-logo-icon"></i>Enfortumab Vedotin</span>
-															</div>
-															<div class="block-table-col">
-																<span class="table-text">3,4850</span>
-															</div>
-															<div class="block-table-col">
-																<span class="table-text">1,049</span>
-															</div>
-														</div>
-														<div class="block-table-row">
-															<div class="block-table-col">
-																<span class="table-text"><i class="ico-logo-icon"></i>Checkmate-901</span>
-															</div>
-															<div class="block-table-col">
-																<span class="table-text">3,4850</span>
-															</div>
-															<div class="block-table-col">
-																<span class="table-text">1,049</span>
+														<div class="block-list-row">
+															<div class="block-description">
+																<strong class="block-title has-icon"><i class="ico-logo-icon"></i>Petros Grivas thoughts on EV-302 Data</strong>
+																<div class="block-info-area">
+																	<div class="block-info-holder">
+																		<ul class="block-link-holder list-unstyled">
+																			<li>Kol Name</li>
+																			<li>How many Video</li>
+																			<li>Total hour of video</li>
+																		</ul>
+																	</div>
+																	<span class="date">19 Now</span>
+																</div>
 															</div>
 														</div>
-														<div class="block-table-row">
-															<div class="block-table-col">
-																<span class="table-text"><i class="ico-logo-icon"></i>Pembrolizumab</span>
-															</div>
-															<div class="block-table-col">
-																<span class="table-text">3,4850</span>
-															</div>
-															<div class="block-table-col">
-																<span class="table-text">1,049</span>
-															</div>
-														</div>
-														<div class="block-table-row">
-															<div class="block-table-col">
-																<span class="table-text"><i class="ico-logo-icon"></i>Standard of Care</span>
-															</div>
-															<div class="block-table-col">
-																<span class="table-text">3,4850</span>
-															</div>
-															<div class="block-table-col">
-																<span class="table-text">1,049</span>
+														<div class="block-list-row">
+															<div class="block-description">
+																<strong class="block-title has-icon"><i class="ico-logo-icon"></i>Nivo+Chemo, will it be competitive in first line?</strong>
+																<div class="block-info-area">
+																	<div class="block-info-holder">
+																		<ul class="block-link-holder list-unstyled">
+																			<li>Kol Name</li>
+																			<li>How many Video</li>
+																			<li>Total hour of video</li>
+																		</ul>
+																	</div>
+																	<span class="date">19 Now</span>
+																</div>
 															</div>
 														</div>
-														<div class="block-table-row">
-															<div class="block-table-col">
-																<span class="table-text"><i class="ico-logo-icon"></i>Anti-Body Drug Conjugate</span>
-															</div>
-															<div class="block-table-col">
-																<span class="table-text">3,4850</span>
-															</div>
-															<div class="block-table-col">
-																<span class="table-text">1,049</span>
+														<div class="block-list-row">
+															<div class="block-description">
+																<strong class="block-title has-icon"><i class="ico-logo-icon"></i>Follow up with Monty on new Data</strong>
+																<div class="block-info-area">
+																	<div class="block-info-holder">
+																		<ul class="block-link-holder list-unstyled">
+																			<li>Kol Name</li>
+																			<li>How many Video</li>
+																			<li>Total hour of video</li>
+																		</ul>
+																	</div>
+																	<span class="date">19 Now</span>
+																</div>
 															</div>
 														</div>
 													</div>
@@ -1461,310 +1067,756 @@
 										</div>
 									</div>
 								</div>
-								<div class="content-detail-block metrics-detail-block">
-									<div class="block-heading-area">
-										<strong class="heading"><i class="icon ico-double-user"></i> KOL Metrics</strong>
-										<span class="view-link-holder">
-											<a href="#" class="view-link">View all <i class="ico-view-all"></i></a>
-										</span>
+								<div class="block-col">
+									<div class="content-detail-block topics-detail-block">
+										<div class="block-heading-area">
+											<strong class="heading"><i class="icon ico-analytics"></i> Trending KOL Topics</strong>
+											<span class="view-link-holder">
+												<a href="#" class="view-link">View all <i class="ico-view-all"></i></a>
+											</span>
+										</div>
+										<div class="block-slider-area">
+											<div class="block-slider">
+												<div class="slide">
+													<div class="block-table-area">
+														<div class="block-table-row-holder">
+															<div class="block-table-row head">
+																<div class="block-table-col">
+																	<strong class="table-heading">Topics</strong>
+																</div>
+																<div class="block-table-col">
+																	<strong class="table-heading">Mentions</strong>
+																</div>
+																<div class="block-table-col">
+																	<strong class="table-heading">sources</strong>
+																</div>
+															</div>
+															<div class="block-table-row">
+																<div class="block-table-col">
+																	<span class="table-text"><i class="ico-logo-icon"></i>Enfortumab Vedotin</span>
+																</div>
+																<div class="block-table-col">
+																	<span class="table-text">3,4850</span>
+																</div>
+																<div class="block-table-col">
+																	<span class="table-text">1,049</span>
+																</div>
+															</div>
+															<div class="block-table-row">
+																<div class="block-table-col">
+																	<span class="table-text"><i class="ico-logo-icon"></i>Checkmate-901</span>
+																</div>
+																<div class="block-table-col">
+																	<span class="table-text">3,4850</span>
+																</div>
+																<div class="block-table-col">
+																	<span class="table-text">1,049</span>
+																</div>
+															</div>
+															<div class="block-table-row">
+																<div class="block-table-col">
+																	<span class="table-text"><i class="ico-logo-icon"></i>Pembrolizumab</span>
+																</div>
+																<div class="block-table-col">
+																	<span class="table-text">3,4850</span>
+																</div>
+																<div class="block-table-col">
+																	<span class="table-text">1,049</span>
+																</div>
+															</div>
+															<div class="block-table-row">
+																<div class="block-table-col">
+																	<span class="table-text"><i class="ico-logo-icon"></i>Standard of Care</span>
+																</div>
+																<div class="block-table-col">
+																	<span class="table-text">3,4850</span>
+																</div>
+																<div class="block-table-col">
+																	<span class="table-text">1,049</span>
+																</div>
+															</div>
+															<div class="block-table-row">
+																<div class="block-table-col">
+																	<span class="table-text"><i class="ico-logo-icon"></i>Anti-Body Drug Conjugate</span>
+																</div>
+																<div class="block-table-col">
+																	<span class="table-text">3,4850</span>
+																</div>
+																<div class="block-table-col">
+																	<span class="table-text">1,049</span>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+												<div class="slide">
+													<div class="block-table-area">
+														<div class="block-table-row-holder">
+															<div class="block-table-row head">
+																<div class="block-table-col">
+																	<strong class="table-heading">Topics</strong>
+																</div>
+																<div class="block-table-col">
+																	<strong class="table-heading">Mentions</strong>
+																</div>
+																<div class="block-table-col">
+																	<strong class="table-heading">sources</strong>
+																</div>
+															</div>
+															<div class="block-table-row">
+																<div class="block-table-col">
+																	<span class="table-text"><i class="ico-logo-icon"></i>Enfortumab Vedotin</span>
+																</div>
+																<div class="block-table-col">
+																	<span class="table-text">3,4850</span>
+																</div>
+																<div class="block-table-col">
+																	<span class="table-text">1,049</span>
+																</div>
+															</div>
+															<div class="block-table-row">
+																<div class="block-table-col">
+																	<span class="table-text"><i class="ico-logo-icon"></i>Checkmate-901</span>
+																</div>
+																<div class="block-table-col">
+																	<span class="table-text">3,4850</span>
+																</div>
+																<div class="block-table-col">
+																	<span class="table-text">1,049</span>
+																</div>
+															</div>
+															<div class="block-table-row">
+																<div class="block-table-col">
+																	<span class="table-text"><i class="ico-logo-icon"></i>Pembrolizumab</span>
+																</div>
+																<div class="block-table-col">
+																	<span class="table-text">3,4850</span>
+																</div>
+																<div class="block-table-col">
+																	<span class="table-text">1,049</span>
+																</div>
+															</div>
+															<div class="block-table-row">
+																<div class="block-table-col">
+																	<span class="table-text"><i class="ico-logo-icon"></i>Standard of Care</span>
+																</div>
+																<div class="block-table-col">
+																	<span class="table-text">3,4850</span>
+																</div>
+																<div class="block-table-col">
+																	<span class="table-text">1,049</span>
+																</div>
+															</div>
+															<div class="block-table-row">
+																<div class="block-table-col">
+																	<span class="table-text"><i class="ico-logo-icon"></i>Anti-Body Drug Conjugate</span>
+																</div>
+																<div class="block-table-col">
+																	<span class="table-text">3,4850</span>
+																</div>
+																<div class="block-table-col">
+																	<span class="table-text">1,049</span>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+												<div class="slide">
+													<div class="block-table-area">
+														<div class="block-table-row-holder">
+															<div class="block-table-row head">
+																<div class="block-table-col">
+																	<strong class="table-heading">Topics</strong>
+																</div>
+																<div class="block-table-col">
+																	<strong class="table-heading">Mentions</strong>
+																</div>
+																<div class="block-table-col">
+																	<strong class="table-heading">sources</strong>
+																</div>
+															</div>
+															<div class="block-table-row">
+																<div class="block-table-col">
+																	<span class="table-text"><i class="ico-logo-icon"></i>Enfortumab Vedotin</span>
+																</div>
+																<div class="block-table-col">
+																	<span class="table-text">3,4850</span>
+																</div>
+																<div class="block-table-col">
+																	<span class="table-text">1,049</span>
+																</div>
+															</div>
+															<div class="block-table-row">
+																<div class="block-table-col">
+																	<span class="table-text"><i class="ico-logo-icon"></i>Checkmate-901</span>
+																</div>
+																<div class="block-table-col">
+																	<span class="table-text">3,4850</span>
+																</div>
+																<div class="block-table-col">
+																	<span class="table-text">1,049</span>
+																</div>
+															</div>
+															<div class="block-table-row">
+																<div class="block-table-col">
+																	<span class="table-text"><i class="ico-logo-icon"></i>Pembrolizumab</span>
+																</div>
+																<div class="block-table-col">
+																	<span class="table-text">3,4850</span>
+																</div>
+																<div class="block-table-col">
+																	<span class="table-text">1,049</span>
+																</div>
+															</div>
+															<div class="block-table-row">
+																<div class="block-table-col">
+																	<span class="table-text"><i class="ico-logo-icon"></i>Standard of Care</span>
+																</div>
+																<div class="block-table-col">
+																	<span class="table-text">3,4850</span>
+																</div>
+																<div class="block-table-col">
+																	<span class="table-text">1,049</span>
+																</div>
+															</div>
+															<div class="block-table-row">
+																<div class="block-table-col">
+																	<span class="table-text"><i class="ico-logo-icon"></i>Anti-Body Drug Conjugate</span>
+																</div>
+																<div class="block-table-col">
+																	<span class="table-text">3,4850</span>
+																</div>
+																<div class="block-table-col">
+																	<span class="table-text">1,049</span>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+												<div class="slide">
+													<div class="block-table-area">
+														<div class="block-table-row-holder">
+															<div class="block-table-row head">
+																<div class="block-table-col">
+																	<strong class="table-heading">Topics</strong>
+																</div>
+																<div class="block-table-col">
+																	<strong class="table-heading">Mentions</strong>
+																</div>
+																<div class="block-table-col">
+																	<strong class="table-heading">sources</strong>
+																</div>
+															</div>
+															<div class="block-table-row">
+																<div class="block-table-col">
+																	<span class="table-text"><i class="ico-logo-icon"></i>Enfortumab Vedotin</span>
+																</div>
+																<div class="block-table-col">
+																	<span class="table-text">3,4850</span>
+																</div>
+																<div class="block-table-col">
+																	<span class="table-text">1,049</span>
+																</div>
+															</div>
+															<div class="block-table-row">
+																<div class="block-table-col">
+																	<span class="table-text"><i class="ico-logo-icon"></i>Checkmate-901</span>
+																</div>
+																<div class="block-table-col">
+																	<span class="table-text">3,4850</span>
+																</div>
+																<div class="block-table-col">
+																	<span class="table-text">1,049</span>
+																</div>
+															</div>
+															<div class="block-table-row">
+																<div class="block-table-col">
+																	<span class="table-text"><i class="ico-logo-icon"></i>Pembrolizumab</span>
+																</div>
+																<div class="block-table-col">
+																	<span class="table-text">3,4850</span>
+																</div>
+																<div class="block-table-col">
+																	<span class="table-text">1,049</span>
+																</div>
+															</div>
+															<div class="block-table-row">
+																<div class="block-table-col">
+																	<span class="table-text"><i class="ico-logo-icon"></i>Standard of Care</span>
+																</div>
+																<div class="block-table-col">
+																	<span class="table-text">3,4850</span>
+																</div>
+																<div class="block-table-col">
+																	<span class="table-text">1,049</span>
+																</div>
+															</div>
+															<div class="block-table-row">
+																<div class="block-table-col">
+																	<span class="table-text"><i class="ico-logo-icon"></i>Anti-Body Drug Conjugate</span>
+																</div>
+																<div class="block-table-col">
+																	<span class="table-text">3,4850</span>
+																</div>
+																<div class="block-table-col">
+																	<span class="table-text">1,049</span>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+												<div class="slide">
+													<div class="block-table-area">
+														<div class="block-table-row-holder">
+															<div class="block-table-row head">
+																<div class="block-table-col">
+																	<strong class="table-heading">Topics</strong>
+																</div>
+																<div class="block-table-col">
+																	<strong class="table-heading">Mentions</strong>
+																</div>
+																<div class="block-table-col">
+																	<strong class="table-heading">sources</strong>
+																</div>
+															</div>
+															<div class="block-table-row">
+																<div class="block-table-col">
+																	<span class="table-text"><i class="ico-logo-icon"></i>Enfortumab Vedotin</span>
+																</div>
+																<div class="block-table-col">
+																	<span class="table-text">3,4850</span>
+																</div>
+																<div class="block-table-col">
+																	<span class="table-text">1,049</span>
+																</div>
+															</div>
+															<div class="block-table-row">
+																<div class="block-table-col">
+																	<span class="table-text"><i class="ico-logo-icon"></i>Checkmate-901</span>
+																</div>
+																<div class="block-table-col">
+																	<span class="table-text">3,4850</span>
+																</div>
+																<div class="block-table-col">
+																	<span class="table-text">1,049</span>
+																</div>
+															</div>
+															<div class="block-table-row">
+																<div class="block-table-col">
+																	<span class="table-text"><i class="ico-logo-icon"></i>Pembrolizumab</span>
+																</div>
+																<div class="block-table-col">
+																	<span class="table-text">3,4850</span>
+																</div>
+																<div class="block-table-col">
+																	<span class="table-text">1,049</span>
+																</div>
+															</div>
+															<div class="block-table-row">
+																<div class="block-table-col">
+																	<span class="table-text"><i class="ico-logo-icon"></i>Standard of Care</span>
+																</div>
+																<div class="block-table-col">
+																	<span class="table-text">3,4850</span>
+																</div>
+																<div class="block-table-col">
+																	<span class="table-text">1,049</span>
+																</div>
+															</div>
+															<div class="block-table-row">
+																<div class="block-table-col">
+																	<span class="table-text"><i class="ico-logo-icon"></i>Anti-Body Drug Conjugate</span>
+																</div>
+																<div class="block-table-col">
+																	<span class="table-text">3,4850</span>
+																</div>
+																<div class="block-table-col">
+																	<span class="table-text">1,049</span>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+												<div class="slide">
+													<div class="block-table-area">
+														<div class="block-table-row-holder">
+															<div class="block-table-row head">
+																<div class="block-table-col">
+																	<strong class="table-heading">Topics</strong>
+																</div>
+																<div class="block-table-col">
+																	<strong class="table-heading">Mentions</strong>
+																</div>
+																<div class="block-table-col">
+																	<strong class="table-heading">sources</strong>
+																</div>
+															</div>
+															<div class="block-table-row">
+																<div class="block-table-col">
+																	<span class="table-text"><i class="ico-logo-icon"></i>Enfortumab Vedotin</span>
+																</div>
+																<div class="block-table-col">
+																	<span class="table-text">3,4850</span>
+																</div>
+																<div class="block-table-col">
+																	<span class="table-text">1,049</span>
+																</div>
+															</div>
+															<div class="block-table-row">
+																<div class="block-table-col">
+																	<span class="table-text"><i class="ico-logo-icon"></i>Checkmate-901</span>
+																</div>
+																<div class="block-table-col">
+																	<span class="table-text">3,4850</span>
+																</div>
+																<div class="block-table-col">
+																	<span class="table-text">1,049</span>
+																</div>
+															</div>
+															<div class="block-table-row">
+																<div class="block-table-col">
+																	<span class="table-text"><i class="ico-logo-icon"></i>Pembrolizumab</span>
+																</div>
+																<div class="block-table-col">
+																	<span class="table-text">3,4850</span>
+																</div>
+																<div class="block-table-col">
+																	<span class="table-text">1,049</span>
+																</div>
+															</div>
+															<div class="block-table-row">
+																<div class="block-table-col">
+																	<span class="table-text"><i class="ico-logo-icon"></i>Standard of Care</span>
+																</div>
+																<div class="block-table-col">
+																	<span class="table-text">3,4850</span>
+																</div>
+																<div class="block-table-col">
+																	<span class="table-text">1,049</span>
+																</div>
+															</div>
+															<div class="block-table-row">
+																<div class="block-table-col">
+																	<span class="table-text"><i class="ico-logo-icon"></i>Anti-Body Drug Conjugate</span>
+																</div>
+																<div class="block-table-col">
+																	<span class="table-text">3,4850</span>
+																</div>
+																<div class="block-table-col">
+																	<span class="table-text">1,049</span>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
 									</div>
-									<div class="block-slider-area">
-										<div class="block-slider">
-											<div class="slide">
-												<div class="block-table-area">
-													<div class="block-table-row-holder">
-														<div class="block-table-row head">
-															<div class="block-table-col">
-																<strong class="table-heading">KOL’s Name</strong>
+									<div class="content-detail-block metrics-detail-block">
+										<div class="block-heading-area">
+											<strong class="heading"><i class="icon ico-double-user"></i> KOL Metrics</strong>
+											<span class="view-link-holder">
+												<a href="#" class="view-link">View all <i class="ico-view-all"></i></a>
+											</span>
+										</div>
+										<div class="block-slider-area">
+											<div class="block-slider">
+												<div class="slide">
+													<div class="block-table-area">
+														<div class="block-table-row-holder">
+															<div class="block-table-row head">
+																<div class="block-table-col">
+																	<strong class="table-heading">KOL’s Name</strong>
+																</div>
+																<div class="block-table-col">
+																	<strong class="table-heading">Content</strong>
+																</div>
+																<div class="block-table-col">
+																	<strong class="table-heading">Activity</strong>
+																</div>
 															</div>
-															<div class="block-table-col">
-																<strong class="table-heading">Content</strong>
+															<div class="block-table-row">
+																<div class="block-table-col">
+																	<span class="table-text">My KOL</span>
+																</div>
+																<div class="block-table-col">
+																	<span class="table-text">34,45</span>
+																</div>
+																<div class="block-table-col">
+																	<span class="table-text">5 <i class="ico-bar"></i></span>
+																</div>
 															</div>
-															<div class="block-table-col">
-																<strong class="table-heading">Activity</strong>
+															<div class="block-table-row">
+																<div class="block-table-col">
+																	<span class="table-text">Brain Cell</span>
+																</div>
+																<div class="block-table-col">
+																	<span class="table-text">22,34</span>
+																</div>
+																<div class="block-table-col">
+																	<span class="table-text no-data">No data</span>
+																</div>
 															</div>
-														</div>
-														<div class="block-table-row">
-															<div class="block-table-col">
-																<span class="table-text">My KOL</span>
-															</div>
-															<div class="block-table-col">
-																<span class="table-text">34,45</span>
-															</div>
-															<div class="block-table-col">
-																<span class="table-text">5 <i class="ico-bar"></i></span>
-															</div>
-														</div>
-														<div class="block-table-row">
-															<div class="block-table-col">
-																<span class="table-text">Brain Cell</span>
-															</div>
-															<div class="block-table-col">
-																<span class="table-text">22,34</span>
-															</div>
-															<div class="block-table-col">
-																<span class="table-text no-data">No data</span>
-															</div>
-														</div>
-														<div class="block-table-row">
-															<div class="block-table-col">
-																<span class="table-text">Pancreas</span>
-															</div>
-															<div class="block-table-col">
-																<span class="table-text">1,497</span>
-															</div>
-															<div class="block-table-col">
-																<span class="table-text no-data">No data</span>
-															</div>
-														</div>
-													</div>
-												</div>
-											</div>
-											<div class="slide">
-												<div class="block-table-area">
-													<div class="block-table-row-holder">
-														<div class="block-table-row head">
-															<div class="block-table-col">
-																<strong class="table-heading">KOL’s Name</strong>
-															</div>
-															<div class="block-table-col">
-																<strong class="table-heading">Content</strong>
-															</div>
-															<div class="block-table-col">
-																<strong class="table-heading">Activity</strong>
-															</div>
-														</div>
-														<div class="block-table-row">
-															<div class="block-table-col">
-																<span class="table-text">My KOL</span>
-															</div>
-															<div class="block-table-col">
-																<span class="table-text">34,45</span>
-															</div>
-															<div class="block-table-col">
-																<span class="table-text">5 <i class="ico-bar"></i></span>
-															</div>
-														</div>
-														<div class="block-table-row">
-															<div class="block-table-col">
-																<span class="table-text">Brain Cell</span>
-															</div>
-															<div class="block-table-col">
-																<span class="table-text">22,34</span>
-															</div>
-															<div class="block-table-col">
-																<span class="table-text no-data">No data</span>
-															</div>
-														</div>
-														<div class="block-table-row">
-															<div class="block-table-col">
-																<span class="table-text">Pancreas</span>
-															</div>
-															<div class="block-table-col">
-																<span class="table-text">1,497</span>
-															</div>
-															<div class="block-table-col">
-																<span class="table-text no-data">No data</span>
+															<div class="block-table-row">
+																<div class="block-table-col">
+																	<span class="table-text">Pancreas</span>
+																</div>
+																<div class="block-table-col">
+																	<span class="table-text">1,497</span>
+																</div>
+																<div class="block-table-col">
+																	<span class="table-text no-data">No data</span>
+																</div>
 															</div>
 														</div>
 													</div>
 												</div>
-											</div>
-											<div class="slide">
-												<div class="block-table-area">
-													<div class="block-table-row-holder">
-														<div class="block-table-row head">
-															<div class="block-table-col">
-																<strong class="table-heading">KOL’s Name</strong>
+												<div class="slide">
+													<div class="block-table-area">
+														<div class="block-table-row-holder">
+															<div class="block-table-row head">
+																<div class="block-table-col">
+																	<strong class="table-heading">KOL’s Name</strong>
+																</div>
+																<div class="block-table-col">
+																	<strong class="table-heading">Content</strong>
+																</div>
+																<div class="block-table-col">
+																	<strong class="table-heading">Activity</strong>
+																</div>
 															</div>
-															<div class="block-table-col">
-																<strong class="table-heading">Content</strong>
+															<div class="block-table-row">
+																<div class="block-table-col">
+																	<span class="table-text">My KOL</span>
+																</div>
+																<div class="block-table-col">
+																	<span class="table-text">34,45</span>
+																</div>
+																<div class="block-table-col">
+																	<span class="table-text">5 <i class="ico-bar"></i></span>
+																</div>
 															</div>
-															<div class="block-table-col">
-																<strong class="table-heading">Activity</strong>
+															<div class="block-table-row">
+																<div class="block-table-col">
+																	<span class="table-text">Brain Cell</span>
+																</div>
+																<div class="block-table-col">
+																	<span class="table-text">22,34</span>
+																</div>
+																<div class="block-table-col">
+																	<span class="table-text no-data">No data</span>
+																</div>
 															</div>
-														</div>
-														<div class="block-table-row">
-															<div class="block-table-col">
-																<span class="table-text">My KOL</span>
-															</div>
-															<div class="block-table-col">
-																<span class="table-text">34,45</span>
-															</div>
-															<div class="block-table-col">
-																<span class="table-text">5 <i class="ico-bar"></i></span>
-															</div>
-														</div>
-														<div class="block-table-row">
-															<div class="block-table-col">
-																<span class="table-text">Brain Cell</span>
-															</div>
-															<div class="block-table-col">
-																<span class="table-text">22,34</span>
-															</div>
-															<div class="block-table-col">
-																<span class="table-text no-data">No data</span>
-															</div>
-														</div>
-														<div class="block-table-row">
-															<div class="block-table-col">
-																<span class="table-text">Pancreas</span>
-															</div>
-															<div class="block-table-col">
-																<span class="table-text">1,497</span>
-															</div>
-															<div class="block-table-col">
-																<span class="table-text no-data">No data</span>
-															</div>
-														</div>
-													</div>
-												</div>
-											</div>
-											<div class="slide">
-												<div class="block-table-area">
-													<div class="block-table-row-holder">
-														<div class="block-table-row head">
-															<div class="block-table-col">
-																<strong class="table-heading">KOL’s Name</strong>
-															</div>
-															<div class="block-table-col">
-																<strong class="table-heading">Content</strong>
-															</div>
-															<div class="block-table-col">
-																<strong class="table-heading">Activity</strong>
-															</div>
-														</div>
-														<div class="block-table-row">
-															<div class="block-table-col">
-																<span class="table-text">My KOL</span>
-															</div>
-															<div class="block-table-col">
-																<span class="table-text">34,45</span>
-															</div>
-															<div class="block-table-col">
-																<span class="table-text">5 <i class="ico-bar"></i></span>
-															</div>
-														</div>
-														<div class="block-table-row">
-															<div class="block-table-col">
-																<span class="table-text">Brain Cell</span>
-															</div>
-															<div class="block-table-col">
-																<span class="table-text">22,34</span>
-															</div>
-															<div class="block-table-col">
-																<span class="table-text no-data">No data</span>
-															</div>
-														</div>
-														<div class="block-table-row">
-															<div class="block-table-col">
-																<span class="table-text">Pancreas</span>
-															</div>
-															<div class="block-table-col">
-																<span class="table-text">1,497</span>
-															</div>
-															<div class="block-table-col">
-																<span class="table-text no-data">No data</span>
+															<div class="block-table-row">
+																<div class="block-table-col">
+																	<span class="table-text">Pancreas</span>
+																</div>
+																<div class="block-table-col">
+																	<span class="table-text">1,497</span>
+																</div>
+																<div class="block-table-col">
+																	<span class="table-text no-data">No data</span>
+																</div>
 															</div>
 														</div>
 													</div>
 												</div>
-											</div>
-											<div class="slide">
-												<div class="block-table-area">
-													<div class="block-table-row-holder">
-														<div class="block-table-row head">
-															<div class="block-table-col">
-																<strong class="table-heading">KOL’s Name</strong>
+												<div class="slide">
+													<div class="block-table-area">
+														<div class="block-table-row-holder">
+															<div class="block-table-row head">
+																<div class="block-table-col">
+																	<strong class="table-heading">KOL’s Name</strong>
+																</div>
+																<div class="block-table-col">
+																	<strong class="table-heading">Content</strong>
+																</div>
+																<div class="block-table-col">
+																	<strong class="table-heading">Activity</strong>
+																</div>
 															</div>
-															<div class="block-table-col">
-																<strong class="table-heading">Content</strong>
+															<div class="block-table-row">
+																<div class="block-table-col">
+																	<span class="table-text">My KOL</span>
+																</div>
+																<div class="block-table-col">
+																	<span class="table-text">34,45</span>
+																</div>
+																<div class="block-table-col">
+																	<span class="table-text">5 <i class="ico-bar"></i></span>
+																</div>
 															</div>
-															<div class="block-table-col">
-																<strong class="table-heading">Activity</strong>
+															<div class="block-table-row">
+																<div class="block-table-col">
+																	<span class="table-text">Brain Cell</span>
+																</div>
+																<div class="block-table-col">
+																	<span class="table-text">22,34</span>
+																</div>
+																<div class="block-table-col">
+																	<span class="table-text no-data">No data</span>
+																</div>
 															</div>
-														</div>
-														<div class="block-table-row">
-															<div class="block-table-col">
-																<span class="table-text">My KOL</span>
-															</div>
-															<div class="block-table-col">
-																<span class="table-text">34,45</span>
-															</div>
-															<div class="block-table-col">
-																<span class="table-text">5 <i class="ico-bar"></i></span>
-															</div>
-														</div>
-														<div class="block-table-row">
-															<div class="block-table-col">
-																<span class="table-text">Brain Cell</span>
-															</div>
-															<div class="block-table-col">
-																<span class="table-text">22,34</span>
-															</div>
-															<div class="block-table-col">
-																<span class="table-text no-data">No data</span>
-															</div>
-														</div>
-														<div class="block-table-row">
-															<div class="block-table-col">
-																<span class="table-text">Pancreas</span>
-															</div>
-															<div class="block-table-col">
-																<span class="table-text">1,497</span>
-															</div>
-															<div class="block-table-col">
-																<span class="table-text no-data">No data</span>
+															<div class="block-table-row">
+																<div class="block-table-col">
+																	<span class="table-text">Pancreas</span>
+																</div>
+																<div class="block-table-col">
+																	<span class="table-text">1,497</span>
+																</div>
+																<div class="block-table-col">
+																	<span class="table-text no-data">No data</span>
+																</div>
 															</div>
 														</div>
 													</div>
 												</div>
-											</div>
-											<div class="slide">
-												<div class="block-table-area">
-													<div class="block-table-row-holder">
-														<div class="block-table-row head">
-															<div class="block-table-col">
-																<strong class="table-heading">KOL’s Name</strong>
+												<div class="slide">
+													<div class="block-table-area">
+														<div class="block-table-row-holder">
+															<div class="block-table-row head">
+																<div class="block-table-col">
+																	<strong class="table-heading">KOL’s Name</strong>
+																</div>
+																<div class="block-table-col">
+																	<strong class="table-heading">Content</strong>
+																</div>
+																<div class="block-table-col">
+																	<strong class="table-heading">Activity</strong>
+																</div>
 															</div>
-															<div class="block-table-col">
-																<strong class="table-heading">Content</strong>
+															<div class="block-table-row">
+																<div class="block-table-col">
+																	<span class="table-text">My KOL</span>
+																</div>
+																<div class="block-table-col">
+																	<span class="table-text">34,45</span>
+																</div>
+																<div class="block-table-col">
+																	<span class="table-text">5 <i class="ico-bar"></i></span>
+																</div>
 															</div>
-															<div class="block-table-col">
-																<strong class="table-heading">Activity</strong>
+															<div class="block-table-row">
+																<div class="block-table-col">
+																	<span class="table-text">Brain Cell</span>
+																</div>
+																<div class="block-table-col">
+																	<span class="table-text">22,34</span>
+																</div>
+																<div class="block-table-col">
+																	<span class="table-text no-data">No data</span>
+																</div>
+															</div>
+															<div class="block-table-row">
+																<div class="block-table-col">
+																	<span class="table-text">Pancreas</span>
+																</div>
+																<div class="block-table-col">
+																	<span class="table-text">1,497</span>
+																</div>
+																<div class="block-table-col">
+																	<span class="table-text no-data">No data</span>
+																</div>
 															</div>
 														</div>
-														<div class="block-table-row">
-															<div class="block-table-col">
-																<span class="table-text">My KOL</span>
+													</div>
+												</div>
+												<div class="slide">
+													<div class="block-table-area">
+														<div class="block-table-row-holder">
+															<div class="block-table-row head">
+																<div class="block-table-col">
+																	<strong class="table-heading">KOL’s Name</strong>
+																</div>
+																<div class="block-table-col">
+																	<strong class="table-heading">Content</strong>
+																</div>
+																<div class="block-table-col">
+																	<strong class="table-heading">Activity</strong>
+																</div>
 															</div>
-															<div class="block-table-col">
-																<span class="table-text">34,45</span>
+															<div class="block-table-row">
+																<div class="block-table-col">
+																	<span class="table-text">My KOL</span>
+																</div>
+																<div class="block-table-col">
+																	<span class="table-text">34,45</span>
+																</div>
+																<div class="block-table-col">
+																	<span class="table-text">5 <i class="ico-bar"></i></span>
+																</div>
 															</div>
-															<div class="block-table-col">
-																<span class="table-text">5 <i class="ico-bar"></i></span>
+															<div class="block-table-row">
+																<div class="block-table-col">
+																	<span class="table-text">Brain Cell</span>
+																</div>
+																<div class="block-table-col">
+																	<span class="table-text">22,34</span>
+																</div>
+																<div class="block-table-col">
+																	<span class="table-text no-data">No data</span>
+																</div>
+															</div>
+															<div class="block-table-row">
+																<div class="block-table-col">
+																	<span class="table-text">Pancreas</span>
+																</div>
+																<div class="block-table-col">
+																	<span class="table-text">1,497</span>
+																</div>
+																<div class="block-table-col">
+																	<span class="table-text no-data">No data</span>
+																</div>
 															</div>
 														</div>
-														<div class="block-table-row">
-															<div class="block-table-col">
-																<span class="table-text">Brain Cell</span>
+													</div>
+												</div>
+												<div class="slide">
+													<div class="block-table-area">
+														<div class="block-table-row-holder">
+															<div class="block-table-row head">
+																<div class="block-table-col">
+																	<strong class="table-heading">KOL’s Name</strong>
+																</div>
+																<div class="block-table-col">
+																	<strong class="table-heading">Content</strong>
+																</div>
+																<div class="block-table-col">
+																	<strong class="table-heading">Activity</strong>
+																</div>
 															</div>
-															<div class="block-table-col">
-																<span class="table-text">22,34</span>
+															<div class="block-table-row">
+																<div class="block-table-col">
+																	<span class="table-text">My KOL</span>
+																</div>
+																<div class="block-table-col">
+																	<span class="table-text">34,45</span>
+																</div>
+																<div class="block-table-col">
+																	<span class="table-text">5 <i class="ico-bar"></i></span>
+																</div>
 															</div>
-															<div class="block-table-col">
-																<span class="table-text no-data">No data</span>
+															<div class="block-table-row">
+																<div class="block-table-col">
+																	<span class="table-text">Brain Cell</span>
+																</div>
+																<div class="block-table-col">
+																	<span class="table-text">22,34</span>
+																</div>
+																<div class="block-table-col">
+																	<span class="table-text no-data">No data</span>
+																</div>
 															</div>
-														</div>
-														<div class="block-table-row">
-															<div class="block-table-col">
-																<span class="table-text">Pancreas</span>
-															</div>
-															<div class="block-table-col">
-																<span class="table-text">1,497</span>
-															</div>
-															<div class="block-table-col">
-																<span class="table-text no-data">No data</span>
+															<div class="block-table-row">
+																<div class="block-table-col">
+																	<span class="table-text">Pancreas</span>
+																</div>
+																<div class="block-table-col">
+																	<span class="table-text">1,497</span>
+																</div>
+																<div class="block-table-col">
+																	<span class="table-text no-data">No data</span>
+																</div>
 															</div>
 														</div>
 													</div>
@@ -1778,6 +1830,186 @@
 					</div>
 				</div>
 			</div>
+			<!-- Filter Sidebar -->
+			<div class="filter-sidebar">
+				<div class="filter-sidebar-content">
+					<div class="filter-sidebar-heading-area">
+						<strong class="filter-heading"><i class="ico-filter"></i>Advance Filter</strong>
+						<span class="clear-btn-wrap">
+							<a href="#" class="clear-btn filter-close-button"><i class="ico-close"></i>Clear</a>
+						</span>
+					</div>
+					<div class="filter-widget-area">
+						<div class="filter-widget-block">
+							<div class="filter-widget-list-holder">
+								<ul class="filter-widget-list">
+									<li>
+										<a href="#" class="list-text">
+											<span class="icon-wrap">
+												<i class="ico-content"></i>
+											</span>
+											<span class="sub-text">All Content</span>
+										</a>
+									</li>
+									<li>
+										<a href="#" class="list-text">
+											<span class="icon-wrap">
+												<i class="ico-other"></i>
+											</span>
+											<span class="sub-text">Owned by others</span>
+										</a>
+									</li>
+									<li>
+										<a href="#" class="list-text">
+											<span class="icon-wrap">
+												<i class="ico-me"></i>
+											</span>
+											<span class="sub-text">Owned by me</span>
+										</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<div class="filter-widget-block">
+							<div class="filter-widget-heading">
+								<strong class="widget-heading">
+									Folder
+									<a href="#" class="add-folder-button"><i class="icon ico-plus"></i></a>
+								</strong>
+							</div>
+							<div class="filter-widget-list-holder">
+								<ul class="filter-widget-list">
+									<li>
+										<a href="#" class="list-text">
+											<span class="icon-wrap">
+												<i class="ico-folder"></i>
+											</span>
+											<span class="sub-text">Daily quick Notes</span>
+										</a>
+									</li>
+									<li>
+										<a href="#" class="list-text">
+											<span class="icon-wrap">
+												<i class="ico-folder"></i>
+											</span>
+											<span class="sub-text">Bladder cancer Notes</span>
+										</a>
+									</li>
+									<li>
+										<a href="#" class="list-text">
+											<span class="icon-wrap">
+												<i class="ico-folder"></i>
+											</span>
+											<span class="sub-text">Public Notes</span>
+										</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<div class="filter-widget-block">
+							<div class="filter-widget-heading">
+								<strong class="widget-heading">Date & Time</strong>
+							</div>
+							<div class="checkbox-list-holder">
+								<ul class="checkbox-list">
+									<li>
+										<label class="checkbox-label-holder">
+											<input type="checkbox" class="checkbox-field">
+											<span class="checkbox-label">
+												<span class="icon"></span>
+												<span class="checkbox-text">All time</span>
+											</span>
+										</label>
+									</li>
+									<li>
+										<label class="checkbox-label-holder">
+											<input type="checkbox" class="checkbox-field">
+											<span class="checkbox-label">
+												<span class="icon"></span>
+												<span class="checkbox-text">Last 28 days</span>
+											</span>
+										</label>
+									</li>
+									<li>
+										<label class="checkbox-label-holder">
+											<input type="checkbox" class="checkbox-field">
+											<span class="checkbox-label">
+												<span class="icon"></span>
+												<span class="checkbox-text">Last 3 months</span>
+											</span>
+										</label>
+									</li>
+									<li>
+										<label class="checkbox-label-holder">
+											<input type="checkbox" class="checkbox-field">
+											<span class="checkbox-label">
+												<span class="icon"></span>
+												<span class="checkbox-text">Last 9 months</span>
+											</span>
+										</label>
+									</li>
+									<li>
+										<label class="checkbox-label-holder">
+											<input type="checkbox" class="checkbox-field">
+											<span class="checkbox-label">
+												<span class="icon"></span>
+												<span class="checkbox-text">Last 1 year</span>
+											</span>
+										</label>
+									</li>
+									<li>
+										<label class="checkbox-label-holder">
+											<input type="checkbox" class="checkbox-field">
+											<span class="checkbox-label">
+												<span class="icon"></span>
+												<span class="checkbox-text">All time</span>
+											</span>
+										</label>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<div class="filter-widget-block">
+							<div class="filter-widget-heading">
+								<strong class="widget-heading">Tags</strong>
+							</div>
+							<div class="widget-tags-list-block">
+								<ul class="widget-tags-list">
+									<li>
+										<span class="widget-tag-text">EV302 <a href="#" class="widget-tag-close"><i class="ico-tag-close"></i></a></span>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="apply-filter-button-wrap">
+					<a href="#" class="apply-filter-button filter-close-button">Apply filters</a>
+				</div>
+			</div>
+			<!-- Add Folder Modal -->
+			<div class="dashboard-modal-area add-folder-dashboard-modal">
+				<div class="dashboard-modal-holder">
+					<div class="dashboard-modal-container">
+						<div class="dashboard-modal-content">
+							<div class="dashboard-modal-header">
+								<strong class="modal-heading"><i class="icon ico-add-folder"></i> New Folder</strong>
+								<a href="#" class="dashboard-modal-close add-folder-modal-close"><i class="ico-close"></i></a>
+							</div>
+							<div class="dashboard-modal-body">
+								<div class="field-row without-icon">
+									<input type="text" class="form-control" placeholder="Enter Name of new folder">
+								</div>
+								<div class="modal-submit-btn-holder">
+									<a href="#" class="modal-submit-btn add-folder-modal-close">Create</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- Filter Sidebar Overlay -->
+			<span class="body-overlay filter-overlay filter-close-button"></span>
 		</main>
 	</div>
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>

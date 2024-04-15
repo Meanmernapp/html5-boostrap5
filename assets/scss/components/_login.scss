@@ -261,6 +261,13 @@ body {
 			}
 		}
 	}
+
+	&.without-icon {
+
+		.form-control {
+			padding-left: 12px;
+		}
+	}
 }
 
 .form-btn-area {
