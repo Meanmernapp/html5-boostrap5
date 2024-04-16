@@ -4,9 +4,25 @@
   .filter-overlay {
     display: block;
   }
+
+  .filter-sidebar {
+    transform: none;
+  }
 }
 
-.filter-sidebar {
+.notification-sidebar-open {
+  overflow: hidden;
+
+  .notification-overlay {
+    display: block;
+  }
+
+  .notification-sidebar {
+    transform: none;
+  }
+}
+
+.dashboard-info-sidebar {
   @include position(fixed, 0, 0, 0, auto);
   background: $white;
   transition: $transition;
@@ -15,16 +31,12 @@
   width: 290px;
   z-index: 110;
 
-  @include min-breakpoint($tablet) {
+  @include min-breakpoint($sm-phone) {
     width: 405px;
-  }
-
-  .filter-sidebar-open & {
-    transform: none;
   }
 }
 
-.filter-sidebar-content {
+.dashboard-info-sidebar-content {
   position: relative;
   overflow: auto;
   padding: 20px 15px;
@@ -36,7 +48,7 @@
   }
 }
 
-.filter-sidebar-heading-area {
+.dashboard-info-sidebar-heading-area {
   @include flex(flex, wrap, center, space-between);
   position: relative;
   margin: 0 0 15px;
@@ -44,9 +56,42 @@
   @include min-breakpoint($tablet) {
     margin: 0 0 30px;
   }
+}
 
-  .clear-btn-wrap {
+.dashboard-info-sidebar-btns-list {
+  @include flex(flex, wrap, center, inherit);
+  @include listreset();
+  position: relative;
+  margin: 0 -8px;
+
+  @include min-breakpoint($tablet) {
+    margin: 0 -10px;
+  }
+
+  li {
+    position: relative;
+    padding: 0 8px;
+
+    @include min-breakpoint($tablet) {
+      padding: 0 10px;
+    }
+  }
+
+  .draft-btn {
+    @include font(16, 18, 400);
+    position: relative;
     display: block;
+    transition: $transition;
+    text-decoration: none;
+    color: $dark-brown;
+
+    @include min-breakpoint($tablet) {
+      @include font(20, 20, 400);
+    }
+
+    &:hover {
+      color: $theme-color;
+    }
   }
 
   .clear-btn {
@@ -75,7 +120,7 @@
   }
 }
 
-.filter-heading {
+.dashboard-info-heading {
   @include flex(flex, wrap, center, inherit);
   @include font(17, 22, 400);
   position: relative;
@@ -364,7 +409,7 @@
   }
 }
 
-.apply-filter-button-wrap {
+.apply-sidebar-button-wrap {
   @include position(absolute, auto, 0, 0, 0);
   padding: 16px 15px;
 
@@ -373,7 +418,7 @@
   }
 }
 
-.apply-filter-button {
+.apply-sidebar-button {
   @include flex(flex, wrap, center, center);
   @include font(16, 20, 500);
   @include size(100%, 44px);
@@ -396,5 +441,75 @@
   &:hover {
     background: $dark-brown;
     color: $white;
+  }
+}
+
+.notification-sidebar {
+
+  .dashboard-info-sidebar-content {
+    max-height: 100vh;
+  }
+}
+
+.sidebar-notification-list-holder {
+  position: relative;
+  margin: 0 -15px;
+
+  @include min-breakpoint($tablet) {
+    margin: 0 -20px;
+  }
+}
+
+.sidebar-notification-list {
+  @include listreset();
+  position: relative;
+
+  li {
+    position: relative;
+    padding: 13px 15px;
+    border-bottom: 1px solid $light-gray;
+
+    @include min-breakpoint($tablet) {
+      padding: 18px 20px;
+    }
+  }
+
+  .sub-text-wrap {
+    @include flex(flex, wrap, flex-start, inherit);
+    position: relative;
+  }
+
+  .icon-wrap {
+    @include fontsize(17px, 19px);
+    position: relative;
+    display: block;
+    margin: 2px 0 0;
+    color: $dark-brown;
+    width: 20px;
+
+    @include min-breakpoint($tablet) {
+      @include fontsize(19px, 20px);
+      width: 22px;
+      margin: 2px 0 0;
+    }
+
+    i {
+      position: relative;
+      display: block;
+    }
+  }
+
+  .sub-text {
+    @include font(15, 22, 400);
+    @include textContent();
+    position: relative;
+    display: block;
+    color: $theme-color;
+    padding: 0 0 0 9px;
+
+    @include min-breakpoint($tablet) {
+      @include font(17, 25, 400);
+      padding: 0 0 0 13px;
+    }
   }
 }

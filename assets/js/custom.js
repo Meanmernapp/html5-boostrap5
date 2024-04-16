@@ -55,6 +55,26 @@ function initCustomModal() {
 		e.preventDefault();
 		jQuery('body').removeClass('folder-modal-active');
 	});
+
+	jQuery(document).on('click', '.clear-history-button', function (e) {
+		e.preventDefault();
+		jQuery('body').addClass('clear-history-modal-active');
+	});
+
+	jQuery(document).on('click', '.delete-history-modal-close', function (e) {
+		e.preventDefault();
+		jQuery('body').removeClass('clear-history-modal-active');
+	});
+
+	jQuery(document).on('click', '.chat-delete-modal-opener', function (e) {
+		e.preventDefault();
+		jQuery('body').addClass('delete-chat-modal-active');
+	});
+
+	jQuery(document).on('click', '.delete-chat-modal-close', function (e) {
+		e.preventDefault();
+		jQuery('body').removeClass('delete-chat-modal-active');
+	});
 }
 
 // Open Close init
@@ -83,6 +103,42 @@ function initOpenClose() {
 	jQuery(document).on('click', '.filter-close-button', function (e) {
 		e.preventDefault();
 		jQuery('body').removeClass('filter-sidebar-open');
+	});
+
+	// Notification Sidebar Open
+	jQuery(document).on('click', '.notification-opener-button', function (e) {
+		e.preventDefault();
+		jQuery('body').addClass('notification-sidebar-open');
+	});
+
+	// Notification Sidebar Close
+	jQuery(document).on('click', '.notification-close-button', function (e) {
+		e.preventDefault();
+		jQuery('body').removeClass('notification-sidebar-open');
+	});
+
+	// History block Open
+	jQuery(document).on('click', '.history-opener-button', function (e) {
+		e.preventDefault();
+		jQuery('body').addClass('history-content-open');
+	});
+
+	// History block Close
+	jQuery(document).on('click', '.history-close-button', function (e) {
+		e.preventDefault();
+		jQuery('body').removeClass('history-content-open');
+	});
+
+	// Chat Detail block Open
+	jQuery(document).on('click', '.chat-detail-opener', function (e) {
+		e.preventDefault();
+		jQuery('body').addClass('chat-detail-content-open');
+	});
+
+	// Chat Detail block Close
+	jQuery(document).on('click', '.chat-detail-close', function (e) {
+		e.preventDefault();
+		jQuery('body').removeClass('chat-detail-content-open');
 	});
 }
 

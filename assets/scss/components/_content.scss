@@ -22,6 +22,7 @@
 }
 
 .filter-overlay,
+.notification-overlay,
 .modal-overlay {
 	z-index: 105;
 }
@@ -1029,10 +1030,6 @@
 			}
 		}
 
-		a {
-			pointer-events: none;
-		}
-
 		.arrow-wrap {
 			@include flex(flex, wrap, center, center);
 			@include size(22px, 22px);
@@ -1932,6 +1929,674 @@
 				width: auto;
 				text-align: left;
 			}
+		}
+	}
+}
+
+.history-content-open,
+.chat-detail-content-open {
+
+	.dashboard-detail-content {
+		display: none;
+	}
+}
+
+.dashboard-history-content {
+	position: relative;
+	background: $white;
+	border-radius: 7px;
+	padding: 0 15px;
+	overflow: hidden;
+	display: none;
+
+	@include min-breakpoint($tablet) {
+		padding: 0 20px;
+	}
+
+	.history-content-open & {
+		display: block;
+	}
+}
+
+.dashboard-content-heading-area {
+	position: relative;
+	padding: 18px 0;
+
+	@include min-breakpoint($tablet) {
+		padding: 22px 0;
+	}
+
+	@include min-breakpoint($desktop) {
+		@include flex(flex, wrap, center, space-between);
+	}
+}
+
+.dashboard-content-heading-wrap {
+	@include flex(flex, wrap, center, inherit);
+	position: relative;
+	margin: 0 0 15px;
+
+	@include min-breakpoint($desktop) {
+		margin: 0;
+	}
+}
+
+.dashboard-back-button-wrap {
+	position: relative;
+	display: block;
+	margin: 0 12px 0 0;
+}
+
+.dashboard-back-button {
+	@include fontsize(14px, 1);
+	position: relative;
+	display: block;;
+	text-decoration: none;
+	color: $lighter-gray;
+	transition: $transition;
+
+	@include min-breakpoint($tablet) {
+		font-size: 16px;
+	}
+
+	&:hover {
+		color: $theme-color;
+	}
+}
+
+.content-sub-heading {
+	@include flex(flex, wrap, center, inherit);
+	@include font(16, 20, 400);
+	position: relative;
+	color: $theme-color;
+
+	@include min-breakpoint($tablet) {
+		@include font(18, 22, 400);
+	}
+
+	i {
+		@include fontsize(18px, 1);
+		position: relative;
+		display: block;
+		margin: 0 10px 0 0;
+
+		@include min-breakpoint($tablet) {
+			font-size: 21px
+		}
+	}
+}
+
+.dashboard-content-search-area {
+	position: relative;
+	text-align: center;
+
+	@include min-breakpoint($tablet) {
+		@include flex(flex, wrap, center, inherit);
+		text-align: left;
+	}
+
+	.field-row {
+		max-width: 342px;
+		margin: 0 auto;
+
+		@include min-breakpoint($tablet) {
+			width: 342px;
+			max-width: inherit;
+			margin: 0;
+		}
+
+		.field-label {
+			left: 13px;
+			top: 13px;
+		}
+
+		.form-control {
+			@include fontsize(14px, 18px);
+			padding: 6px 12px 6px 45px;
+			border-radius: 7px;
+			height: 42px;
+		}
+	}
+}
+
+.dashboard-content-clear-button-wrap {
+	position: relative;
+	display: block;
+	margin: 0 0 12px;
+
+	@include min-breakpoint($tablet) {
+		margin: 0 12px 0 0;
+	}
+}
+
+.dashboard-content-clear-button {
+	@include flex(inline-flex, wrap, center, inherit);
+	@include font(15, 20, 400);
+	padding: 5px 16px;
+	position: relative;
+	transition: $transition;
+	text-decoration: none;
+	background: $theme-color;
+	color: $white;
+	border-radius: 7px;
+	height: 42px;
+
+	@include min-breakpoint($tablet) {
+		@include font(16, 22, 400);
+	}
+
+	i {
+		position: relative;
+		display: block;
+		font-size: 15px;
+		margin: 0 8px 0 0;
+
+		@include min-breakpoint($tablet) {
+			font-size: 16px;
+			margin: 0 10px 0 0;
+		}
+	}
+
+	&:hover {
+		background: $dark-brown;
+		color: $white;
+	}
+}
+
+.dashboard-history-block-area {
+	position: relative;
+
+	@include min-breakpoint($largescreen) {
+		padding: 10px 0 0;
+	}
+}
+
+.dashboard-history-block-holder {
+	position: relative;
+}
+
+.dashboard-history-heading-area {
+	position: relative;
+	padding: 0 15px 10px;
+	margin: 0 -15px;
+	border-bottom: 1px solid $light-gray;
+
+	@include min-breakpoint($tablet) {
+		padding: 0 20px 10px;
+		margin: 0 -20px;
+	}
+
+	.heading {
+		@include font(14, 18, 400);
+		position: relative;
+		display: block;
+		color: $lighter-gray;
+
+		@include min-breakpoint($tablet) {
+			font-size: 15px;
+		}
+	}
+}
+
+.dashboard-history-list-holder {
+	position: relative;
+}
+
+.dashboard-history-list {
+	@include font(14, 20, 400);
+	@include listreset();
+	position: relative;
+	padding: 25px 0;
+
+	@include min-breakpoint($tablet) {
+		@include font(15, 22, 400);
+		padding: 30px 0;
+	}
+
+	@include min-breakpoint($largescreen) {
+		@include font(16, 24, 400);
+		padding: 32px 0 45px;
+	}
+
+	@include min-breakpoint($tv-screen) {
+		@include font(17, 25, 400);
+	}
+
+	li {
+		position: relative;
+		margin: 0 0 15px;
+
+		@include min-breakpoint($tablet) {
+			@include flex(flex, wrap, center, space-between);
+			margin: 0 0 20px;
+		}
+
+		@include min-breakpoint($largescreen) {
+			margin: 0 0 28px;
+		}
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+
+	.history-list-description {
+		position: relative;
+		padding: 0 0 12px;
+
+		@include min-breakpoint($tablet) {
+			@include textContent();
+			padding: 0 15px 0 0;
+		}
+	}
+
+	.history-time {
+		position: relative;
+		display: block;
+		font-style: italic;
+		color: $lighter-gray;
+		text-align: right;
+	}
+}
+
+.chat-detail-slide {
+	display: none;
+
+	.chat-detail-content-open & {
+		display: block;
+	}
+
+	.tags-list-area {
+		margin: 0 0 8px;
+	
+		@include min-breakpoint($tablet) {
+			margin: 0 0 12px;
+		}
+	}
+}
+
+.chat-detail-content {
+	position: relative;
+}
+
+.chat-detail-heading-area {
+	position: relative;
+
+	@include min-breakpoint($tablet) {
+		@include flex(flex, wrap, center, space-between);
+	}
+
+	.chat-heading-info {
+		@include font(16, 20, 400);
+		position: relative;
+		display: block;
+		color: $lighter-gray;
+		margin: 0 0 12px;
+
+		@include min-breakpoint($tablet) {
+			@include font(18, 24, 400);
+			margin: 0;
+		}
+	}
+}
+
+.chat-share-button-wrap {
+	position: relative;
+	display: block;
+}
+
+.chat-share-button {
+	@include font(17, 20, 400);
+	position: relative;
+	display: inline-block;
+	vertical-align: top;
+	transition: $transition;
+	text-decoration: none;
+	background: $light-brown;
+	color: $theme-color;
+	height: 38px;
+	border-radius: 5px;
+	padding: 9px 10px;
+
+	i {
+		@include align(inline-block, top);
+		position: relative;
+		margin: 2px 7px 0 0;
+		font-size: 16px;
+	}
+
+	&:hover {
+		background: $theme-color;
+		color: $white;
+	}
+}
+
+.chat-detail-list-holder {
+	position: relative;
+}
+
+.chat-detail-list {
+	@include listreset();
+	position: relative;
+
+	> li {
+		position: relative;
+		padding: 18px 0;
+		border-bottom: 1px solid $light-gray;
+
+		@include min-breakpoint($tablet) {
+			@include flex(flex, wrap, center, inherit);
+			padding: 24px 0;
+		}
+
+		@include min-breakpoint($desktop) {
+			padding: 32px 0;
+		}
+
+		&.active {
+
+			.chat-detail-description {
+
+				.heading {
+					font-weight: 500;
+				}
+			}
+		}
+
+		&:last-child {
+			border-bottom: none;
+		}
+	}
+
+	.image-wrap {
+		@include size(49px, 49px);
+		position: relative;
+		overflow: hidden;
+		border-radius: 50%;
+		margin: 0 0 12px;
+
+		@include min-breakpoint($tablet) {
+			margin: 0;
+		}
+
+		img {
+			@include img-style;
+		}
+
+		.icon-holder {
+			@include flex(flex, wrap, center, center);
+			@include fontsize(30px, 1);
+			@include size(100%, 100%);
+			position: relative;
+			background: $theme-color;
+			color: $light-brown;
+
+			i {
+				position: relative;
+				display: block;
+				left: -1px;
+			}
+		}
+	}
+}
+
+.chat-detail-description {
+	@include flex(flex, wrap, center, space-between);
+	position: relative;
+
+	@include min-breakpoint($tablet) {
+		@include textContent();
+		padding: 0 0 0 15px;
+	}
+
+	@include min-breakpoint($desktop) {
+		padding: 0 0 0 20px;
+	}
+
+	.heading {
+		@include font(15, 20, 400);
+		@include textContent();
+		position: relative;
+		display: block;
+		color: $theme-color;
+		padding: 0 10px 0 0;
+
+		@include min-breakpoint($sm-phone) {
+			font-size: 16px;
+		}
+
+		@include min-breakpoint($tablet) {
+			@include font(20, 26, 400);
+			padding: 0;
+		}
+
+		@include min-breakpoint($desktop) {
+			@include font(22, 30, 400);
+		}
+	}
+}
+
+.chat-option-list {
+	@include flex(flex, wrap, center, inherit);
+	@include listreset();
+	position: relative;
+
+	li {
+		position: relative;
+		padding: 0 6px;
+
+		@include min-breakpoint($tablet) {
+			padding: 0 8px;
+		}
+
+		@include min-breakpoint($desktop) {
+			padding: 0 12px;
+		}
+	}
+
+	a {
+		@include fontsize(16px, 1);
+		position: relative;
+		display: block;
+		text-decoration: none;
+		transition: $transition;
+		color: $lighter-gray;
+
+		@include min-breakpoint($tablet) {
+			font-size: 20px;
+		}
+
+		@include min-breakpoint($desktop) {
+			font-size: 23px;
+		}
+
+		&:hover {
+			color: $theme-color;
+		}
+	}
+}
+
+.chat-detail-inner-wrap {
+	position: relative;
+	padding: 0 0 10px;
+	margin: 0 0 20px;
+	border-bottom: 1px solid $light-gray;
+
+	@include min-breakpoint($tablet) {
+		padding: 0 0 10px 65px;
+		margin: 0 0 30px;
+	}
+
+	@include min-breakpoint($desktop) {
+		padding: 0 0 15px 70px;
+		margin: 0 0 50px;
+	}
+}
+
+.chat-source-list-holder {
+	position: relative;
+	margin: 0 0 12px;
+
+	@include min-breakpoint($tablet) {
+		@include flex(flex, wrap, center, inherit);
+		margin: 0 0 24px;
+	}
+
+	.source-heading {
+		@include font(16, 22, 400);
+		position: relative;
+		display: block;
+		color: $lighter-gray;
+		margin: 0 0 12px;
+
+		@include min-breakpoint($tablet) {
+			margin: 0;
+		}
+
+		@include min-breakpoint($desktop) {
+			@include font(18, 24, 400);
+		}
+	}
+}
+
+.chat-source-list {
+	@include flex(flex, wrap, center, inherit);
+	@include listreset();
+	position: relative;
+
+	@include min-breakpoint($tablet) {
+		padding: 0 0 0 10px;
+	}
+
+	@include min-breakpoint($desktop) {
+		padding: 0 0 0 13px;
+	}
+
+	li {
+		position: relative;
+		padding: 0 6px;
+		margin: 0 0 10px;
+
+		@include min-breakpoint($tablet) {
+			margin: 0;
+		}
+
+		@include min-breakpoint($desktop) {
+			padding: 0 9px;
+		}
+	}
+
+	.chat-tag-box {
+		@include flex(flex, wrap, center, inherit);
+		position: relative;
+		background: $light-gray;
+		border-radius: 7px;
+		padding: 6px 12px 6px 6px;
+		height: 44px;
+	}
+
+	.image-wrap {
+		@include size(30px, 30px);
+		position: relative;
+		overflow: hidden;
+		border-radius: 50%;
+
+		@include min-breakpoint($tablet) {
+			@include size(34px, 34px);
+		}
+
+		img {
+			@include img-style;
+			border-radius: 50%;
+		}
+	}
+
+	.name {
+		@include font(15, 20, 400);
+		position: relative;
+		display: block;
+		color: $theme-color;
+		padding: 0 0 0 7px;
+
+		@include min-breakpoint($tablet) {
+			font-size: 16px;
+		}
+
+		@include min-breakpoint($desktop) {
+			@include font(18, 22, 400);
+		}
+	}
+}
+
+.chat-text-area {
+	@include font(16, 24, 400);
+	position: relative;
+	color: $theme-color;
+	padding: 0 0 25px;
+
+	@include min-breakpoint($tablet) {
+		@include font(18, 28, 400);
+		padding: 0 0 30px;
+	}
+
+	@include min-breakpoint($desktop) {
+		@include font(20, 30, 400);
+		padding: 0 0 34px;
+	}
+
+	p {
+		font-size: inherit;
+		margin: 0;
+	}
+}
+
+.chat-detail-list-area {
+	position: relative;
+
+	.block-list-row-holder {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		margin: 0;
+	}
+	
+	.block-list-row {
+		background: $light-brown;
+		border-radius: 7px;
+		width: 100%;
+		padding: 10px;
+		margin: 0 0 15px;
+
+		@include min-breakpoint($tablet) {
+			width: 48.8%;
+		}
+
+		@include min-breakpoint($desktop) {
+			padding: 13px;
+			margin: 0 0 20px;
+		}
+
+		@include min-breakpoint($largescreen) {
+			width: 49.2%;
+		}
+
+		&:before {
+			display: none;
+		}
+	}
+
+	.block-link-holder {
+		color: $theme-color;
+
+		li {
+
+			&:before {
+				background: $white;
+			}
+		}
+
+		a {
+			color: $theme-color;
 		}
 	}
 }

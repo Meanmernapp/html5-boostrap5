@@ -10,6 +10,22 @@
   }
 }
 
+.clear-history-modal-active {
+  overflow: hidden;
+
+  .delete-history-modal {
+    @include OpacityShow();
+  }
+}
+
+.delete-chat-modal-active {
+  overflow: hidden;
+
+  .delete-chat-modal {
+    @include OpacityShow();
+  }
+}
+
 .dashboard-modal-area {
   @include position(fixed, 0, 0, 0, 0);
   background: $overlay-bg;
@@ -106,22 +122,134 @@
   padding: 15px 0 0;
 }
 
+.modal-sub-btn,
 .modal-submit-btn {
-  @include font(16, 20, 500);
+  @include font(14, 16, 500);
   display: block;
   text-decoration: none;
   border: none;
   transition: $transition;
   outline: none;
-  padding: 11px 24px;
+  padding: 13px 15px;
   border-radius: 7px;
   min-width: 100px;
   height: 40px;
+  text-align: center;
+
+  @include min-breakpoint($xs-phone) {
+    @include font(15, 18, 500);
+    padding: 11px 20px;
+  }
+
+  @include min-breakpoint($tablet) {
+    @include font(16, 20, 500);
+    padding: 11px 24px;
+  }
+}
+
+.modal-submit-btn {
   background: $theme-color;
   color: $white;
 
   &:hover {
     background: $dark-brown;
     color: $white;
+  }
+}
+
+.modal-sub-btn {
+  background: $light-gray;
+  color: $theme-color;
+
+  &:hover {
+    background: $theme-color;
+    color: $white;
+  }
+}
+
+.dashboard-modal-text-area {
+  @include font(16, 20, 400);
+  position: relative;
+  text-align: center;
+  color: $theme-color;
+  margin: 0 0 15px;
+
+  @include min-breakpoint($tablet) {
+    @include font(18, 24, 400);
+    margin: 0 0 20px;
+  }
+
+  .icon-holder {
+    @include flex(flex, wrap, center, center);
+    @include size(56px, 56px);
+    background: $light-white;
+    position: relative;
+    margin: 0 auto 14px;
+    color: $dark-brown;
+    border-radius: 50%;
+
+    @include min-breakpoint($tablet) {
+      @include size(72px, 72px);
+      margin: 0 auto 18px;
+    }
+
+    i {
+      font-size: 20px;
+      position: relative;
+      display: block;
+
+      @include min-breakpoint($tablet) {
+        font-size: 24px;
+      }
+    }
+  }
+
+  p {
+    font-size: inherit;
+    margin: 0;
+  }
+}
+
+.dashboard-modal-button-list {
+  @include flex(flex, wrap, center, inherit);
+  @include listreset();
+  position: relative;
+  margin: 0 -3px;
+
+  li {
+    position: relative;
+    padding: 0 3px;
+    width: 50%;
+  }
+
+  .modal-submit-btn-holder {
+    display: block;
+    padding: 0;
+  }
+
+  .modal-submit-btn,
+  .modal-sub-btn {
+    width: 100%;
+  }
+}
+
+.delete-history-modal,
+.delete-chat-modal {
+
+  .dashboard-modal-container {
+    max-width: 395px;
+  }
+
+  .dashboard-modal-header {
+    justify-content: flex-end;
+    margin: 0 0 2px;
+  }
+
+  .dashboard-modal-content {
+    padding: 20px 15px;
+
+    @include min-breakpoint($xs-phone) {
+      padding: 20px 32px 32px;
+    }
   }
 }
