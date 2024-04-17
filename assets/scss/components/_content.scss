@@ -538,6 +538,10 @@
 	@include min-breakpoint($widescreen) {
 		display: block;
 	}
+
+	.notebook-content-open & {
+		display: none !important;
+	}
 }
 
 .sidebar-widget-area {
@@ -1936,7 +1940,9 @@
 .history-content-open,
 .chat-detail-content-open,
 .user-detail-content-open,
-.setting-content-open {
+.setting-content-open,
+.search-content-open,
+.notebook-content-open {
 
 	.dashboard-detail-content {
 		display: none;
@@ -2212,6 +2218,10 @@
 	.chat-detail-content-open & {
 		display: block;
 	}
+}
+
+.chat-detail-slide,
+.dashboard-search-content {
 
 	.tags-list-area {
 		margin: 0 0 8px;
@@ -2757,7 +2767,8 @@
 	position: relative;
 }
 
-.user-block-slider-button-area {
+.user-block-slider-button-area,
+.note-block-slider-pagination-area {
 	@include flex(flex, wrap, center, space-between);
 	position: relative;
 	margin: 0 0 18px;
@@ -3498,4 +3509,378 @@
 		background: $dark-brown;
 		color: $white;
 	}
+}
+
+.dashboard-search-content {
+	position: relative;
+	height: 100%;
+	display: none;
+
+	.search-content-open & {
+		display: block;
+	}
+}
+
+.search-content-open {
+
+	.main-content-area {
+		align-items: inherit;
+	}
+}
+
+.dashboard-search-content-holder {
+	position: relative;
+
+	@include min-breakpoint($widescreen) {
+		@include flex(flex, wrap, inherit, flex-end);
+		@include size(100%, 100%);
+		flex-direction: column;
+	}
+
+	.content-heading-area {
+		width: 100%;
+		margin: 0;
+	}
+}
+
+.dashboard-weclome-block-area {
+	position: relative;
+	padding: 10px 0 0;
+	margin: 0 0 25px;
+
+	@include min-breakpoint($tablet) {
+		padding: 20px 0 0;
+		margin: 0 0 35px;
+	}
+
+	@include min-breakpoint($desktop) {
+		padding: 30px 0 0;
+		margin: 0 0 50px;
+	}
+
+	@include min-breakpoint($widescreen) {
+		padding: 0;
+	}
+
+	@include min-breakpoint($largescreen) {
+		margin: 0 0 68px;
+	}
+}
+
+.dashboard-weclome-block-content {
+	position: relative;
+	text-align: center;
+	max-width: 500px;
+	margin: 0 auto;
+
+	.icon-holder {
+		position: relative;
+		display: block;
+		font-size: 38px;
+		color: $light-brown;
+		margin: 0 0 10px;
+
+		@include min-breakpoint($tablet) {
+			font-size: 52px;
+			margin: 0 0 20px;
+		}
+
+		@include min-breakpoint($desktop) {
+			font-size: 66px;
+			margin: 0 0 30px;
+		}
+
+		i {
+			display: block;
+		}
+	}
+
+	.welcome-heading {
+		@include fontsize(24px, 1.1);
+		font-weight: 700;
+		position: relative;
+		display: block;
+		margin: 0 0 6px;
+
+		@include min-breakpoint($tablet) {
+			font-size: 31px;
+			margin: 0 0 6px;
+		}
+
+		@include min-breakpoint($desktop) {
+			font-size: 38px;
+		}
+
+		span {
+			font-weight: 400;
+		}
+	}
+
+	.welcome-text {
+		@include fontsize(16px, 1.1);
+		font-weight: 400;
+		position: relative;
+		display: block;
+		color: $lighter-gray;
+
+		@include min-breakpoint($tablet) {
+			font-size: 20px;
+		}
+
+		@include min-breakpoint($desktop) {
+			font-size: 24px;
+		}
+	}
+}
+
+.dashboard-weclome-block-row {
+	position: relative;
+	display: flex;
+	flex-wrap: wrap;
+	padding: 0 0 10px;
+	margin: 0 -7px;
+}
+
+.dashboard-weclome-block-col {
+	position: relative;
+	padding: 0 7px;
+	margin: 0 0 12px;
+	width: 100%;
+
+	@include min-breakpoint($phone) {
+		width: 50%;
+		margin: 0 0 14px;
+	}
+
+	@include min-breakpoint($desktop) {
+		width: 25%;
+	}
+}
+
+.dashboard-weclome-info-block {
+	position: relative;
+	background: $white;
+	border-radius: 7px;
+	padding: 16px 15px;
+	overflow: hidden;
+
+	@include min-breakpoint($desktop) {
+		padding: 20px 18px;
+		border-radius: 10px;
+	}
+
+	@include min-breakpoint($largescreen) {
+		padding: 22px;
+	}
+
+	.icon-wrap {
+		position: relative;
+		font-size: 16px;
+		display: block;
+		margin: 0 0 6px;
+		color: $light-brown;
+
+		@include min-breakpoint($desktop) {
+			font-size: 18px;
+			margin: 0 0 8px;
+		}
+
+		i {
+			display: block;
+		}
+	}
+
+	.heading-text {
+		@include font(15, 20, 400);
+		position: relative;
+		color: $theme-color;
+		display: block;
+
+		@include min-breakpoint($desktop) {
+			@include font(16, 24, 400);
+		}
+
+		@include min-breakpoint($largescreen) {
+			@include font(18, 27, 400);
+		}
+	}
+}
+
+.notes-detail-content {
+	position: relative;
+	height: 100%;
+	display: none;
+
+	.notebook-content-open & {
+		display: block;
+	}
+}
+
+.notebook-content-open {
+
+	.main-content-area {
+		align-items: inherit;
+	}
+
+	.dashboard-content-heading-area {
+		padding-top: 0;
+	}
+}
+
+.dashboard-notebook-sidebar-content {
+	position: relative;
+	display: none;
+	padding: 25px 20px;
+
+	.notebook-content-open & {
+		display: block;
+	}
+
+	.dashboard-info-sidebar-heading-area {
+		padding: 30px 0 10px;
+		margin: 0;
+	}
+
+	.dashboard-info-heading {
+		color: $lighter-gray;
+	}
+}
+
+.add-note-btn-holder {
+	position: relative;
+	margin: 0 -20px;
+	padding: 0 20px;
+	display: block;
+}
+
+.add-note-btn {
+	@include flex(flex, wrap, center, center);
+	@include font(18, 22, 400);
+	position: relative;
+	border-radius: 7px;
+	background: $theme-color;
+	text-decoration: none;
+	transition: $transition;
+	color: $white;
+	height: 48px;
+	padding: 5px 25px;
+
+	&:hover {
+		background: $dark-brown;
+		color: $white;
+	}
+
+	i {
+		@include align(inline-block, top);
+		font-size: 15px;
+		margin: 0 15px 0 0;
+	}
+}
+
+.notes-detail-content-area {
+	position: relative;
+	height: 100%;
+
+	.content-sub-heading {
+
+		i {
+			color: $dark-brown;
+		}
+	}
+
+	.dashboard-content-search-area {
+
+		.field-row {
+			width: 505px;
+
+			.form-control {
+				background: none;
+			}
+		}
+	}
+}
+
+.latest-select-area {
+	position: relative;
+}
+
+.dashboard-note-list-area {
+	padding: 0 0 50px;
+
+	.block-list-row-holder {
+		display: flex;
+		flex-wrap: wrap;
+		margin: 0 -7px;
+	}
+
+	.block-list-row-col {
+		position: relative;
+		width: 33.333%;
+		padding: 0 7px;
+		margin: 0 0 14px;
+	}
+
+	.block-list-row {
+		background: $white;
+		padding: 10px 10px 11px 15px;
+		border-radius: 7px;
+		transition: $transition;
+
+		&:hover {
+			background: $light-brown;
+
+			.date {
+				color: $white;
+			}
+
+			.block-link-holder {
+				color: $white;
+
+				li {
+
+					&:before {
+						background: $white;
+					}
+				}
+			}
+
+			.block-title {
+
+				i {
+					color: $white;
+				}
+			}
+		}
+	}
+
+	.block-link-holder {
+		transition: $transition;
+
+		li {
+
+			&:before {
+				transition: $transition;
+			}
+		}
+	}
+
+	.block-description {
+
+		.date {
+			transition: $transition;
+			font-size: 13px;
+			margin: -25px 0 0;
+		}
+
+		.block-title {
+
+			i {
+				transition: $transition;
+			}
+		}
+	}
+}
+
+.note-block-slider-holder {
+	position: relative;
 }

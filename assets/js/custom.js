@@ -34,6 +34,20 @@ function initSlickCarousel() {
 		prevArrow: '<button class="slick-prev"><i class="ico-prev"></i></button>',
 		nextArrow: '<button class="slick-next"><i class="ico-next"></i></button>',
 	});
+
+	jQuery('.note-block-slider').slick({
+		slidesToScroll: 1,
+		slidesToShow: 1,
+		rows: 0,
+		dots: true,
+		arrows: true,
+		infinite: false,
+		swipe: false,
+		appendArrows: jQuery('.note-slider-arrows'),
+		appendDots: jQuery('.note-slider-dots'),
+		prevArrow: '<button class="slick-prev"><i class="ico-prev"></i></button>',
+		nextArrow: '<button class="slick-next"><i class="ico-next"></i></button>',
+	});
 }
 
 // Custom Forms init
@@ -168,24 +182,28 @@ function initOpenClose() {
 	jQuery(document).on('click', '.history-opener-button', function (e) {
 		e.preventDefault();
 		jQuery('body').addClass('history-content-open');
+		jQuery('.block-slider').slick('refresh');
 	});
 
 	// History block Close
 	jQuery(document).on('click', '.history-close-button', function (e) {
 		e.preventDefault();
 		jQuery('body').removeClass('history-content-open');
+		jQuery('.block-slider').slick('refresh');
 	});
 
 	// Chat Detail block Open
-	jQuery(document).on('click', '.chat-detail-opener', function (e) {
+	jQuery(document).on('click', '.chat-detail-opener, .welcome-block-opener', function (e) {
 		e.preventDefault();
-		jQuery('body').addClass('chat-detail-content-open');
+		jQuery('body').addClass('chat-detail-content-open').removeClass('search-content-open');
+		jQuery('.block-slider').slick('refresh');
 	});
 
 	// Chat Detail block Close
 	jQuery(document).on('click', '.chat-detail-close', function (e) {
 		e.preventDefault();
 		jQuery('body').removeClass('chat-detail-content-open');
+		jQuery('.block-slider').slick('refresh');
 	});
 
 	// User Detail block Open
@@ -193,6 +211,7 @@ function initOpenClose() {
 		e.preventDefault();
 		jQuery('body').addClass('user-detail-content-open').removeClass('chat-detail-content-open');
 		jQuery('.user-block-slider').slick('refresh');
+		jQuery('.block-slider').slick('refresh');
 	});
 
 	// User Detail block Close
@@ -200,19 +219,59 @@ function initOpenClose() {
 		e.preventDefault();
 		jQuery('body').removeClass('user-detail-content-open').addClass('chat-detail-content-open');
 		jQuery('.user-block-slider').slick('refresh');
+		jQuery('.block-slider').slick('refresh');
 	});
 
 	// Setting block Open
 	jQuery(document).on('click', '.dashboard-setting-opener', function (e) {
 		e.preventDefault();
 		jQuery('body').addClass('setting-content-open');
+		jQuery('.block-slider').slick('refresh');
 	});
 
 	// Setting block Close
 	jQuery(document).on('click', '.dashboard-setting-close', function (e) {
 		e.preventDefault();
 		jQuery('body').removeClass('setting-content-open');
+		jQuery('.block-slider').slick('refresh');
 	});
+
+	// Search block Open
+	jQuery(document).on('click', '.search-content-opener', function (e) {
+		e.preventDefault();
+		jQuery('body').addClass('search-content-open');
+		jQuery('.block-slider').slick('refresh');
+	});
+
+	// Search block Close
+	jQuery(document).on('click', '.search-content-close', function (e) {
+		e.preventDefault();
+		jQuery('body').removeClass('search-content-open');
+		jQuery('.block-slider').slick('refresh');
+	});
+
+	// NoteBook block Open
+	jQuery(document).on('click', '.notebook-content-opener', function (e) {
+		e.preventDefault();
+		jQuery('body').addClass('notebook-content-open');
+		jQuery('.note-block-slider').slick('refresh');
+	});
+
+	// NoteBook block Close
+	jQuery(document).on('click', '.notebook-content-close', function (e) {
+		e.preventDefault();
+		jQuery('body').removeClass('notebook-content-open');
+		jQuery('.note-block-slider').slick('refresh');
+	});
+
+	// Dashboard Content Block Close
+	jQuery(document).on('click', '.dashboard-content-opener', function (e) {
+		e.preventDefault();
+		jQuery('body').removeClass();
+		jQuery('.block-slider').slick('refresh');
+		jQuery('.note-block-slider').slick('refresh');
+	});
+
 }
 
 // Outside Click init

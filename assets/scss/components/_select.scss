@@ -165,3 +165,63 @@ body > .jcf-select-drop.jcf-drop-flipped {
 		padding: 9px 12px;
 	}
 }
+
+.jcf-select-latest-select {
+	cursor: pointer;
+	background: none;
+	border: none;
+	border-radius: 5px 5px 0 0;
+	min-width: 115px;
+
+	.jcf-select-text {
+		color: $theme-color;
+		text-align: center;
+		font-size: 14px;
+		cursor: pointer;
+	}
+
+	.jcf-select-opener {
+		width: 25px;
+
+		&:before {
+			color: $theme-color;
+			font-size: 8px;
+			top: 19px;
+		}
+	}
+
+	&.jcf-drop-active {
+		background: $white;
+
+		.jcf-select-opener {
+
+			&:before {
+				transform: rotate(180deg);
+			}
+		}
+	}
+}
+
+.jcf-select-drop {
+
+	&.jcf-select-latest-select {
+
+		.jcf-select-drop-content {
+			border: none;
+		}
+
+		.jcf-list {
+			font-size: 14px;
+			box-shadow: 0 6px 6px rgba($black, 0.2);
+			border-radius: 0 0 5px 5px;
+		}
+
+		.jcf-list {
+
+			.jcf-option {
+				text-align: center;
+				padding: 5px 8px;
+			}
+		}
+	}
+}
