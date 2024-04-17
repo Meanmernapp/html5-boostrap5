@@ -119,21 +119,21 @@
 .user-opener-wrap {
 	position: relative;
 	display: block;
+}
 
-	.user-link {
-		@include size(38px, 38px);
-		position: relative;
-		display: block;
+.user-link {
+	@include size(38px, 38px);
+	position: relative;
+	display: block;
+	border-radius: 50%;
+
+	@include min-breakpoint($tablet) {
+		@include size(49px, 49px);
+	}
+
+	img {
+		@include img-style;
 		border-radius: 50%;
-
-		@include min-breakpoint($tablet) {
-			@include size(49px, 49px);
-		}
-
-		img {
-			@include img-style;
-			border-radius: 50%;
-		}
 	}
 }
 
@@ -1934,7 +1934,9 @@
 }
 
 .history-content-open,
-.chat-detail-content-open {
+.chat-detail-content-open,
+.user-detail-content-open,
+.setting-content-open {
 
 	.dashboard-detail-content {
 		display: none;
@@ -1997,6 +1999,11 @@
 
 	@include min-breakpoint($tablet) {
 		font-size: 16px;
+	}
+
+	i {
+		position: relative;
+		display: block;
 	}
 
 	&:hover {
@@ -2550,7 +2557,8 @@
 	}
 }
 
-.chat-detail-list-area {
+.chat-detail-list-area,
+.user-block-slider {
 	position: relative;
 
 	.block-list-row-holder {
@@ -2598,5 +2606,896 @@
 		a {
 			color: $theme-color;
 		}
+	}
+	
+	.block-description {
+
+		.date {
+			color: $dark-brown;
+		}
+	}
+}
+
+.user-block-slider {
+
+	.block-list-row {
+		width: 100%;
+	}
+
+	.block-link-holder {
+
+		li {
+
+			&:before {
+				background: #a4a4a4;
+			}
+		}
+	}
+}
+
+.user-social-detail-slide {
+	position: relative;
+	display: none;
+
+	.user-detail-content-open & {
+		display: block;
+	}
+}
+
+.user-social-detail-content {
+	position: relative;
+}
+
+.user-social-detail-row {
+	position: relative;
+
+	@include min-breakpoint($widescreen) {
+		display: flex;
+		flex-wrap: wrap;
+	}
+}
+
+.user-social-detail-col {
+	position: relative;
+
+	&:nth-child(1) {
+		@include min-breakpoint($widescreen) {
+			width: 37%;
+			padding: 0 12px 0 0;
+		}
+
+		@include min-breakpoint($largescreen) {
+			width: 35.5%;
+			padding: 0 20px 0 0;
+		}
+	}
+
+	&:nth-child(2) {
+		@include min-breakpoint($widescreen) {
+			@include textContent();
+		}
+	}
+}
+
+.user-social-info-detail {
+	position: relative;
+
+	@include min-breakpoint($largescreen) {
+		height: 100%;
+		padding: 0 0 50px;
+	}
+}
+
+.user-social-info-heading {
+	@include flex(flex, wrap, center, inherit);
+	position: relative;
+	margin: 0 0 20px;
+
+	.heading {
+		@include flex(flex, wrap, center, inherit);
+		@include font(16, 22, 400);
+		position: relative;
+		color: $theme-color;
+		margin: 0 0 0 10px;
+
+		@include min-breakpoint($largescreen) {
+			@include font(18, 24, 400);
+		}
+
+		i {
+			position: relative;
+			display: block;
+			color: $dark-brown;
+			font-size: 18px;
+			margin: 0 8px 0 0;
+
+			@include min-breakpoint($largescreen) {
+				font-size: 20px;
+				margin: 0 10px 0 0;
+			}
+		}
+	}
+}
+
+.user-social-back-wrap {
+	position: relative;
+	display: block;
+}
+
+.user-social-back {
+	@include align(inline-block, top);
+	@include font(18, 20, 400);
+	position: relative;
+	text-decoration: none;
+	transition: $transition;
+	border-radius: 5px;
+	background: $white;
+	color: $theme-color;
+	padding: 6px 14px;
+	height: 32px;
+
+	i {
+		@include align(inline-block, top);
+		@include fontsize(16px, 1);
+		position: relative;
+		color: $lighter-gray;
+		margin: 2px 10px 0 0;
+		transition: $transition;
+	}
+
+	&:hover {
+		background: $theme-color;
+		color: $white;
+
+		i {
+			color: $white;
+		}
+	}
+}
+
+.user-block-slider-holder {
+	position: relative;
+}
+
+.user-block-slider-button-area {
+	@include flex(flex, wrap, center, space-between);
+	position: relative;
+	margin: 0 0 18px;
+	z-index: 3;
+
+	@include min-breakpoint($widescreen) {
+		@include position(absolute, auto, 0, 0, 0);
+		margin: 0;
+	}
+
+	.slick-arrow {
+		background: $light-brown;
+		color: $white;
+
+		&:hover {
+			background: $dark-brown;
+		}
+
+		&.slick-disabled {
+			background: $light-gray;
+			color: rgba($theme-color, 0.3);
+			border-color: $light-gray;
+		}
+	}
+
+	.slick-prev {
+		margin: 0 10px 0 0;
+	}
+}
+
+.user-social-description-area {
+	position: relative;
+}
+
+.user-social-description-header {
+	position: relative;
+	background: $white;
+	border-radius: 7px;
+	padding: 20px 15px;
+	overflow: hidden;
+
+	@include min-breakpoint($tablet) {
+		padding: 22px 18px;
+	}
+
+	@include min-breakpoint($largescreen) {
+		padding: 28px 22px;
+	}
+}
+
+.user-social-description-heading {
+	@include flex(flex, wrap, center, space-between);
+	position: relative;
+	margin: 0 0 15px;
+
+	@include min-breakpoint($tablet) {
+		margin: 0 0 20px;
+	}
+
+	.heading {
+		@include flex(flex, wrap, center, inherit);
+		@include font(16, 22, 400);
+		color: $theme-color;
+
+		@include min-breakpoint($tablet) {
+			@include font(18, 24, 400);
+		}
+
+		i {
+			position: relative;
+			font-size: 16px;
+			display: block;
+			color: $dark-brown;
+			margin: 0 8px 0 0;
+
+			@include min-breakpoint($tablet) {
+				font-size: 18px;
+				margin: 0 10px 0 0;
+			}
+		}
+	}
+}
+
+.user-social-title-area {
+	position: relative;
+	margin: 0 0 20px;
+
+	@include min-breakpoint($tablet) {
+		margin: 0 0 24px;
+	}
+
+	@include min-breakpoint($largescreen) {
+		margin: 0 0 32px;
+	}
+
+	.title {
+		@include font(18, 24, 400);
+		color: $theme-color;
+		display: block;
+
+		@include min-breakpoint($tablet) {
+			@include font(22, 30, 400);
+		}
+
+		@include min-breakpoint($largescreen) {
+			@include font(25, 34, 400);
+		}
+	}
+}
+
+.user-social-detail-list-area {
+	position: relative;
+
+	@include min-breakpoint($tablet) {
+		@include flex(flex, wrap, center, inherit);
+	}
+
+	@include min-breakpoint($widescreen) {
+		margin: 0 -6px;
+	}
+
+	@include min-breakpoint($largescreen) {
+		margin: 0;
+	}
+
+	ul {
+		@include flex(flex, wrap, center, inherit);
+		@include listreset();
+		position: relative;
+
+		li {
+			position: relative;
+			padding: 0 5px 0 0;
+			margin: 0 0 5px;
+
+			@include min-breakpoint($tablet) {
+				margin: 0;
+			}
+
+			@include min-breakpoint($largescreen) {
+				padding: 0 10px 0 0;
+			}
+		}
+	}
+}
+
+.user-social-detail-list {
+
+	.social-text-wrap {
+		@include flex(flex, wrap, center, inherit);
+		position: relative;
+		background: $light-gray;
+		border-radius: 7px;
+		padding: 6px 12px 6px 7px;
+		height: 44px;
+	}
+
+	.image-wrap {
+		@include size(30px, 30px);
+		position: relative;
+		overflow: hidden;
+		border-radius: 50%;
+
+		@include min-breakpoint($largescreen) {
+			@include size(34px, 34px);
+		}
+
+		img {
+			@include img-style;
+			border-radius: 50%;
+		}
+	}
+
+	.icon-wrap {
+		@include fontsize(16px, 1);
+		position: relative;
+		display: block;
+		color: $dark-brown;
+
+		@include min-breakpoint($largescreen) {
+			font-size: 18px;
+		}
+
+		i {
+			position: relative;
+			display: block;
+		}
+	}
+
+	.text {
+		@include font(15, 20, 400);
+		position: relative;
+		display: block;
+		color: $theme-color;
+		padding: 0 0 0 7px;
+
+		@include min-breakpoint($desktop) {
+			@include font(15, 20, 400);
+			padding: 0 0 0 7px;
+		}
+
+		@include min-breakpoint($largescreen) {
+			@include font(18, 22, 400);
+			padding: 0 0 0 10px;
+		}
+	}
+}
+
+.user-like-option-list {
+
+	li {
+
+		&:first-child {
+			padding-left: 0;
+		}
+	}
+
+	a {
+		@include flex(flex, wrap, center, inherit);
+		@include size(40px, 44px);
+		position: relative;
+		background: $light-gray;
+		border-radius: 7px;
+		color: $lighter-gray;
+		transition: $transition;
+		text-decoration: none;
+
+		@include min-breakpoint($largescreen) {
+			width: 44px;
+		}
+
+		i {
+			position: relative;
+			display: block;
+			font-size: 16px;
+			text-align: center;
+			width: 100%;
+		}
+
+		.ico-dislike {
+			top: 1px;
+		}
+
+		&.selected {
+			background: $light-brown;
+			color: $theme-color;
+		}
+	}
+}
+
+.user-social-search-area {
+	position: relative;
+	padding: 20px 0;
+
+	@include min-breakpoint($tablet) {
+		padding: 25px 0;
+	}
+
+	@include min-breakpoint($largescreen) {
+		@include flex(flex, wrap, center, space-between);
+		padding: 30px 0;
+	}
+}
+
+.user-social-search-list {
+	@include flex(flex, wrap, center, inherit);
+	@include listreset();
+	position: relative;
+	margin: 0 -4px;
+
+	li {
+		position: relative;
+		padding: 0 4px;
+		margin: 0 0 6px;
+
+		@include min-breakpoint($tablet) {
+			margin: 0;
+		}
+	}
+
+	a {
+		@include flex(flex, wrap, center, inherit);
+		background: $light-gray;
+		position: relative;
+		text-decoration: none;
+		transition: $transition;
+		padding: 10px 15px;
+		height: 42px;
+		color: $theme-color;
+		border-radius: 7px;
+
+		@include min-breakpoint($tablet) {
+			padding: 10px 22px;
+		}
+
+		&:hover,
+		&.active {
+			background: $light-brown;
+			color: $theme-color;
+		}
+	}
+
+	.icon-holder {
+		position: relative;
+		display: block;
+		color: $theme-color;
+
+		i {
+			@include fontsize(21px, 1);
+			position: relative;
+			display: block;
+		}
+	}
+
+	.text {
+		position: relative;
+		display: block;
+		padding: 0 0 0 10px;
+	}
+}
+
+.user-social-search-holder {
+	position: relative;
+	max-width: 303px;
+	margin: 10px auto 0;
+
+	@include min-breakpoint($tablet) {
+		width: 303px;
+		margin: 15px 0 0;
+		max-width: inherit;
+	}
+
+	@include min-breakpoint($largescreen) {
+		margin: 0;
+	}
+
+	.field-row {
+		margin: 0;
+
+		.form-control {
+			@include fontsize(14px, 18px);
+			padding: 8px 15px 8px 45px;
+			background: none;
+			height: 42px;
+		}
+
+		.field-label {
+			left: 13px;
+			top: 13px;
+		}
+	}
+}
+
+.user-detail-summary-area {
+	position: relative;
+	background: $white;
+	border-radius: 7px;
+	padding: 20px 15px;
+	overflow: hidden;
+
+	@include min-breakpoint($tablet) {
+		padding: 26px 22px;
+	}
+}
+
+.user-summary-heading-area {
+	@include flex(flex, wrap, center, space-between);
+	position: relative;
+	margin: 0 0 22px;
+
+	@include min-breakpoint($tablet) {
+		margin: 0 0 34px;
+	}
+
+	.heading {
+		@include flex(flex, wrap, center, inherit);
+		@include font(16, 22, 400);
+		color: $theme-color;
+
+		@include min-breakpoint($tablet) {
+			@include font(18, 24, 400);
+		}
+
+		i {
+			position: relative;
+			display: block;
+			color: $dark-brown;
+			margin: 0 10px 0 0;
+		}
+	}
+}
+
+.summary-opener-holder {
+	position: relative;
+	display: block;
+}
+
+.summary-opener {
+	@include font(9, 12, 400);
+	position: relative;
+	display: block;
+	transition: $transition;
+	text-decoration: none;
+	color: $theme-color;
+
+	@include min-breakpoint($tablet) {
+		@include font(11, 14, 400);
+	}
+
+	i {
+		position: relative;
+		display: block;
+		transition: $transition;
+		transform: rotate(180deg);
+	}
+
+	&.active {
+
+		i {
+			transform: none;
+		}
+	}
+
+	&:hover {
+		color: $dark-brown;
+	}
+}
+
+.user-summary-slide {
+	position: relative;
+}
+
+.user-summary-text-holder {
+	position: relative;
+	overflow: hidden;
+}
+
+.user-summary-text-wrap {
+	@include font(15, 22, 400);
+	position: relative;
+	color: $theme-color;
+
+	@include min-breakpoint($tablet) {
+		@include font(16, 24, 400);
+	}
+
+	@include min-breakpoint($largescreen) {
+		@include font(18, 27, 400);
+	}
+
+	ol {
+		@include listreset;
+		position: relative;
+		counter-reset: item;
+		padding: 0 0 10px;
+
+		@include min-breakpoint($largescreen) {
+			padding: 0 0 15px;
+		}
+
+		li {
+			position: relative;
+			padding: 0 0 0 15px;
+			margin: 0 0 18px;
+
+			@include min-breakpoint($tablet) {
+				padding: 0 0 0 20px;
+				margin: 0 0 22px;
+			}
+
+			@include min-breakpoint($largescreen) {
+				margin: 0 0 30px;
+			}
+
+			&:before {
+				content: counters(item, ".") ".";
+				counter-increment: item;
+				position: absolute;
+				left: 0;
+				top: 0;
+			}
+
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+	}
+}
+
+.dashboard-setting-content {
+	position: relative;
+	display: none;
+
+	.setting-content-open & {
+		display: block;
+	}
+}
+
+.dashboard-setting-content-holder {
+	position: relative;
+	background: $white;
+	border-radius: 7px;
+	overflow: hidden;
+
+	.dashboard-content-heading-area {
+		padding-left: 20px;
+		padding-right: 20px;
+	}
+
+	.dashboard-back-button {
+
+		i {
+			top: 1px;
+		}
+	}
+
+	.dashboard-content-heading-wrap {
+		margin: 0;
+	}
+}
+
+.dashboard-setting-section {
+	position: relative;
+
+	.inner-row {
+		position: relative;
+		border-top: 1px solid $light-gray;
+
+		@include min-breakpoint($tablet) {
+			display: flex;
+			flex-wrap: wrap;
+		}
+	}
+
+	.label-col {
+		position: relative;
+		padding: 15px 15px 0;
+
+		@include min-breakpoint($tablet) {
+			border-right: 1px solid $light-gray;
+			padding: 22px 20px;
+			width: 200px;
+		}
+
+		@include min-breakpoint($desktop) {
+			width: 250px;
+		}
+
+		@include min-breakpoint($largescreen) {
+			width: 352px;
+		}
+
+		label {
+			@include font(16, 18, 400);
+			position: relative;
+			color: $theme-color;
+			display: block;
+			margin: 0;
+
+			@include min-breakpoint($largescreen) {
+				@include font(18, 24, 400);
+			}
+		}
+	}
+
+	.field-description-col {
+		position: relative;
+		padding: 14px 15px 20px;
+
+		@include min-breakpoint($tablet) {
+			@include textContent();
+			padding: 22px 20px;
+		}
+	}
+
+	.field-row {
+		margin: 15px 0 0;
+		max-width: 590px;
+
+		&:first-child {
+			margin-top: 0;
+		}
+
+		.form-control {
+			height: 50px;
+		}
+	}
+}
+
+.change-password-text-wrap {
+	position: relative;
+	display: block;
+	padding: 12px 0 0;
+
+	@include min-breakpoint($tablet) {
+		padding: 17px 0 0;
+	}
+
+	a {
+		@include align(inline-block, top);
+		@include font(15, 18, 400);
+		position: relative;
+		transition: $transition;
+		color: $dark-brown;
+
+		@include min-breakpoint($tablet) {
+			@include font(18, 22, 400);
+		}
+
+		&:hover {
+			color: $theme-color;
+			text-decoration: none;
+		}
+	}
+}
+
+.user-image-field-area {
+	position: relative;
+
+	@include min-breakpoint($sm-phone) {
+		@include flex(flex, wrap, center, inherit);
+	}
+
+	.user-image {
+		@include size(75px, 75px);
+		position: relative;
+		border-radius: 50%;
+		overflow: hidden;
+		margin: 0 0 12px;
+
+		@include min-breakpoint($sm-phone) {
+			@include size(90px, 90px);
+			margin: 0;
+		}
+
+		@include min-breakpoint($desktop) {
+			@include size(106px, 106px);
+		}
+
+		img {
+			@include img-style;
+			border-radius: 50%;
+		}
+	}
+}
+
+.user-image-description {
+	position: relative;
+
+	@include min-breakpoint($sm-phone) {
+		@include textContent();
+		padding: 0 0 0 20px;
+	}
+
+	@include min-breakpoint($desktop) {
+		padding: 0 0 0 30px;
+	}
+
+	.info-text {
+		@include font(14, 18, 400);
+		font-style: italic;
+		position: relative;
+		display: block;
+		color: rgba(#5f6a64, 0.5);
+
+		@include min-breakpoint($sm-phone) {
+			font-size: 15px;
+		}
+
+		@include min-breakpoint($tablet) {
+			@include font(16, 20, 400);
+		}
+	}
+}
+
+.upload-field-area {
+	position: relative;
+	margin: 0 0 10px;
+
+	@include min-breakpoint($sm-phone) {
+		margin: 0 0 14px;
+	}
+
+	.upload-field {
+		@include align(inline-block, top);
+		position: relative;
+		cursor: pointer;
+		margin: 0;
+	}
+
+	.upload-text {
+		@include font(16, 20, 400);
+		position: relative;
+		display: block;
+		background: $light-white;
+		border-radius: 7px;
+		color: $theme-color;
+		padding: 10px 8px;
+		height: 38px;
+
+		@include min-breakpoint($sm-phone) {
+			font-size: 18px;
+		}
+
+		i {
+			@include align(inline-block, top);
+			position: relative;
+			margin: 0 6px 0 0;
+		}
+	}
+
+	input[type="file"] {
+		@include OpacityHide();
+		position: absolute;
+		margin: 0;
+	}
+}
+
+.setting-save-button-wrap {
+	@include flex(flex, wrap, center, flex-end);
+	position: relative;
+}
+
+.setting-save-button {
+	@include align(inline-block, top);
+	@include font(16, 20, 500);
+	min-width: 162px;
+	height: 46px;
+	text-decoration: none;
+	padding: 13px 25px;
+	border-radius: 7px;
+	background: $theme-color;
+	transition: $transition;
+	text-align: center;
+	color: $white;
+
+	&:hover {
+		background: $dark-brown;
+		color: $white;
 	}
 }

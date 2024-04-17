@@ -229,6 +229,19 @@ body {
 		}
 	}
 
+	textarea {
+
+		&.form-control {
+			min-height: 100px;
+			padding-top: 10px;
+
+			@include min-breakpoint($tablet) {
+				min-height: 145px;
+				padding-top: 12px;
+			}
+		}
+	}
+
 	.field-label {
 		position: absolute;
 		left: 14px;

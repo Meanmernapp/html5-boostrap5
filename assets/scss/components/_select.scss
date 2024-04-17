@@ -2,11 +2,12 @@
 	display: inline-block;
 	vertical-align: top;
 	position: relative;
-	border: 1px solid #777;
-	background: #fff;
-	margin: 0 0 12px;
+	background: $white;
+	border-radius: 7px;
+	border: 2px solid $light-gray;
 	min-width: 150px;
-	height: 26px;
+	height: 46px;
+	margin: 0;
 }
 
 .jcf-select select {
@@ -16,24 +17,48 @@
 }
 
 .jcf-select .jcf-select-text {
+	@include font(14, 20, 400);
 	text-overflow:ellipsis;
 	white-space: nowrap;
 	overflow: hidden;
 	cursor: default;
 	display: block;
-	font-size: 13px;
-	line-height: 26px;
-	margin: 0 35px 0 8px;
+	color: $lighter-gray;
+	padding: 12px 30px 10px 12px;
+
+	@include min-breakpoint($tablet) {
+		font-size: 16px;
+		padding: 12px 35px 10px 12px;
+	}
 }
 
 .jcf-select .jcf-select-opener {
 	position: absolute;
 	text-align: center;
-	background: #aaa;
-	width: 26px;
+	width: 25px;
 	bottom: 0;
 	right: 0;
 	top: 0;
+
+	@include min-breakpoint($tablet) {
+		width: 30px;
+	}
+
+	&:before {
+		@include fontsize(8px, 1);
+		font-family: 'icomoon' !important;
+		position: absolute;
+		left: 0;
+		top: 18px;
+		content: "\e929";
+		color: $lighter-gray;
+		transition: $transition;
+
+		@include min-breakpoint($tablet) {
+			font-size: 9px;
+			top: 16px;
+		}
+	}
 }
 
 body > .jcf-select-drop {
@@ -48,7 +73,7 @@ body > .jcf-select-drop.jcf-drop-flipped {
 
 .jcf-select .jcf-select-drop {
 	position: absolute;
-	margin-top: 0px;
+	margin-top: 0;
 	z-index: 9999;
 	top: 100%;
 	left: -1px;
@@ -60,38 +85,8 @@ body > .jcf-select-drop.jcf-drop-flipped {
 	top: auto;
 }
 
-.jcf-select.jcf-compact-multiple {
-	max-width: 220px;
-}
-
-.jcf-select.jcf-compact-multiple .jcf-select-opener:before {
-	display: inline-block;
-	padding-top: 2px;
-	content: '...';
-}
-
 .jcf-select-drop .jcf-select-drop-content {
-	border: 1px solid #f00;
-}
-
-.jcf-select-drop.jcf-compact-multiple .jcf-hover {
-	background: none;
-}
-
-.jcf-select-drop.jcf-compact-multiple .jcf-selected {
-	background: #e6e6e6;
-	color: #000;
-}
-
-.jcf-select-drop.jcf-compact-multiple .jcf-selected:before {
-	display: inline-block;
-	content: '';
-	height:4px;
-	width:8px;
-	margin:-7px 5px 0 -3px;
-	border:3px solid #777;
-	border-width:0 0 3px 3px;
-	transform: rotate(-45deg);
+	border: 2px solid $light-gray;
 }
 
 .jcf-list-box {
@@ -103,13 +98,16 @@ body > .jcf-select-drop.jcf-drop-flipped {
 }
 
 .jcf-list {
+	@include font(14, 20, 400);
 	display: inline-block;
 	vertical-align: top;
 	position: relative;
-	background: #fff;
-	line-height: 14px;
-	font-size: 12px;
+	background: $white;
 	width: 100%;
+
+	@include min-breakpoint($tablet) {
+		font-size: 16px;
+	}
 }
 
 .jcf-list .jcf-list-content {
@@ -139,32 +137,31 @@ body > .jcf-select-drop.jcf-drop-flipped {
 	overflow: hidden;
 	cursor: default;
 	display: block;
-	padding: 5px 9px;
-	color: #656565;
+	padding: 6px 12px;
+	color: $lighter-gray;
 	min-height: 14px;
 	height: 1%;
-}
 
-.jcf-list .jcf-disabled {
-	background: #fff !important;
-	color: #aaa !important;
+	@include min-breakpoint($tablet) {
+		padding: 9px 12px;
+	}
 }
 
 .jcf-select-drop .jcf-hover,
 .jcf-list-box .jcf-selected {
 	background: #e6e6e6;
-	color: #000;
+	color: $black;
 }
 
 .jcf-list .jcf-optgroup-caption {
 	white-space: nowrap;
 	font-weight: bold;
 	display: block;
-	padding: 5px 9px;
+	padding: 7px 12px;
 	cursor: default;
-	color: #000;
-}
+	color: $black;
 
-.jcf-list .jcf-optgroup .jcf-option {
-	padding-left: 30px;
+	@include min-breakpoint($tablet) {
+		padding: 9px 12px;
+	}
 }

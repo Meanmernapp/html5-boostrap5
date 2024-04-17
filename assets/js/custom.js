@@ -20,6 +20,20 @@ function initSlickCarousel() {
 		prevArrow: '<button class="slick-prev"><i class="ico-prev"></i></button>',
 		nextArrow: '<button class="slick-next"><i class="ico-next"></i></button>',
 	});
+
+	jQuery('.user-block-slider').slick({
+		slidesToScroll: 1,
+		slidesToShow: 1,
+		rows: 0,
+		dots: true,
+		arrows: true,
+		infinite: false,
+		swipe: false,
+		appendArrows: jQuery('.user-slider-arrows'),
+		appendDots: jQuery('.user-slider-dots'),
+		prevArrow: '<button class="slick-prev"><i class="ico-prev"></i></button>',
+		nextArrow: '<button class="slick-next"><i class="ico-next"></i></button>',
+	});
 }
 
 // Custom Forms init
@@ -75,6 +89,26 @@ function initCustomModal() {
 		e.preventDefault();
 		jQuery('body').removeClass('delete-chat-modal-active');
 	});
+
+	jQuery(document).on('click', '.add-note-button', function (e) {
+		e.preventDefault();
+		jQuery('body').addClass('note-modal-active');
+	});
+
+	jQuery(document).on('click', '.note-modal-close', function (e) {
+		e.preventDefault();
+		jQuery('body').removeClass('note-modal-active');
+	});
+
+	jQuery(document).on('click', '.change-password-opener', function (e) {
+		e.preventDefault();
+		jQuery('body').addClass('change-password-modal-active');
+	});
+
+	jQuery(document).on('click', '.change-password-close', function (e) {
+		e.preventDefault();
+		jQuery('body').removeClass('change-password-modal-active');
+	});
 }
 
 // Open Close init
@@ -91,6 +125,19 @@ function initOpenClose() {
 		e.preventDefault();
 		jQuery(this).parents('.widget-dropdown-area').toggleClass('active');
 		jQuery(this).parents('.widget-dropdown-area').find('.widget-dropdown-slide').slideToggle();
+	});
+
+	// Like Option Selected
+	jQuery(document).on('click', '.user-like-button', function (e) {
+		e.preventDefault();
+		jQuery(this).toggleClass('selected');
+	});
+
+	// Summary Slide
+	jQuery(document).on('click', '.summary-opener', function (e) {
+		e.preventDefault();
+		jQuery(this).toggleClass('active');
+		jQuery(this).parents('.user-detail-summary-area').find('.user-summary-slide').slideToggle();
 	});
 
 	// Filter Sidebar Open
@@ -139,6 +186,32 @@ function initOpenClose() {
 	jQuery(document).on('click', '.chat-detail-close', function (e) {
 		e.preventDefault();
 		jQuery('body').removeClass('chat-detail-content-open');
+	});
+
+	// User Detail block Open
+	jQuery(document).on('click', '.chat-block-detail-opener', function (e) {
+		e.preventDefault();
+		jQuery('body').addClass('user-detail-content-open').removeClass('chat-detail-content-open');
+		jQuery('.user-block-slider').slick('refresh');
+	});
+
+	// User Detail block Close
+	jQuery(document).on('click', '.chat-block-detail-close', function (e) {
+		e.preventDefault();
+		jQuery('body').removeClass('user-detail-content-open').addClass('chat-detail-content-open');
+		jQuery('.user-block-slider').slick('refresh');
+	});
+
+	// Setting block Open
+	jQuery(document).on('click', '.dashboard-setting-opener', function (e) {
+		e.preventDefault();
+		jQuery('body').addClass('setting-content-open');
+	});
+
+	// Setting block Close
+	jQuery(document).on('click', '.dashboard-setting-close', function (e) {
+		e.preventDefault();
+		jQuery('body').removeClass('setting-content-open');
 	});
 }
 
