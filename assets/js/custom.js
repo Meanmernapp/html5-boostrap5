@@ -48,6 +48,20 @@ function initSlickCarousel() {
 		prevArrow: '<button class="slick-prev"><i class="ico-prev"></i></button>',
 		nextArrow: '<button class="slick-next"><i class="ico-next"></i></button>',
 	});
+
+	jQuery('.note-edit-slider').slick({
+		slidesToScroll: 1,
+		slidesToShow: 1,
+		rows: 0,
+		dots: true,
+		arrows: true,
+		infinite: false,
+		swipe: false,
+		appendArrows: jQuery('.edit-slider-arrows'),
+		appendDots: jQuery('.edit-slider-dots'),
+		prevArrow: '<button class="slick-prev"><i class="ico-prev"></i></button>',
+		nextArrow: '<button class="slick-next"><i class="ico-next"></i></button>',
+	});
 }
 
 // Custom Forms init
@@ -225,6 +239,7 @@ function initOpenClose() {
 	// Setting block Open
 	jQuery(document).on('click', '.dashboard-setting-opener', function (e) {
 		e.preventDefault();
+		jQuery("body").removeClass();
 		jQuery('body').addClass('setting-content-open');
 		jQuery('.block-slider').slick('refresh');
 	});
@@ -264,12 +279,27 @@ function initOpenClose() {
 		jQuery('.note-block-slider').slick('refresh');
 	});
 
+	// NoteBook Slide block Open
+	jQuery(document).on('click', '.note-slide-block-opener', function (e) {
+		e.preventDefault();
+		jQuery('body').addClass('notebook-edit-slide-open');
+		jQuery('.note-edit-slider').slick('refresh');
+	});
+
+	// NoteBook Slide block Close
+	jQuery(document).on('click', '.note-slide-block-close', function (e) {
+		e.preventDefault();
+		jQuery('body').removeClass('notebook-edit-slide-open');
+		jQuery('.note-edit-slider').slick('refresh');
+	});
+
 	// Dashboard Content Block Close
 	jQuery(document).on('click', '.dashboard-content-opener', function (e) {
 		e.preventDefault();
 		jQuery('body').removeClass();
 		jQuery('.block-slider').slick('refresh');
 		jQuery('.note-block-slider').slick('refresh');
+		jQuery('.note-edit-slider').slick('refresh');
 	});
 
 }

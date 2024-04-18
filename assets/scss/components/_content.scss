@@ -1942,7 +1942,8 @@
 .user-detail-content-open,
 .setting-content-open,
 .search-content-open,
-.notebook-content-open {
+.notebook-content-open,
+.notebook-edit-slide-open {
 
 	.dashboard-detail-content {
 		display: none;
@@ -2768,7 +2769,8 @@
 }
 
 .user-block-slider-button-area,
-.note-block-slider-pagination-area {
+.note-block-slider-pagination-area,
+.note-edit-slider-pagination-area {
 	@include flex(flex, wrap, center, space-between);
 	position: relative;
 	margin: 0 0 18px;
@@ -3781,6 +3783,10 @@
 	position: relative;
 	height: 100%;
 
+	.notebook-edit-slide-open & {
+		display: none;
+	}
+
 	.content-sub-heading {
 
 		i {
@@ -3883,4 +3889,65 @@
 
 .note-block-slider-holder {
 	position: relative;
+}
+
+.note-edit-slide {
+	position: relative;
+	height: 100%;
+	display: none;
+
+	.notebook-edit-slide-open & {
+		display: block;
+	}
+}
+
+.note-edit-slide-content {
+	position: relative;
+	display: flex;
+	flex-wrap: wrap;
+	height: 100%;
+}
+
+.note-edit-slide-col {
+	position: relative;
+
+	&:nth-child(1) {
+		@include min-breakpoint($widescreen) {
+			width: 37%;
+			padding: 0 12px 0 0;
+		}
+
+		@include min-breakpoint($largescreen) {
+			width: 35.5%;
+			padding: 0 20px 0 0;
+		}
+	}
+
+	&:nth-child(2) {
+		@include min-breakpoint($widescreen) {
+			@include textContent();
+		}
+	}
+
+	.dashboard-content-heading-area {
+		display: block;
+	}
+
+	.field-row {
+		width: 100%;
+		margin: 20px 0 0;
+
+		.field-label {
+			left: 13px;
+			top: 13px;
+		}
+
+		.form-control {
+			@include fontsize(14px, 18px);
+			padding: 6px 12px 6px 45px;
+			background: none;
+			border-radius: 7px;
+			height: 42px;
+		}
+	}
 }
