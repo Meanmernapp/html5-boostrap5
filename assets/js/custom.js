@@ -216,6 +216,18 @@ function initOpenClose() {
 		jQuery('body').removeClass('notification-sidebar-open');
 	});
 
+	// User Widget Sidebar Open
+	jQuery(document).on('click', '.user-widget-detail-opener', function (e) {
+		e.preventDefault();
+		jQuery('body').addClass('user-widget-sidebar-open');
+	});
+
+	// User Widget  Sidebar Close
+	jQuery(document).on('click', '.user-widget-sidebar-close-button', function (e) {
+		e.preventDefault();
+		jQuery('body').removeClass('user-widget-sidebar-open');
+	});
+
 	// History block Open
 	jQuery(document).on('click', '.history-opener-button', function (e) {
 		e.preventDefault();
@@ -331,13 +343,26 @@ function initOpenClose() {
 	jQuery(document).on('click', '.member-detail-opener', function (e) {
 		e.preventDefault();
 		jQuery('body').addClass('member-content-open');
-		jQuery('.block-slider').slick('refresh');
 	});
 
 	// Member view block Close
 	jQuery(document).on('click', '.member-detail-close', function (e) {
 		e.preventDefault();
 		jQuery('body').removeClass('member-content-open');
+		jQuery('.block-slider').slick('refresh');
+	});
+
+	// User Widget view block Open
+	jQuery(document).on('click', '.user-widget-list-opener', function (e) {
+		e.preventDefault();
+		jQuery('body').addClass('user-widget-content-open');
+		jQuery('.block-slider').slick('refresh');
+	});
+
+	// User Widget view block Close
+	jQuery(document).on('click', '.user-widget-list-close', function (e) {
+		e.preventDefault();
+		jQuery('body').removeClass('user-widget-content-open');
 		jQuery('.block-slider').slick('refresh');
 	});
 

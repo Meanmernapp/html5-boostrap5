@@ -22,6 +22,18 @@
   }
 }
 
+.user-widget-sidebar-open {
+  overflow: hidden;
+
+  .user-widget-sidebar-overlay {
+    display: block;
+  }
+
+  .user-widget-sidebar {
+    transform: none;
+  }
+}
+
 .dashboard-info-sidebar {
   @include position(fixed, 0, 0, 0, auto);
   background: $white;
@@ -444,7 +456,8 @@
   }
 }
 
-.notification-sidebar {
+.notification-sidebar,
+.user-widget-sidebar {
 
   .dashboard-info-sidebar-content {
     max-height: 100vh;
@@ -510,6 +523,219 @@
     @include min-breakpoint($tablet) {
       @include font(17, 25, 400);
       padding: 0 0 0 13px;
+    }
+  }
+}
+
+.user-sidebar-heading-area {
+  position: relative;
+  padding: 0 0 16px;
+
+  .user-image-wrap {
+    @include size(70px, 70px);
+    position: relative;
+    margin: 0 0 10px;
+
+    @include min-breakpoint($tablet) {
+      @include size(103px, 103px);
+      margin: 0 0 12px;
+    }
+  }
+
+  .user-image {
+    @include size(100%, 100%);
+    position: relative;
+    overflow: hidden;
+    border-radius: 50%;
+
+    img {
+      @include img-style;
+    }
+  }
+
+  .status-wrap {
+		@include size(16px, 16px);
+		background: $light-white;
+		position: absolute;
+		border-radius: 50%;
+		padding: 2px;
+		right: 2px;
+		bottom: 4px;
+		z-index: 3;
+
+		@include min-breakpoint($tablet) {
+			@include size(20px, 20px);
+			padding: 3px;
+			right: 5px;
+			bottom: 7px;
+		}
+	}
+
+	.status {
+		@include size(100%, 100%);
+		background: #4d46ae;
+		position: relative;
+		display: block;
+		border-radius: 50%;
+	}
+
+  .name {
+    @include font(20, 26, 400);
+    position: relative;
+    color: $theme-color;
+    display: block;
+    margin: 0 0 4px;
+
+    @include min-breakpoint($tablet) {
+      @include font(24, 30, 400);
+    }
+  }
+
+  .desination {
+    @include font(15, 18, 400);
+    position: relative;
+    display: block;
+    color: $lighter-gray;
+
+    @include min-breakpoint($tablet) {
+      @include font(17, 20, 400);
+    }
+  }
+}
+
+.user-sidebar-widget-area {
+  position: relative;
+}
+
+.user-sidebar-widget {
+  position: relative;
+  padding: 20px 15px;
+  margin: 0 -15px;
+  border-top: 1px solid $light-gray;
+
+  @include min-breakpoint($tablet) {
+    margin: 0 -20px;
+    padding: 32px 20px;
+  }
+
+  .title {
+    @include font(15, 18, 400);
+    position: relative;
+    display: block;
+    color: $lighter-gray;
+    margin: 0 0 8px;
+
+    @include min-breakpoint($tablet) {
+      @include font(17, 20, 400);
+      margin: 0 0 13px;
+    }
+  }
+
+  p {
+    @include font(15, 22, 400);
+    color: $theme-color;
+    margin: 0;
+
+    @include min-breakpoint($tablet) {
+      @include font(17, 25, 400);
+      margin: 0 -10px 0 0;
+    }
+  }
+}
+
+.user-sidebar-list {
+  @include listreset();
+  position: relative;
+  padding: 2px 0 0;
+
+  @include min-breakpoint($tablet) {
+    padding: 4px 0 0;
+  }
+
+  li {
+    @include flex(flex, wrap, center, space-between);
+    position: relative;
+    margin: 0 0 15px;
+
+    @include min-breakpoint($tablet) {
+      margin: 0 0 18px;
+    }
+
+    &:last-child {
+      margin: 0;
+    }
+  }
+
+  .sub-title-wrap {
+    @include flex(flex, wrap, center, inherit);
+    @include textContent();
+    position: relative;
+  }
+
+  .icon-wrap {
+    position: relative;
+    display: block;
+    width: 30px;
+    color: $dark-brown;
+    font-size: 18px;
+
+    @include min-breakpoint($tablet) {
+      width: 40px;
+      font-size: 20px;
+    }
+
+    img {
+      position: relative;
+      display: block;
+      width: 18px;
+
+      @include min-breakpoint($tablet) {
+        width: 20px;
+      }
+    }
+
+    i {
+      position: relative;
+      display: block;
+    }
+  }
+
+  .sub-title {
+    @include font(15, 18, 400);
+    @include textContent();
+    position: relative;
+    color: $theme-color;
+    display: block;
+
+    @include min-breakpoint($tablet) {
+      @include font(17, 20, 400);
+    }
+  }
+
+  .sub-text {
+    @include font(14, 18, 400);
+    position: relative;
+    display: block;
+    color: $theme-color;
+
+    @include min-breakpoint($tablet) {
+      @include font(16, 20, 400);
+    }
+
+    a {
+      text-decoration: underline;
+      color: $dark-brown;
+      transition: $transition;
+
+      &:hover {
+        text-decoration: none;
+        color: $theme-color;
+      }
+    }
+
+    &.join-text {
+      color: $lighter-gray;
+      font-style: italic;
     }
   }
 }

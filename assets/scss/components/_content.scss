@@ -23,7 +23,8 @@
 
 .filter-overlay,
 .notification-overlay,
-.modal-overlay {
+.modal-overlay,
+.user-widget-sidebar-overlay {
 	z-index: 105;
 }
 
@@ -1949,7 +1950,8 @@
 .notebook-content-open,
 .notebook-edit-slide-open,
 .notebook-edit-content-slide-open,
-.member-content-open {
+.member-content-open,
+.user-widget-content-open {
 
 	.dashboard-detail-content {
 		display: none;
@@ -4599,5 +4601,264 @@
 	&:hover {
 		background: $dark-brown;
 		color: $white;
+	}
+}
+
+.user-widget-detail-content {
+	position: relative;
+	display: none;
+
+	.user-widget-content-open & {
+		display: block;
+	}
+}
+
+.user-widget-content-open {
+
+	.main-content-area {
+		align-items: inherit;
+	}
+}
+
+.user-widget-detail-content-holder {
+	position: relative;
+
+	@include min-breakpoint($widescreen) {
+		display: flex;
+		flex-wrap: wrap;
+	}
+}
+
+.user-widget-detail-content-col {
+	position: relative;
+
+	&:nth-child(1) {
+		@include min-breakpoint($widescreen) {
+			width: 37%;
+			padding: 0 12px 0 0;
+		}
+
+		@include min-breakpoint($largescreen) {
+			width: 37%;
+			padding: 0 15px 0 0;
+		}
+
+		@include min-breakpoint($tv-screen) {
+			padding: 0 20px 0 0;
+		}
+	}
+
+	&:nth-child(2) {
+		@include min-breakpoint($widescreen) {
+			@include textContent();
+		}
+	}
+
+	.block-link-holder {
+
+		li {
+
+			&:first-child {
+				padding-left: 0;
+
+				&:before {
+					display: none;
+				}
+			}
+		}
+	}
+}
+
+.user-widget-detail-content-wrap {
+	position: relative;
+	height: 100%;
+
+	.slick-arrow {
+		background: $light-brown;
+		color: $white;
+
+		&:hover {
+			background: $dark-brown;
+		}
+
+		&.slick-disabled {
+			background: $light-gray;
+			color: rgba($theme-color, 0.3);
+			border-color: $light-gray;
+		}
+	}
+
+	.slick-prev {
+		right: 46px;
+	}
+
+	.slick-next {
+		right: 0;
+	}
+
+	.slick-dots {
+
+		@include min-breakpoint($widescreen) {
+			position: absolute;
+			left: 0;
+			bottom: 0;
+		}
+	}
+
+	.block-heading-area {
+		padding: 0 0 12px;
+	}
+
+	.block-slider {
+		position: static;
+	}
+}
+
+.user-widget-detail-col {
+	position: relative;
+
+	.block-list-row {
+		background: $white;
+		border-radius: 7px;
+		margin: 0 0 15px;
+
+		&:before {
+			display: none;
+		}
+	}
+}
+
+.user-widget-heading-block {
+	position: relative;
+	background: $white;
+	border-radius: 7px;
+	overflow: hidden;
+	padding: 20px 15px;
+	margin: 0 0 15px;
+
+	@include min-breakpoint($tablet) {
+		@include flex(flex, wrap, center, inherit);
+		padding: 22px 12px;
+		margin: 0 0 20px;
+	}
+
+	@include min-breakpoint($largescreen) {
+		padding: 25px 20px;
+	}
+
+	@include min-breakpoint($tv-screen) {
+		padding: 25px;
+	}
+}
+
+.widget-image-holder {
+	@include size(60px, 60px);
+	position: relative;
+	overflow: hidden;
+	border-radius: 50%;
+
+	@include min-breakpoint($largescreen) {
+		@include size(75px, 75px);
+	}
+
+	@include min-breakpoint($tv-screen) {
+		@include size(86px, 86px);
+	}
+
+	img {
+		@include img-style;
+		border-radius: 50%;
+	}
+}
+
+.user-widget-description {
+	position: relative;
+	padding: 12px 0 0;
+
+	@include min-breakpoint($tablet) {
+		@include textContent();
+		padding: 0 0 0 10px;
+	}
+
+	@include min-breakpoint($largescreen) {
+		padding: 0 0 0 18px;
+	}
+
+	.name {
+		@include font(16, 20, 400);
+		position: relative;
+		color: $theme-color;
+		display: block;
+		margin: 0 0 10px;
+
+		@include min-breakpoint($largescreen) {
+			@include font(18, 24, 400);
+			margin: 0 0 14px;
+		}
+
+		@include min-breakpoint($tv-screen) {
+			@include font(20, 28, 400);
+		}
+	}
+}
+
+.user-widget-list-holder {
+	position: relative;
+	overflow: hidden;
+}
+
+.user-widget-list {
+	@include listreset();
+	position: relative;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 6px;
+
+	@include min-breakpoint($largescreen) {
+		gap: 8px;
+	}
+
+	li {
+		position: relative;
+	}
+
+	.sub-text-wrap {
+		@include flex(flex, wrap, center, inherit);
+		position: relative;
+		padding: 6px 8px;
+		background: $light-white;
+		color: $theme-color;
+		border-radius: 7px;
+	}
+
+	.icon-wrap {
+		position: relative;
+		display: block;
+		color: $dark-brown;
+		margin: 0 6px 0 0;
+
+		@include min-breakpoint($largescreen) {
+			margin: 0 8px 0 0;
+		}
+
+		i {
+			position: relative;
+			display: block;
+		}
+	}
+
+	.sub-text {
+		@include font(13, 18, 400);
+		@include textContent();
+		position: relative;
+		display: block;
+
+		@include min-breakpoint($largescreen) {
+			@include font(16, 20, 400);
+		}
+
+		@include min-breakpoint($tv-screen) {
+			@include font(18, 22, 400);
+		}
 	}
 }
