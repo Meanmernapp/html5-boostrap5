@@ -4,11 +4,11 @@ let DashboardEditor,
 	farola_editor: function () {
 		// Initialize the Froala Editor
 		DashboardEditor = new FroalaEditor('.note-froala', {
-			placeholderText: 'Type Something…',
+			placeholderText: '',
 			autofocus: false,
 			toolbarSticky: false,
 			fontFamilySelection: true,
-			toolbarButtons: ['undo', 'redo', 'fontFamily', 'bold', 'italic', 'insertFile', 'insertImage', 'insertVideo', 'quote', 'formatUL', 'formatOL', 'strikeThrough', 'outdent', 'indent',]
+			toolbarButtons: ['undo', 'redo', 'fontFamily', 'bold', 'italic', 'insertFile', 'insertImage', 'insertVideo', 'quote', 'formatUL', 'formatOL', 'outdent', 'indent',]
 		});
 	},
 

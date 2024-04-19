@@ -42,6 +42,13 @@
   }
 }
 
+.add-note-modal-open {
+
+  .add-edit-note-dashboard-modal {
+    @include OpacityShow();
+  }
+}
+
 .dashboard-modal-area {
   @include position(fixed, 0, 0, 0, 0);
   background: $overlay-bg;
@@ -278,7 +285,8 @@
   }
 }
 
-.add-note-dashboard-modal {
+.add-note-dashboard-modal,
+.add-edit-note-dashboard-modal {
 
   .field-row {
 

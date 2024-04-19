@@ -1593,6 +1593,10 @@
 		padding: 0 0 0 12px;
 
 		@include min-breakpoint($largescreen) {
+			padding: 0 0 0 12px;
+		}
+
+		@include min-breakpoint($tv-screen) {
 			padding: 0 0 0 14px;
 		}
 
@@ -1943,7 +1947,8 @@
 .setting-content-open,
 .search-content-open,
 .notebook-content-open,
-.notebook-edit-slide-open {
+.notebook-edit-slide-open,
+.notebook-edit-content-slide-open {
 
 	.dashboard-detail-content {
 		display: none;
@@ -2285,6 +2290,32 @@
 
 	&:hover {
 		background: $theme-color;
+		color: $white;
+	}
+}
+
+.delete-note-button {
+	@include font(17, 20, 400);
+	position: relative;
+	display: inline-block;
+	vertical-align: top;
+	transition: $transition;
+	text-decoration: none;
+	background: $theme-color;
+	color: $white;
+	height: 38px;
+	border-radius: 5px;
+	padding: 9px 10px;
+
+	i {
+		@include align(inline-block, top);
+		position: relative;
+		margin: 2px 6px 0 0;
+		font-size: 16px;
+	}
+
+	&:hover {
+		background: $dark-brown;
 		color: $white;
 	}
 }
@@ -2770,7 +2801,8 @@
 
 .user-block-slider-button-area,
 .note-block-slider-pagination-area,
-.note-edit-slider-pagination-area {
+.note-edit-slider-pagination-area,
+.note-edit-content-slider-pagination-area {
 	@include flex(flex, wrap, center, space-between);
 	position: relative;
 	margin: 0 0 18px;
@@ -3716,6 +3748,46 @@
 	.notebook-content-open & {
 		display: block;
 	}
+
+	.block-link-holder {
+
+		@include min-breakpoint($widescreen) {
+			font-size: 11px;
+		}
+
+		@include min-breakpoint($tv-screen) {
+			font-size: 13px;
+		}
+	}
+
+	.block-description {
+
+		.date {
+			@include min-breakpoint($widescreen) {
+				font-size: 11px !important;
+				margin: 0 !important;
+			}
+
+			@include min-breakpoint($largescreen) {
+				margin: -25px 0 0 !important;
+			}
+	
+			@include min-breakpoint($tv-screen) {
+				font-size: 13px !important;
+			}
+		}
+	}
+
+	.block-info-area {
+
+		@include min-breakpoint($widescreen) {
+			display: block;
+		}
+
+		@include min-breakpoint($largescreen) {
+			display: flex;
+		}
+	}
 }
 
 .notebook-content-open {
@@ -3783,7 +3855,8 @@
 	position: relative;
 	height: 100%;
 
-	.notebook-edit-slide-open & {
+	.notebook-edit-slide-open &,
+	.notebook-edit-content-slide-open & {
 		display: none;
 	}
 
@@ -3811,26 +3884,54 @@
 }
 
 .dashboard-note-list-area {
-	padding: 0 0 50px;
+	padding: 0 0 40px;
+
+	@include min-breakpoint($tablet) {
+		padding: 0 0 50px;
+	}
 
 	.block-list-row-holder {
-		display: flex;
-		flex-wrap: wrap;
-		margin: 0 -7px;
+		margin: 0 -5px;
+
+		@include min-breakpoint($tablet) {
+			display: flex;
+			flex-wrap: wrap;
+		}
+
+		@include min-breakpoint($tv-screen) {
+			margin: 0 -7px;
+		}
 	}
 
 	.block-list-row-col {
 		position: relative;
-		width: 33.333%;
-		padding: 0 7px;
-		margin: 0 0 14px;
+		width: 100%;
+		padding: 0 5px;
+		margin: 0 0 10px;
+
+		@include min-breakpoint($tablet) {
+			width: 50%;
+		}
+
+		@include min-breakpoint($largescreen) {
+			width: 33.333%;
+		}
+
+		@include min-breakpoint($tv-screen) {
+			padding: 0 7px;
+			margin: 0 0 14px;
+		}
 	}
 
 	.block-list-row {
 		background: $white;
-		padding: 10px 10px 11px 15px;
+		padding: 10px 8px 11px 10px;
 		border-radius: 7px;
 		transition: $transition;
+
+		@include min-breakpoint($tv-screen) {
+			padding: 10px 10px 11px 15px;
+		}
 
 		&:hover {
 			background: $light-brown;
@@ -3859,6 +3960,17 @@
 		}
 	}
 
+	.block-info-area {
+
+		@include min-breakpoint($widescreen) {
+			display: block;
+		}
+
+		@include min-breakpoint($tv-screen) {
+			display: flex;
+		}
+	}
+
 	.block-link-holder {
 		transition: $transition;
 
@@ -3874,8 +3986,10 @@
 
 		.date {
 			transition: $transition;
-			font-size: 13px;
-			margin: -25px 0 0;
+
+			@include min-breakpoint($tv-screen) {
+				margin: -25px 0 0;
+			}
 		}
 
 		.block-title {
@@ -3901,11 +4015,113 @@
 	}
 }
 
+.note-edit-content-slide {
+	position: relative;
+	height: 100%;
+	display: none;
+
+	.notebook-edit-content-slide-open & {
+		display: block;
+	}
+
+	.edit-link-holder {
+
+		a {
+			text-decoration: none;
+			color: $dark-brown;
+			font-style: normal;
+
+			&:hover {
+				color: $theme-color;
+			}
+		}
+	}
+}
+
+.note-edit-slider-pagination-area,
+.note-edit-content-slider-pagination-area {
+
+	@include min-breakpoint($widescreen) {
+		right: 12px;
+	}
+
+	@include min-breakpoint($largescreen) {
+		right: 20px;
+	}
+}
+
+.note-edit-content-slider-pagination-area {
+	margin: 20px 0;
+
+	@include min-breakpoint($tablet) {
+		margin: 25px 0;
+	}
+
+	@include min-breakpoint($widescreen) {
+		margin: 0 0 18px;
+	}
+}
+
 .note-edit-slide-content {
 	position: relative;
-	display: flex;
-	flex-wrap: wrap;
-	height: 100%;
+
+	@include min-breakpoint($widescreen) {
+		display: flex;
+		flex-wrap: wrap;
+		height: 100%;
+	}
+}
+
+.note-edit-content-slider {
+
+	.block-list-row {
+		padding: 10px 10px 11px 15px;
+		border-radius: 7px;
+		background: $light-brown;
+		transition: $transition;
+	}
+
+	.block-link-holder {
+		transition: $transition;
+		color: $theme-color;
+
+		li {
+
+			&:before {
+				transition: $transition;
+				background: $theme-color;
+			}
+
+			&:first-child {
+				padding-left: 0;
+
+				&:before {
+					display: none;
+				}
+			}
+		}
+	}
+
+	.block-description {
+
+		.date {
+			transition: $transition;
+			color: $theme-color;
+
+			@include min-breakpoint($tablet) {
+				margin: -25px 0 0;
+				font-size: 13px;
+			}
+		}
+
+		.block-title {
+
+			i {
+				transition: $transition;
+				color: $white;
+			}
+		}
+	}
 }
 
 .note-edit-slide-col {
@@ -3918,7 +4134,11 @@
 		}
 
 		@include min-breakpoint($largescreen) {
-			width: 35.5%;
+			width: 37%;
+			padding: 0 15px 0 0;
+		}
+
+		@include min-breakpoint($tv-screen) {
 			padding: 0 20px 0 0;
 		}
 	}
@@ -3948,6 +4168,254 @@
 			background: none;
 			border-radius: 7px;
 			height: 42px;
+		}
+	}
+}
+
+.note-edit-heading-block {
+	position: relative;
+	border-radius: 7px;
+	background: $white;
+	padding: 18px 15px 10px;
+	margin: 0 0 15px;
+
+	@include min-breakpoint($tablet) {
+		@include flex(flex, wrap, center, space-between);
+		padding: 28px 18px;
+		margin: 0 0 18px;
+	}
+}
+
+.note-edit-heading-wrap {
+	@include flex(flex, wrap, center, inherit);
+	position: relative;
+}
+
+.note-edit-heading {
+	@include flex(flex, wrap, center, inherit);
+	@include font(16, 20, 400);
+	color: $theme-color;
+	position: relative;
+
+	@include min-breakpoint($tablet) {
+		@include font(18, 24, 400);
+		margin: 0;
+	}
+
+	i {
+		position: relative;
+		display: block;
+		color: $dark-brown;
+		margin: 0 10px 0 0;
+
+		@include min-breakpoint($widescreen) {
+			font-size: 20px;
+		}
+	}
+}
+
+.edit-heading-btns-list {
+	@include flex(flex, wrap, center, center);
+	@include listreset();
+	position: relative;
+	margin: 12px -5px 0;
+
+	@include min-breakpoint($tablet) {
+		@include flex(flex, wrap, center, inherit);
+		margin: 0 -5px;
+	}
+
+	li {
+		position: relative;
+		padding: 0 5px;
+		margin: 0 0 8px;
+
+		@include min-breakpoint($tablet) {
+			margin: 0;
+		}
+	}
+}
+
+.create-folder-button {
+	@include align(inline-block, top);
+	@include font(16, 20, 400);
+	position: relative;
+	text-decoration: none;
+	transition: $transition;
+	border-radius: 5px;
+	padding: 9px 10px;
+	background: $light-white;
+	color: $theme-color;
+	height: 38px;
+
+	i {
+		@include align(inline-block, top);
+		position: relative;
+		color: $dark-brown;
+		margin: 3px 8px 0 0;
+		font-size: 16px;
+		transition: $transition;
+	}
+
+	&:hover {
+		background: $dark-brown;
+		color: $white;
+
+		i {
+			color: $white;
+		}
+	}
+}
+
+.note-edit-detail-area {
+	position: relative;
+	border-radius: 7px;
+	background: $white;
+	padding: 18px 15px 0;
+	overflow: hidden;
+
+	@include min-breakpoint($tablet) {
+		padding: 28px 18px 0;
+	}
+
+	.setting-save-button-wrap {
+		padding: 20px 0;
+	}
+}
+
+.note-edit-detail-heading-area {
+	position: relative;
+
+	.field-row {
+		margin: 0;
+
+		.field-label {
+			color: $dark-brown;
+		}
+	}
+}
+
+.note-edit-info-area {
+	position: relative;
+}
+
+.note-edit-title-area {
+	@include font(16, 20, 400);
+	position: relative;
+	padding: 16px 0;
+
+	@include min-breakpoint($tablet) {
+		@include flex(flex, wrap, center, inherit);
+		@include font(18, 24, 400);
+		padding: 22px 0;
+	}
+
+	.title {
+		font-weight: 400;
+		position: relative;
+		color: $theme-color;
+		display: block;
+	}
+}
+
+.edit-link-holder {
+	position: relative;
+	display: block;
+	padding: 8px 0 0;
+
+	@include min-breakpoint($tablet) {
+		padding: 0 0 0 18px;
+	}
+
+	a {
+		@include align(inline-block, top);
+		transition: $transition;
+		color: $lighter-gray;
+		font-style: italic;
+	}
+}
+
+.note-editor-holder {
+	position: relative;
+
+	.fr-second-toolbar {
+		display: none;
+	}
+
+	.fr-box.fr-basic {
+		border-radius: 0;
+	}
+
+	.fr-toolbar.fr-top {
+		border-radius: 7px 7px 0 0;
+	}
+
+	.fr-toolbar .fr-newline {
+		display: none;
+	}
+
+	.fr-box.fr-basic .fr-element {
+		padding: 10px 15px;
+		font-size: 16px;
+		line-height: 1.5;
+		color: $theme-color;
+
+		@include min-breakpoint($desktop) {
+			font-size: 18px;
+		}
+
+		p {
+			font-size: inherit;
+		}
+	}
+
+	.fr-wrapper .fr-placeholder {
+		font-style: italic;
+	}
+
+	.fr-toolbar {
+		border: 1px solid $light-gray;
+		border-bottom: none;
+	}
+
+	.fr-box.fr-basic .fr-wrapper {
+		min-height: 150px;
+		border: 1px solid $light-gray;
+		border-top: none;
+		border-radius: 0 0 7px 7px;
+
+		@include min-breakpoint($tablet) {
+			min-height: 180px;
+		}
+
+		@include min-breakpoint($desktop) {
+			min-height: 250px;
+		}
+	}
+
+	.fr-toolbar .fr-command.fr-btn i,
+	.fr-toolbar .fr-command.fr-btn svg,
+	.fr-popup .fr-command.fr-btn i,
+	.fr-popup .fr-command.fr-btn svg,
+	.fr-modal .fr-command.fr-btn i,
+	.fr-modal .fr-command.fr-btn svg {
+		@include breakpoint($desktop-max) {
+			margin: 8px 5px;
+		}
+
+		@include breakpoint($tablet-max) {
+			margin: 6px 4px;
+		}
+	}
+
+	.fr-toolbar .fr-command.fr-btn i,
+	.fr-toolbar .fr-command.fr-btn svg,
+	.fr-popup .fr-command.fr-btn i,
+	.fr-popup .fr-command.fr-btn svg,
+	.fr-modal .fr-command.fr-btn i,
+	.fr-modal .fr-command.fr-btn svg {
+		@include breakpoint($phone) {
+			width: 16px;
 		}
 	}
 }

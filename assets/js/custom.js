@@ -62,6 +62,20 @@ function initSlickCarousel() {
 		prevArrow: '<button class="slick-prev"><i class="ico-prev"></i></button>',
 		nextArrow: '<button class="slick-next"><i class="ico-next"></i></button>',
 	});
+
+	jQuery('.note-edit-content-slider').slick({
+		slidesToScroll: 1,
+		slidesToShow: 1,
+		rows: 0,
+		dots: true,
+		arrows: true,
+		infinite: false,
+		swipe: false,
+		appendArrows: jQuery('.edit-content-slider-arrows'),
+		appendDots: jQuery('.edit-content-slider-dots'),
+		prevArrow: '<button class="slick-prev"><i class="ico-prev"></i></button>',
+		nextArrow: '<button class="slick-next"><i class="ico-next"></i></button>',
+	});
 }
 
 // Custom Forms init
@@ -136,6 +150,16 @@ function initCustomModal() {
 	jQuery(document).on('click', '.change-password-close', function (e) {
 		e.preventDefault();
 		jQuery('body').removeClass('change-password-modal-active');
+	});
+
+	jQuery(document).on('click', '.select-content-modal-opener', function (e) {
+		e.preventDefault();
+		jQuery('body').addClass('add-note-modal-open');
+	});
+
+	jQuery(document).on('click', '.select-content-modal-close', function (e) {
+		e.preventDefault();
+		jQuery('body').removeClass('add-note-modal-open');
 	});
 }
 
@@ -221,7 +245,7 @@ function initOpenClose() {
 	});
 
 	// User Detail block Open
-	jQuery(document).on('click', '.chat-block-detail-opener', function (e) {
+	jQuery(document).on('click', '.chat-block-detail-opener, .update-note-button', function (e) {
 		e.preventDefault();
 		jQuery('body').addClass('user-detail-content-open').removeClass('chat-detail-content-open');
 		jQuery('.user-block-slider').slick('refresh');
@@ -282,14 +306,23 @@ function initOpenClose() {
 	// NoteBook Slide block Open
 	jQuery(document).on('click', '.note-slide-block-opener', function (e) {
 		e.preventDefault();
-		jQuery('body').addClass('notebook-edit-slide-open');
+		jQuery('body').addClass('notebook-edit-content-slide-open');
 		jQuery('.note-edit-slider').slick('refresh');
+		jQuery('.note-edit-content-slider').slick('refresh');
 	});
 
 	// NoteBook Slide block Close
-	jQuery(document).on('click', '.note-slide-block-close', function (e) {
+	jQuery(document).on('click', '.note-slide-content-block-close', function (e) {
 		e.preventDefault();
-		jQuery('body').removeClass('notebook-edit-slide-open');
+		jQuery('body').removeClass('notebook-edit-content-slide-open');
+		jQuery('.note-edit-slider').slick('refresh');
+		jQuery('.note-block-slider').slick('refresh');
+		jQuery('.note-edit-content-slider').slick('refresh');
+	});
+
+	jQuery(document).on('click', '.add-note-btn', function (e) {
+		e.preventDefault();
+		jQuery('body').addClass('notebook-edit-slide-open');
 		jQuery('.note-edit-slider').slick('refresh');
 	});
 
@@ -300,6 +333,7 @@ function initOpenClose() {
 		jQuery('.block-slider').slick('refresh');
 		jQuery('.note-block-slider').slick('refresh');
 		jQuery('.note-edit-slider').slick('refresh');
+		jQuery('.note-edit-content-slider').slick('refresh');
 	});
 
 }
