@@ -320,10 +320,25 @@ function initOpenClose() {
 		jQuery('.note-edit-content-slider').slick('refresh');
 	});
 
+	// Add Note Button
 	jQuery(document).on('click', '.add-note-btn', function (e) {
 		e.preventDefault();
 		jQuery('body').addClass('notebook-edit-slide-open');
 		jQuery('.note-edit-slider').slick('refresh');
+	});
+
+	// Member view block Open
+	jQuery(document).on('click', '.member-detail-opener', function (e) {
+		e.preventDefault();
+		jQuery('body').addClass('member-content-open');
+		jQuery('.block-slider').slick('refresh');
+	});
+
+	// Member view block Close
+	jQuery(document).on('click', '.member-detail-close', function (e) {
+		e.preventDefault();
+		jQuery('body').removeClass('member-content-open');
+		jQuery('.block-slider').slick('refresh');
 	});
 
 	// Dashboard Content Block Close

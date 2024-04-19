@@ -1948,7 +1948,8 @@
 .search-content-open,
 .notebook-content-open,
 .notebook-edit-slide-open,
-.notebook-edit-content-slide-open {
+.notebook-edit-content-slide-open,
+.member-content-open {
 
 	.dashboard-detail-content {
 		display: none;
@@ -4417,5 +4418,186 @@
 		@include breakpoint($phone) {
 			width: 16px;
 		}
+	}
+}
+
+.member-detail-content {
+	position: relative;
+	display: none;
+
+	.member-content-open & {
+		display: block;
+	}
+}
+
+.member-detail-content-holder {
+	position: relative;
+	border-radius: 7px;
+	background: $white;
+	padding: 0 15px;
+	overflow: hidden;
+
+	@include min-breakpoint($tablet) {
+		padding: 0 20px;
+	}
+
+	.content-sub-heading {
+
+		i {
+			font-size: 22px;
+
+			@include min-breakpoint($tablet) {
+				font-size: 28px;
+			}
+		}
+	}
+}
+
+.member-table-area {
+	position: relative;
+	padding: 0 0 25px;
+	margin: 0 -15px;
+
+	@include min-breakpoint($tablet) {
+		padding: 0 0 30px;
+	}
+
+	@include min-breakpoint($desktop) {
+		padding: 0 0 50px;
+		margin: 0 -20px;
+	}
+}
+
+.member-table-holder {
+	position: relative;
+
+	@include breakpoint($tablet-max) {
+		overflow: auto;
+	}
+}
+
+.member-table {
+	width: 100%;
+
+	@include breakpoint($tablet-max) {
+		min-width: 700px;
+	}
+
+	td,
+	th {
+		border-bottom: 1px solid $light-gray;
+		padding: 13px 5px;
+
+		@include min-breakpoint($desktop) {
+			padding: 20px 5px;
+		}
+		
+		&:first-child {
+			padding-left: 15px;
+
+			@include min-breakpoint($desktop) {
+				padding-left: 20px;
+			}
+		}
+
+		&:last-child {
+			padding-right: 15px;
+
+			@include min-breakpoint($desktop) {
+				padding-left: 20px;
+				width: 150px;
+			}
+		}
+
+		&:not(:first-child):not(:nth-child(2)) {
+
+			.table-heading-text,
+			.table-text {
+				max-width: 100px;
+				text-align: center;
+			}
+		}
+	}
+
+	th {
+		padding-top: 0;
+		padding-bottom: 6px;
+
+		@include min-breakpoint($desktop) {
+			padding-bottom: 8px;
+		}
+	}
+
+	.table-heading-text {
+		@include font(13, 17, 400);
+		color: $lighter-gray;
+		position: relative;
+		display: block;
+
+		@include min-breakpoint($desktop) {
+			@include font(15, 20, 400);
+		}
+	}
+
+	.table-text {
+		@include font(14, 18, 400);
+		position: relative;
+		display: block;
+		white-space: nowrap;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		color: $theme-color;
+
+		@include min-breakpoint($desktop) {
+			@include font(17, 20, 400);
+		}
+	}
+}
+
+.member-button-area {
+	@include flex(flex, wrap, center, flex-end);
+	position: relative;
+	padding: 20px 0;
+
+	@include min-breakpoint($desktop) {
+		padding: 30px 0;
+	}
+}
+
+.member-add-button {
+	@include align(inline-block, top);
+	@include font(16, 20, 400);
+	position: relative;
+	background: $theme-color;
+	color: $white;
+	text-decoration: none;
+	border-radius: 7px;
+	transition: $transition;
+	padding: 14px 18px;
+	height: 48px;
+
+	@include min-breakpoint($desktop) {
+		@include font(20, 24, 400);
+		padding: 18px 19px;
+		height: 60px;
+	}
+
+	i {
+		@include align(inline-block, top);
+		position: relative;
+		margin: 0 5px 0 0;
+		font-size: 18px;
+		top: 1px;
+
+		@include min-breakpoint($desktop) {
+			margin: 0 8px 0 0;
+			font-size: 22px;
+			top: 1px;
+		}
+	}
+
+	&:hover {
+		background: $dark-brown;
+		color: $white;
 	}
 }
