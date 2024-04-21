@@ -264,10 +264,34 @@ function initOpenClose() {
 		jQuery('.block-slider').slick('refresh');
 	});
 
+	jQuery(document).on('click', '.chat-block-detail-opener-parent', function (e) {
+		e.preventDefault();
+		jQuery('body').addClass('user-detail-content-open-parent');
+		jQuery('.user-block-slider').slick('refresh');
+		jQuery('.block-slider').slick('refresh');
+	});
+
+	jQuery(document).on('click', '.chat-block-detail-opener-widget', function (e) {
+		e.preventDefault();
+		jQuery('body').removeClass();
+		jQuery('body').addClass('user-detail-content-open-parent-widget');
+		jQuery('.user-block-slider').slick('refresh');
+		jQuery('.block-slider').slick('refresh');
+	});
+
 	// User Detail block Close
 	jQuery(document).on('click', '.chat-block-detail-close', function (e) {
-		e.preventDefault();
-		jQuery('body').removeClass('user-detail-content-open').addClass('chat-detail-content-open');
+		e.preventDefault()
+		if(jQuery('body').hasClass('user-detail-content-open-parent')) {
+			jQuery('body').removeClass();
+		}
+		else if(jQuery('body').hasClass('user-detail-content-open-parent-widget')) {
+			jQuery('body').removeClass();
+			jQuery('body').addClass('user-widget-content-open');
+		}
+		else {
+			jQuery('body').removeClass('user-detail-content-open').addClass('chat-detail-content-open');
+		}
 		jQuery('.user-block-slider').slick('refresh');
 		jQuery('.block-slider').slick('refresh');
 	});
@@ -278,6 +302,7 @@ function initOpenClose() {
 		jQuery("body").removeClass();
 		jQuery('body').addClass('setting-content-open');
 		jQuery('.block-slider').slick('refresh');
+		jQuery('.header-user-slide').slideUp();
 	});
 
 	// Setting block Close
@@ -304,6 +329,7 @@ function initOpenClose() {
 	// NoteBook block Open
 	jQuery(document).on('click', '.notebook-content-opener', function (e) {
 		e.preventDefault();
+		jQuery('body').removeClass();
 		jQuery('body').addClass('notebook-content-open');
 		jQuery('.note-block-slider').slick('refresh');
 	});
@@ -323,10 +349,22 @@ function initOpenClose() {
 		jQuery('.note-edit-content-slider').slick('refresh');
 	});
 
+	jQuery(document).on('click', '.note-block-detail-opener', function (e) {
+		e.preventDefault();
+		jQuery('body').addClass('notebook-edit-content-slide-open-parent');
+		jQuery('.note-edit-slider').slick('refresh');
+		jQuery('.note-edit-content-slider').slick('refresh');
+	});
+
 	// NoteBook Slide block Close
 	jQuery(document).on('click', '.note-slide-content-block-close', function (e) {
 		e.preventDefault();
-		jQuery('body').removeClass('notebook-edit-content-slide-open');
+		if(jQuery('body').hasClass('notebook-edit-content-slide-open-parent')) {
+			jQuery('body').removeClass();
+		}
+		else {
+			jQuery('body').removeClass('notebook-edit-content-slide-open');
+		}
 		jQuery('.note-edit-slider').slick('refresh');
 		jQuery('.note-block-slider').slick('refresh');
 		jQuery('.note-edit-content-slider').slick('refresh');

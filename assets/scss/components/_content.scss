@@ -1945,11 +1945,14 @@
 .history-content-open,
 .chat-detail-content-open,
 .user-detail-content-open,
+.user-detail-content-open-parent,
+.user-detail-content-open-parent-widget,
 .setting-content-open,
 .search-content-open,
 .notebook-content-open,
 .notebook-edit-slide-open,
 .notebook-edit-content-slide-open,
+.notebook-edit-content-slide-open-parent,
 .member-content-open,
 .user-widget-content-open {
 
@@ -2682,7 +2685,9 @@
 	position: relative;
 	display: none;
 
-	.user-detail-content-open & {
+	.user-detail-content-open &,
+	.user-detail-content-open-parent &,
+	.user-detail-content-open-parent-widget & {
 		display: block;
 	}
 }
@@ -4018,12 +4023,28 @@
 	}
 }
 
+.notebook-edit-content-slide-open-parent {
+
+	.notes-detail-content {
+		display: block;
+	}
+
+	.notes-detail-content-area {
+		display: none;
+	}
+
+	.main-content-area {
+		align-items: inherit;
+	}
+}
+
 .note-edit-content-slide {
 	position: relative;
 	height: 100%;
 	display: none;
 
-	.notebook-edit-content-slide-open & {
+	.notebook-edit-content-slide-open &,
+	.notebook-edit-content-slide-open-parent & {
 		display: block;
 	}
 
@@ -4651,20 +4672,6 @@
 	&:nth-child(2) {
 		@include min-breakpoint($widescreen) {
 			@include textContent();
-		}
-	}
-
-	.block-link-holder {
-
-		li {
-
-			&:first-child {
-				padding-left: 0;
-
-				&:before {
-					display: none;
-				}
-			}
 		}
 	}
 }

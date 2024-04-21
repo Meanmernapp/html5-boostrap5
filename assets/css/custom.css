@@ -3384,11 +3384,14 @@ body {
 .history-content-open .dashboard-detail-content,
 .chat-detail-content-open .dashboard-detail-content,
 .user-detail-content-open .dashboard-detail-content,
+.user-detail-content-open-parent .dashboard-detail-content,
+.user-detail-content-open-parent-widget .dashboard-detail-content,
 .setting-content-open .dashboard-detail-content,
 .search-content-open .dashboard-detail-content,
 .notebook-content-open .dashboard-detail-content,
 .notebook-edit-slide-open .dashboard-detail-content,
 .notebook-edit-content-slide-open .dashboard-detail-content,
+.notebook-edit-content-slide-open-parent .dashboard-detail-content,
 .member-content-open .dashboard-detail-content,
 .user-widget-content-open .dashboard-detail-content {
   display: none;
@@ -4346,7 +4349,7 @@ body {
   position: relative;
   display: none;
 }
-.user-detail-content-open .user-social-detail-slide {
+.user-detail-content-open .user-social-detail-slide, .user-detail-content-open-parent .user-social-detail-slide, .user-detail-content-open-parent-widget .user-social-detail-slide {
   display: block;
 }
 
@@ -5961,12 +5964,24 @@ body {
   display: block;
 }
 
+.notebook-edit-content-slide-open-parent .notes-detail-content {
+  display: block;
+}
+.notebook-edit-content-slide-open-parent .notes-detail-content-area {
+  display: none;
+}
+.notebook-edit-content-slide-open-parent .main-content-area {
+  -webkit-box-align: inherit;
+      -ms-flex-align: inherit;
+          align-items: inherit;
+}
+
 .note-edit-content-slide {
   position: relative;
   height: 100%;
   display: none;
 }
-.notebook-edit-content-slide-open .note-edit-content-slide {
+.notebook-edit-content-slide-open .note-edit-content-slide, .notebook-edit-content-slide-open-parent .note-edit-content-slide {
   display: block;
 }
 .note-edit-content-slide .edit-link-holder a {
@@ -6698,12 +6713,6 @@ body {
         flex-basis: 0;
     min-width: 0;
   }
-}
-.user-widget-detail-content-col .block-link-holder li:first-child {
-  padding-left: 0;
-}
-.user-widget-detail-content-col .block-link-holder li:first-child:before {
-  display: none;
 }
 
 .user-widget-detail-content-wrap {
