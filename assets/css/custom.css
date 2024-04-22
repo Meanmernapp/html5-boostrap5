@@ -1607,11 +1607,16 @@ body {
   color: #a4a4a4;
   text-decoration: none;
   padding: 12px 5px;
-  font-size: 22px;
+  font-size: 20px;
 }
 @media (min-width: 1440px) {
   .menu-list a {
     padding: 15px 10px;
+    font-size: 22px;
+  }
+}
+@media (min-width: 1600px) {
+  .menu-list a {
     font-size: 24px;
   }
 }

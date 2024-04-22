@@ -480,10 +480,14 @@
 		color: $lighter-gray;
 		text-decoration: none;
 		padding: 12px 5px;
-		font-size: 22px;
+		font-size: 20px;
 
 		@include min-breakpoint($largescreen) {
 			padding: 15px 10px;
+			font-size: 22px;
+		}
+
+		@include min-breakpoint($tv-screen) {
 			font-size: 24px;
 		}
 
