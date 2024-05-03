@@ -10,6 +10,42 @@
   }
 }
 
+.add-user-modal-active {
+  overflow: hidden;
+
+  .filter-overlay {
+    display: none !important;
+  }
+
+  .add-user-dashboard-modal {
+    @include OpacityShow();
+  }
+}
+
+.add-kol-modal-active {
+  overflow: hidden;
+
+  .filter-overlay {
+    display: none !important;
+  }
+
+  .add-kol-dashboard-modal {
+    @include OpacityShow();
+  }
+}
+
+.user-modal-modal-active {
+  overflow: hidden;
+
+  .filter-overlay {
+    display: none !important;
+  }
+
+  .user-reply-modal {
+    @include OpacityShow();
+  }
+}
+
 .clear-history-modal-active {
   overflow: hidden;
 
@@ -297,6 +333,104 @@
     .jcf-select {
       width: 100%;
       border-radius: 5px;
+    }
+  }
+}
+
+.add-user-dashboard-modal,
+.add-kol-dashboard-modal,
+.user-reply-modal {
+
+  .dashboard-modal-content {
+    overflow: auto;
+    max-height: calc(100vh - 50px);
+  }
+
+  .field-row {
+
+    &.auto-password {
+
+      .form-control {
+        padding-right: 155px;
+
+        @include min-breakpoint($xs-phone) {
+          padding-right: 180px;
+        }
+      }
+    }
+  }
+
+  .auto-password-btn {
+    @include position(absolute, 7px, 7px, auto, auto);
+    @include font(14, 18, 400);
+    transition: $transition;
+    text-decoration: none;
+    color: $dark-brown;
+    padding: 7px 6px;
+    border-radius: 5px;
+    height: 34px;
+    background: rgba($light-brown, 0.7);
+
+    @include min-breakpoint($xs-phone) {
+      @include font(16, 20, 400);
+      padding: 7px;
+    }
+
+    i {
+      @include align(inline-block, top);
+      position: relative;
+      font-size: 16px;
+      margin: 0 5px 0 0;
+
+      @include min-breakpoint($xs-phone) {
+        font-size: 18px;
+        margin: 0 7px 0 0;
+      }
+    }
+
+    &:hover {
+      background: $theme-color;
+      color: $white;
+    }
+  }
+
+  .jcf-select {
+    width: 100%;
+  }
+
+  .field-label-title {
+    @include font(14, 18, 400);
+    color: $lighter-gray;
+    position: relative;
+    display: block;
+    margin: 0 0 10px;
+  }
+
+  .user-reply-info {
+    position: relative;
+    padding: 11px 12px;
+    border-radius: 7px;
+    background: $light-white;
+    margin: 0 0 18px;
+
+    @include min-breakpoint($xs-phone) {
+      margin: 0 0 30px;
+    }
+
+    .sub-title {
+      @include font(17, 22, 400);
+      position: relative;
+      display: block;
+      color: $theme-color;
+      margin: 0 0 6px;
+    }
+
+    .text {
+      @include font(14, 18, 400);
+      font-style: italic;
+      position: relative;
+      display: block;
+      color: $lighter-gray;
     }
   }
 }

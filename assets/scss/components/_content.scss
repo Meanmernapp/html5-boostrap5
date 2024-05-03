@@ -23,6 +23,7 @@
 
 .filter-overlay,
 .notification-overlay,
+.support-overlay,
 .modal-overlay,
 .user-widget-sidebar-overlay {
 	z-index: 105;
@@ -3308,7 +3309,8 @@
 	position: relative;
 	display: none;
 
-	.setting-content-open & {
+	.setting-content-open &,
+	.admin-setting-content-open & {
 		display: block;
 	}
 }

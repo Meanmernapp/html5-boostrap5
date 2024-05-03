@@ -1,0 +1,844 @@
+.main-admin-content-area {
+  position: relative;
+}
+
+.admin-detail-section {
+  position: relative;
+  padding: 0 15px;
+
+  @include min-breakpoint($tablet) {
+    padding: 0 20px;
+  }
+
+  .admin-notes-detail-active & {
+    padding: 0;
+  }
+}
+
+.admin-visual-area {
+  position: relative;
+  padding: 20px 0 10px;
+
+  @include min-breakpoint($tablet) {
+    padding: 20px 0 5px;
+  }
+}
+
+.admin-visual-row {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -5px;
+
+  @include min-breakpoint($largescreen) {
+    margin: 0 -10px;
+  }
+}
+
+.admin-visual-col {
+  position: relative;
+  padding: 0 5px;
+  width: 100%;
+  margin: 0 0 10px;
+
+  @include min-breakpoint($tablet) {
+    width: 50%;
+    margin: 0 0 15px;
+  }
+
+  @include min-breakpoint($widescreen) {
+    width: 25%;
+  }
+
+  @include min-breakpoint($largescreen) {
+    padding: 0 10px;
+  }
+}
+
+.admin-visual-block {
+  @include flex(flex, wrap, flex-start, space-between);
+  position: relative;
+  background: $light-brown;
+  border-radius: 7px;
+  overflow: hidden;
+  padding: 15px 12px;
+  height: 100%;
+
+  @include min-breakpoint($largescreen) {
+    padding: 17px 15px;
+  }
+  
+  @include min-breakpoint($tv-screen) {
+    padding: 17px 20px;
+  }
+
+  @include min-breakpoint($xl-screen) {
+    padding: 17px 24px;
+  }
+
+  .admin-info-wrap {
+    @include flex(flex, wrap, flex-start, flex-start);
+    @include textContent();
+    position: relative;
+    padding: 0 10px 0 0;
+
+    @include min-breakpoint($largescreen) {
+      padding: 0 15px 0 0;
+    }
+  }
+
+  .icon-wrap {
+    position: relative;
+    display: block;
+
+    i {
+      position: relative;
+      display: block;
+      font-size: 18px;
+
+      @include min-breakpoint($largescreen) {
+        font-size: 20px;
+      }
+
+      @include min-breakpoint($xl-screen) {
+        font-size: 22px;
+      }
+    }
+  }
+
+  .title {
+    @include font(15, 20, 400);
+    position: relative;
+    display: block;
+    color: $black-dark;
+    padding: 0 0 0 7px;
+
+    @include min-breakpoint($largescreen) {
+      @include font(16, 22, 400);
+      padding: 0 0 0 10px;
+    }
+
+    @include min-breakpoint($xl-screen) {
+      @include font(18, 24, 400);
+    }
+  }
+
+  .admin-num {
+    @include fontsize(38px, 1);
+    font-weight: 500;
+    position: relative;
+    display: block;
+    color: $black-dark;
+
+    @include min-breakpoint($largescreen) {
+      font-size: 44px;
+    }
+
+    @include min-breakpoint($tv-screen) {
+      font-size: 50px;
+    }
+
+    @include min-breakpoint($xl-screen) {
+      font-size: 60px;
+    }
+  }
+}
+
+.admin-detail-row {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -5px;
+
+  @include min-breakpoint($largescreen) {
+    margin: 0 -10px;
+  }
+
+  .slick-dots {
+    padding-top: 30px;
+  }
+}
+
+.admin-detail-col {
+  position: relative;
+  padding: 0 5px;
+  width: 100%;
+
+  @include min-breakpoint($widescreen) {
+    width: 50%;
+  }
+
+  @include min-breakpoint($largescreen) {
+    padding: 0 10px;
+  }
+
+  .block-heading-area {
+
+    @include breakpoint($tablet-max) {
+      display: block;
+    }
+  }
+}
+
+.block-btns-list {
+  @include flex(flex, wrap, center, center);
+  position: relative;
+  list-style: none;
+  padding: 15px 0 6px;
+  margin: 0 -5px;
+
+  @include min-breakpoint($tablet) {
+    justify-content: flex-start;
+    padding: 0;
+  }
+
+  li {
+    position: relative;
+    padding: 0 5px;
+  }
+
+  .view-link {
+    @include flex(flex, wrap, center, center);
+    background: $light-white;
+    border-radius: 7px;
+    height: 42px;
+    padding: 3px 13px;
+    transition: $transition;
+
+    i {
+      margin-top: 0;
+    }
+
+    &:hover {
+      background: $theme-color;
+      color: $white;
+    }
+  }
+
+  .admin-add-sub-btn {
+    @include flex(flex, wrap, center, center);
+    @include font(15, 20, 400);
+    position: relative;
+    transition: $transition;
+    background: $theme-color;
+    color: $white;
+    text-decoration: none;
+    padding: 3px 13px;
+    height: 42px;
+    border-radius: 7px;
+
+    @include min-breakpoint($tablet) {
+      @include font(16, 22, 400);
+    }
+  
+    @include min-breakpoint($tv-screen) {
+      font-size: 17px;
+    }
+
+    i {
+      position: relative;
+      display: block;
+      margin: 0 6px 0 0;
+
+      @include min-breakpoint($tablet) {
+        margin: 0 8px 0 0;
+      }
+    }
+
+    &:hover {
+      background: $dark-brown;
+    }
+  }
+}
+
+.admin-table-area {
+  position: relative;
+
+  @include breakpoint($tablet-max) {
+    overflow: auto;
+  }
+}
+
+.admin-table {
+  position: relative;
+  width: 100%;
+
+  @include breakpoint($tablet-max) {
+    min-width: 550px;
+  }
+
+  th,
+  td {
+    border-bottom: 2px solid #efefef;
+    padding: 15px 5px;
+
+    @include min-breakpoint($tablet) {
+      padding: 20px 5px;
+    }
+
+    &:first-child {
+      padding-left: 15px;
+
+      @include min-breakpoint($tablet) {
+        padding-left: 20px;
+      }
+    }
+
+    &:last-child {
+      padding-right: 15px;
+
+      @include min-breakpoint($tablet) {
+        padding-right: 20px;
+      }
+    }
+  }
+
+  th {
+    padding-top: 0;
+    padding-bottom: 8px;
+  }
+
+  .heading-text {
+    @include font(15, 18, 400);
+    position: relative;
+    display: block;
+    color: $lighter-gray;
+  }
+
+  .text {
+    @include font(16, 20, 400);
+    position: relative;
+    color: $theme-color;
+    display: block;
+
+    @include min-breakpoint($largescreen) {
+      font-size: 17px;
+    }
+
+    i {
+      @include align(inline-block, middle);
+      @include fontsize(18px, 1);
+      position: relative;
+      color: $light-brown;
+      margin: 0 10px 0 0;
+    }
+  }
+
+  .action-list {
+    @include flex(flex, wrap, center, inherit);
+    @include listreset();
+    position: relative;
+    margin: 0 -8px;
+
+    @include min-breakpoint($largescreen) {
+      margin: 0 -13px;
+    }
+
+    li {
+      position: relative;
+      padding: 0 8px;
+
+      @include min-breakpoint($largescreen) {
+        padding: 0 13px;
+      }
+    }
+
+    a {
+      position: relative;
+      display: block;
+      text-decoration: none;
+      color: $lighter-gray;
+      transition: $transition;
+
+      i {
+        font-size: 23px;
+        position: relative;
+        display: block;
+
+        @include min-breakpoint($largescreen) {
+          font-size: 20px;
+        }
+      }
+
+      &:hover {
+        color: $theme-color;
+      }
+    }
+  }
+
+  &.member-table,
+  &.kol-table {
+
+    th,
+    td {
+
+      &:last-child {
+        width: 100px;
+
+        @include min-breakpoint($largescreen) {
+          width: 120px;
+        }
+      }
+    }
+  }
+
+  &.member-table {
+
+    th,
+    td {
+
+      &:nth-child(3) {
+
+        .heading-text,
+        .text {
+          width: 40px;
+          text-align: center;
+        }
+      }
+    }
+  }
+
+  &.kol-table {
+
+    th,
+    td {
+
+      &:nth-child(2) {
+
+        .heading-text,
+        .text {
+          width: 70px;
+          text-align: center;
+        }
+      }
+    }
+  }
+
+   &.topic-table {
+
+    td {
+      padding-top: 12px;
+      padding-bottom: 12px;
+    }
+
+    td,
+    th {
+
+      &:nth-child(2),
+      &:nth-child(3) {
+
+        .heading-text,
+        .text {
+          width: 70px;
+          text-align: center;
+        }
+      }
+
+      &:nth-child(2) {
+        width: 115px;
+      }
+
+       &:nth-child(3) {
+        width: 90px;
+      }
+    }
+  }
+}
+
+.dashboard-content-search-area {
+
+  .btn-wrap {
+    position: relative;
+    display: block;
+    text-align: center;
+    margin: 0 0 15px;
+
+    @include min-breakpoint($tablet) {
+      margin: 0 15px 0 0;
+      text-align: left;
+    }
+  }
+
+  .add-heading-btn {
+    @include flex(inline-flex, wrap, center, center);
+    @include font(15, 20, 400);
+    position: relative;
+    transition: $transition;
+    background: $theme-color;
+    color: $white;
+    text-decoration: none;
+    padding: 3px 13px;
+    height: 42px;
+    border-radius: 7px;
+
+    @include min-breakpoint($tablet) {
+      @include font(16, 22, 400);
+    }
+  
+    @include min-breakpoint($tv-screen) {
+      font-size: 17px;
+    }
+
+    i {
+      position: relative;
+      display: block;
+      margin: 0 6px 0 0;
+
+      @include min-breakpoint($tablet) {
+        margin: 0 8px 0 0;
+      }
+    }
+
+    &:hover {
+      background: $dark-brown;
+    }
+  }
+}
+
+.admin-dashboard-area {
+  position: relative;
+
+  .admin-member-detail-active &,
+  .admin-kol-detail-active &,
+  .admin-notes-detail-active &,
+  .admin-setting-content-open & {
+    display: none;
+  }
+}
+
+.admin-member-section {
+  position: relative;
+  padding: 20px 0;
+  display: none;
+
+  .admin-member-detail-active & {
+    display: block;
+  }
+
+  .slick-dots {
+    padding-top: 30px;
+  }
+
+  .content-sub-heading {
+
+    i {
+      color: $dark-brown;
+    }
+  }
+}
+
+.admin-member-table-area {
+  position: relative;
+
+  @include breakpoint($desktop-max) {
+    overflow: auto;
+  }
+}
+
+.admin-member-table {
+
+  @include breakpoint($desktop-max) {
+    min-width: 1000px;
+  }
+
+  td,
+  th {
+    &:not(:first-child):not(:nth-child(2)) {
+
+			.heading-text,
+			.text {
+				max-width: 100px;
+				text-align: center;
+			}
+		}
+
+    &:last-child {
+      width: 90px;
+
+      @include min-breakpoint($largescreen) {
+        width: 120px;
+      }
+    }
+  }
+}
+
+.admin-kol-section {
+  position: relative;
+  padding: 20px 0;
+  display: none;
+
+  .admin-kol-detail-active & {
+    display: block;
+  }
+
+  .slick-dots {
+    padding-top: 30px;
+  }
+
+  .content-sub-heading {
+
+    i {
+      color: $dark-brown;
+    }
+  }
+}
+
+.kol-detail-content-holder {
+  position: relative;
+
+  @include breakpoint($tablet-max) {
+    overflow: auto;
+  }
+}
+
+.admin-kol-table {
+
+  @include breakpoint($tablet-max) {
+    min-width: 500px;
+  }
+
+  td,
+  th {
+    &:nth-child(2),
+    &:nth-child(3) {
+
+			.heading-text,
+			.text {
+				max-width: 100px;
+				text-align: center;
+			}
+		}
+
+    &:last-child {
+      width: 100px;
+
+      @include min-breakpoint($largescreen) {
+        width: 120px;
+      }
+    }
+  }
+}
+
+.admin-notes-section {
+  position: relative;
+  display: none;
+
+  .admin-notes-detail-active & {
+    display: block;
+  }
+
+  .notes-heading {
+    padding-top: 0;
+  }
+ 
+  .inner-row {
+    position: relative;
+
+    @include min-breakpoint($widescreen) {
+      display: flex;
+      flex-wrap: wrap;
+    }
+  }
+
+  .content-sub-heading {
+
+    i {
+      color: $dark-brown;
+    }
+  }
+
+  .field-row {
+
+    .form-control {
+      background: none;
+    }
+  }
+
+  .jcf-select-latest-select {
+
+    .jcf-select-text {
+      font-size: 18px;
+    }
+  }
+
+  .slick-dots {
+    padding: 30px 0 40px;
+  }
+
+  .slick-arrow {
+		background: $light-brown;
+		color: $white;
+
+		&:hover {
+			background: $dark-brown;
+		}
+
+		&.slick-disabled {
+			background: $light-gray;
+			color: rgba($theme-color, 0.3);
+			border-color: $light-gray;
+		}
+	}
+
+  .slick-next {
+    right: 0;
+  }
+
+  .slick-prev {
+    right: 46px;
+  }
+}
+
+.dashboard-notebook-sidebar-content {
+
+  .admin-notes-detail-active & {
+    display: block;
+  }
+}
+
+.admin-notebook-content {
+  position: relative;
+
+  .admin-topic-detail-active & {
+    display: none;
+  }
+}
+
+.admin-notebook-row {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -5px;
+
+  @include min-breakpoint($phone) {
+    margin: 0 -7px;
+  }
+}
+
+.admin-notebook-col {
+  position: relative;
+  width: 100%;
+  padding: 0 5px;
+  margin: 0 0 10px;
+
+  @include min-breakpoint($phone) {
+    width: 50%;
+    padding: 0 7px;
+    margin: 0 0 14px;
+  }
+
+  @include min-breakpoint($desktop) {
+    width: 33.333%;
+  }
+
+  .block-list-row {
+    background: $white;
+    border-radius: 8px;
+    padding: 11px;
+
+    &:before {
+      display: none;
+    }
+  }
+
+  .block-description {
+
+    .block-title {
+
+      + .block-info-area {
+
+        @include min-breakpoint($tablet) {
+          padding: 8px 0 0;
+        }
+      }
+    }
+  }
+}
+
+.admin-note-topic-section {
+  position: relative;
+  display: none;
+
+  .admin-topic-detail-active & {
+    display: block;
+  }
+
+  .member-detail-content-holder {
+    overflow: visible;
+    margin: 0 0 80px;
+
+    .content-sub-heading {
+
+      i {
+        font-size: 14px;
+      }
+    }
+  }
+
+  .slick-dots {
+    position: absolute;
+    left: 0;
+    bottom: -73px;
+  }
+
+  .slick-arrow {
+    bottom: -60px;
+  }
+}
+
+.admin-topic-table-area {
+  position: relative;
+
+  @include breakpoint($desktop-max) {
+    overflow: auto;
+  }
+}
+
+.admin-topic-table {
+
+  @include breakpoint($desktop-max) {
+    min-width: 900px;
+  }
+
+  td,
+  th {
+    &:nth-child(2),
+    &:nth-child(3) {
+      width: 100px;
+
+      @include min-breakpoint($desktop) {
+        width: 120px;
+      }
+
+      @include min-breakpoint($largescreen) {
+        width: 150px;
+      }
+
+      @include min-breakpoint($tv-screen) {
+        width: 180px;
+      }
+
+			.heading-text,
+			.text {
+				max-width: 100px;
+				text-align: center;
+			}
+		}
+
+    &:last-child {
+      width: 90px;
+
+      @include min-breakpoint($largescreen) {
+        width: 120px;
+      }
+    }
+  }
+}
+
+.dashboard-admin-setting-content {
+  padding: 20px 15px;
+
+  @include min-breakpoint($tablet) {
+    padding: 20px;
+  }
+}

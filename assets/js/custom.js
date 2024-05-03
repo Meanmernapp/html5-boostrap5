@@ -3,6 +3,7 @@ jQuery(function() {
 	initSlickCarousel();
 	initCustomForms();
 	initOpenClose();
+	initAdminOpenClose();
 	initCustomModal();
 	initOutsideClick();
 });
@@ -414,6 +415,130 @@ function initOpenClose() {
 		jQuery('.note-edit-content-slider').slick('refresh');
 	});
 
+}
+
+// Admin Open Close init
+function initAdminOpenClose() {
+	// Support Sidebar
+	jQuery(document).on('click', '.support-opener-button', function (e) {
+		e.preventDefault();
+		jQuery('body').addClass('support-sidebar-open');
+	});
+
+	jQuery(document).on('click', '.support-close-button', function (e) {
+		e.preventDefault();
+		jQuery('body').removeClass('support-sidebar-open');
+	});
+
+	// Admin Add User
+	jQuery(document).on('click', '.admin-add-user-btn', function (e) {
+		e.preventDefault();
+		jQuery('body').addClass('add-user-modal-active');
+	});
+
+	jQuery(document).on('click', '.add-user-modal-close', function (e) {
+		e.preventDefault();
+		jQuery('body').removeClass('add-user-modal-active');
+	});
+
+	// Admin Add KOL
+	jQuery(document).on('click', '.admin-add-kol-btn', function (e) {
+		e.preventDefault();
+		jQuery('body').addClass('add-kol-modal-active');
+	});
+
+	jQuery(document).on('click', '.add-kol-modal-close', function (e) {
+		e.preventDefault();
+		jQuery('body').removeClass('add-kol-modal-active');
+	});
+
+	// Admin Reply Modal
+	jQuery(document).on('click', '.reply-modal-opener', function (e) {
+		e.preventDefault();
+		jQuery('body').addClass('user-modal-modal-active');
+	});
+
+	jQuery(document).on('click', '.user-reply-modal-close', function (e) {
+		e.preventDefault();
+		jQuery('body').removeClass('user-modal-modal-active');
+	});
+
+	// Admin Member section
+	jQuery(document).on('click', '.admin-member-opener', function (e) {
+		e.preventDefault();
+		jQuery('body').removeClass();
+		jQuery('body').addClass('admin-member-detail-active');
+		jQuery('.block-slider').slick('refresh');
+	});
+
+	jQuery(document).on('click', '.admin-member-close', function (e) {
+		e.preventDefault();
+		jQuery('body').removeClass('admin-member-detail-active');
+		jQuery('.block-slider').slick('refresh');
+	});
+
+	// Admin Kol section
+	jQuery(document).on('click', '.admin-kols-opener', function (e) {
+		e.preventDefault();
+		jQuery('body').removeClass();
+		jQuery('body').addClass('admin-kol-detail-active');
+		jQuery('.block-slider').slick('refresh');
+	});
+
+	jQuery(document).on('click', '.admin-kol-close', function (e) {
+		e.preventDefault();
+		jQuery('body').removeClass('admin-kol-detail-active');
+		jQuery('.block-slider').slick('refresh');
+	});
+
+	// Admin notes section
+	jQuery(document).on('click', '.admin-notes-opener', function (e) {
+		e.preventDefault();
+		jQuery('body').removeClass();
+		jQuery('body').addClass('admin-notes-detail-active');
+		jQuery('.block-slider').slick('refresh');
+	});
+
+	jQuery(document).on('click', '.admin-notes-close', function (e) {
+		e.preventDefault();
+		jQuery('body').removeClass('admin-notes-detail-active');
+		jQuery('.block-slider').slick('refresh');
+	});
+
+	// Admin Topic section
+	jQuery(document).on('click', '.admin-topic-button', function (e) {
+		e.preventDefault();
+		jQuery('body').addClass('admin-topic-detail-active');
+		jQuery('.block-slider').slick('refresh');
+	});
+
+	jQuery(document).on('click', '.admin-topic-close', function (e) {
+		e.preventDefault();
+		jQuery('body').removeClass('admin-topic-detail-active');
+		jQuery('.block-slider').slick('refresh');
+	});
+
+	// Admin Setting section
+	jQuery(document).on('click', '.admin-dashboard-setting-opener', function (e) {
+		e.preventDefault();
+		jQuery('body').removeClass();
+		jQuery('body').addClass('admin-setting-content-open');
+		jQuery('.block-slider').slick('refresh');
+		jQuery('.header-user-slide').slideUp();
+	});
+
+	jQuery(document).on('click', '.admin-setting-close', function (e) {
+		e.preventDefault();
+		jQuery('body').removeClass('admin-setting-content-open');
+		jQuery('.block-slider').slick('refresh');
+	});
+
+	// Dashboard Content Block Close
+	jQuery(document).on('click', '.admin-dashboard-opener', function (e) {
+		e.preventDefault();
+		jQuery('body').removeClass();
+		jQuery('.block-slider').slick('refresh');
+	});
 }
 
 // Outside Click init

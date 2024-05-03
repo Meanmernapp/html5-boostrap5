@@ -22,6 +22,18 @@
   }
 }
 
+.support-sidebar-open {
+  overflow: hidden;
+
+  .support-overlay {
+    display: block;
+  }
+
+  .support-sidebar {
+    transform: none;
+  }
+}
+
 .user-widget-sidebar-open {
   overflow: hidden;
 
@@ -184,6 +196,41 @@
 
     &:before {
       display: none;
+    }
+  }
+
+  &.top-note-widget {
+    padding-top: 0;
+
+    .filter-widget-heading {
+
+      .widget-heading {
+        @include font(20, 24, 400);
+        color: $theme-color;
+
+        i {
+          @include fontsize(20px, 1);
+          color: $theme-color;
+          margin: 0 10px 0 0;
+        }
+      }
+    }
+  }
+
+  .inner-block {
+    position: relative;
+    margin: 0 0 18px;
+
+    @include min-breakpoint($tablet) {
+      margin: 0 0 25px;
+    }
+
+    @include min-breakpoint($desktop) {
+      margin: 0 0 40px;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
     }
   }
 }
@@ -736,6 +783,208 @@
     &.join-text {
       color: $lighter-gray;
       font-style: italic;
+    }
+  }
+}
+
+.support-notification-list-holder {
+  position: relative;
+  margin: 0 -15px;
+
+  @include min-breakpoint($tablet) {
+    margin: 0 -20px;
+  }
+}
+
+.support-notification-list {
+  @include listreset();
+  position: relative;
+
+  > li {
+    position: relative;
+    padding: 10px 15px;
+    border-bottom: 1px solid $light-gray;
+
+    @include min-breakpoint($tablet) {
+      padding: 13px 20px;
+    }
+  }
+
+  .sub-text-wrap {
+    @include flex(flex, wrap, center, space-between);
+    position: relative;
+  }
+
+  .heading-wrap {
+    @include textContent();
+    position: relative;
+    padding: 0 8px 0 0;
+
+    @include min-breakpoint($tablet) {
+      padding: 0 10px 0 0;
+    }
+  }
+
+  .heading {
+    @include font(14, 20, 400);
+    position: relative;
+    display: block;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    color: $theme-color;
+
+    @include min-breakpoint($tablet) {
+      @include font(17, 24, 400);
+    }
+  }
+
+  .name-info-wrap {
+    @include flex(flex, wrap, center, inherit);
+    position: relative;
+  }
+
+  .name {
+    @include font(13, 16, 400);
+    font-style: italic;
+    color: $lighter-gray;
+    position: relative;
+    display: block;
+
+    @include min-breakpoint($tablet) {
+      @include font(14, 18, 400);
+    }
+  }
+
+  .new-tag {
+    @include font(13, 16, 400);
+    position: relative;
+    display: block;
+    background: $dark-brown;
+    color: $white;
+    border-radius: 3px;
+    padding: 1px 4px 2px;
+    margin: 0 0 0 7px;
+
+    @include min-breakpoint($tablet) {
+      @include font(14, 18, 400);
+      margin: 0 0 0 10px;
+    }
+  }
+}
+
+.support-option-list {
+  @include flex(flex, wrap, center, space-between);
+  @include listreset();
+  position: relative;
+  margin: 0 -7px;
+
+  @include min-breakpoint($tablet) {
+    margin: 0 -13px;
+  }
+
+  li {
+    position: relative;
+    padding: 0 7px;
+
+    @include min-breakpoint($tablet) {
+      padding: 0 13px;
+    }
+  }
+
+  a {
+    position: relative;
+    display: block;
+    transition: $transition;
+    color: $lighter-gray;
+    text-decoration: none;
+
+    i {
+      font-size: 18px;
+      display: block;
+
+      @include min-breakpoint($tablet) {
+        font-size: 24px;
+      }
+    }
+
+    &:hover {
+      color: $theme-color;
+    }
+  }
+}
+
+.filter-widget-btns-list {
+  @include flex(flex, wrap, center, inherit);
+  @include listreset();
+  position: relative;
+  margin: 0 -5px;
+
+  @include min-breakpoint($largescreen) {
+    margin: 0 -8px;
+  }
+
+  li {
+    position: relative;
+    padding: 0 5px;
+
+    @include min-breakpoint($largescreen) {
+      padding: 0 8px;
+    }
+  }
+
+  a {
+    @include flex(flex, wrap, center, center);
+    @include font(16, 22, 400);
+    position: relative;
+    transition: $transition;
+    text-decoration: none;
+    border-radius: 7px;
+    padding: 3px 18px 3px 11px;
+    height: 44px;
+
+    @include min-breakpoint($largescreen) {
+      padding: 3px 22px 3px 11px;
+      font-size: 18px;
+    }
+
+    i {
+      position: relative;
+      display: block;
+      transition: $transition;
+      margin: 0 7px 0 0;
+
+      @include min-breakpoint($largescreen) {
+        margin: 0 10px 0 0;
+      }
+    }
+  }
+
+  .widget-video-btn {
+    background: $theme-color;
+    color: $white;
+
+    &:hover {
+      background: $dark-brown;
+      color: $white;
+    }
+  }
+
+  .admin-topic-button {
+    background: $light-white;
+    color: $theme-color;
+
+    i {
+      color: $dark-brown;
+    }
+
+    &:hover {
+      background: $dark-brown;
+      color: $white;
+
+      i {
+        color: $white;
+      }
     }
   }
 }
